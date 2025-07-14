@@ -1,0 +1,76 @@
+---
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+---
+
+# Meterpreter Portwd
+
+Meterpreter, a powerful payload within the Metasploit Framework, includes built-in capabilities for port forwarding, which is crucial for pivoting through compromised systems. The `portfwd` command within Meterpreter allows you to create local and remote port forwarding rules.
+
+## Common `portfwd` Commands:
+
+### Adding a Local Port Forward:
+
+This command forwards a local port on your attacker machine to a specific port on a remote host (relative to the compromised machine).
+
+```
+meterpreter > portfwd add -l [LOCAL_PORT] -p [REMOTE_PORT] -r [REMOTE_HOST]
+```
+
+**Scenario:** You have a Meterpreter session on a host (`compromised_host`) that can reach an internal web server at `192.168.1.100` on port `80`. You want to access this web server from your attacker machine.
+
+```
+meterpreter > portfwd add -l 8080 -p 80 -r 192.168.1.100
+```
+
+Now, you can open your web browser on your attacker machine and navigate to `http://localhost:8080` to access the internal web server.
+
+### Adding a Remote Port Forward:
+
+This command forwards a port on the compromised remote host to a port on your local attacker machine. This could be used to expose a service running on your machine to the compromised host's network.
+
+```
+meterpreter > portfwd add -L [REMOTE_PORT] -p [LOCAL_PORT] -R [LOCAL_IP]
+```
+
+**Scenario:** You have a web server running on your attacker machine at `10.10.10.5` on port `8000`, and you want the compromised host to access it on its `localhost:9000`.
+
+```
+meterpreter > portfwd add -L 9000 -p 8000 -R 10.10.10.5
+```
+
+Now, from the compromised host, `http://localhost:9000` would connect to your attacker machine's web server.
+
+### Listing Existing Port Forwards:
+
+```
+meterpreter > portfwd list
+```
+
+This will display all active port forwarding rules set up within the current Meterpreter session.
+
+### Deleting a Port Forward:
+
+```
+meterpreter > portfwd delete -l [LOCAL_PORT] -p [REMOTE_PORT] -r [REMOTE_HOST]
+# or for remote forwards:
+meterpreter > portfwd delete -L [REMOTE_PORT] -p [LOCAL_PORT] -R [LOCAL_IP]
+```
+
+You need to specify the exact parameters used when adding the forward to delete it.
+
+## Considerations:
+
+* Session Stability: Port forwarding relies on the Meterpreter session remaining active and stable. If the session dies, the forward will be lost.
+* Network Path: Ensure the compromised host has the necessary network connectivity to the target you wish to pivot to.
+* Limited Scope: Meterpreter's `portfwd` is primarily for specific port-to-port forwarding, not a full SOCKS proxy like `-D` in SSH or Chisel's SOCKS functionality. For broader network access, consider setting up a SOCKS proxy via Metasploit's `auxiliary/server/socks_proxy` module, which can then leverage the Meterpreter session.

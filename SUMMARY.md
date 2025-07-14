@@ -1,8 +1,10 @@
 # Table of contents
 
+* [Field Kit](README.md)
+
 ## Field Manual
 
-* [Pre-Engagement](README.md)
+* [Pre-Engagement](<README (1).md>)
 * [Intelligence](field-manual/intelligence/README.md)
   * [Footprinting](field-manual/intelligence/footprinting/README.md)
     * [Host Enumeration](field-manual/intelligence/footprinting/host-enumeration.md)

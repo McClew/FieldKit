@@ -107,4 +107,18 @@
 
 ## Templates
 
-* [Template Placeholder](templates/template-placeholder.md)
+* [Note Template](templates/note-template/README.md)
+  * [Overview](templates/note-template/overview.md)
+  * [Scope & RoE](templates/note-template/scope-and-roe.md)
+  * [Enumeration](templates/note-template/enumeration/README.md)
+    * [Services](templates/note-template/enumeration/services.md)
+    * [Hosts](templates/note-template/enumeration/hosts.md)
+    * [Domains](templates/note-template/enumeration/domains.md)
+    * [Networks](templates/note-template/enumeration/networks.md)
+    * [Cloud Infrastructure](templates/note-template/enumeration/cloud-infrastructure.md)
+    * [Users & Groups](templates/note-template/enumeration/users-and-groups.md)
+    * [Miscellaneous](templates/note-template/enumeration/miscellaneous.md)
+  * [Exploitation](templates/note-template/exploitation.md)
+  * [Post-Exploitation](templates/note-template/post-exploitation.md)
+  * [Flags](templates/note-template/flags.md)
+  * [Write-up](templates/note-template/write-up.md)

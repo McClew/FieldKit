@@ -25,3 +25,17 @@ The primary objective of analysis is to transform disparate data into a coherent
 * **Risk Prioritisation:** Assessing the severity and exploitability of identified vulnerabilities to focus efforts on the most impactful avenues.
 
 By thoroughly analysing the gathered intelligence, this phase allows for the transition from passive information gathering to proactive and targeted exploitation, ensuring that subsequent actions are strategic, efficient, and maximize the likelihood of achieving the engagement's goals.
+
+{% columns %}
+{% column %}
+{% content-ref url="attack-path-planning.md" %}
+[attack-path-planning.md](attack-path-planning.md)
+{% endcontent-ref %}
+{% endcolumn %}
+
+{% column %}
+{% content-ref url="vulnerability-scanning.md" %}
+[vulnerability-scanning.md](vulnerability-scanning.md)
+{% endcontent-ref %}
+{% endcolumn %}
+{% endcolumns %}

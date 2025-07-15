@@ -23,3 +23,21 @@ The primary goal of intelligence gathering is to build a comprehensive understan
 * **Post-Exploitation Reconnaissance:** Once initial access is gained, intelligence gathering shifts to internal network discovery, host enumeration, and privilege escalation reconnaissance to identify additional assets, trust relationships, and pathways for lateral movement and further compromise.
 
 By thoroughly understanding the target's landscape and potential weaknesses, the intelligence phase provides the critical foundation for effective and targeted exploitation.
+
+{% columns %}
+{% column %}
+{% content-ref url="footprinting/" %}
+[footprinting](footprinting/)
+{% endcontent-ref %}
+{% endcolumn %}
+
+{% column %}
+{% content-ref url="humint.md" %}
+[humint.md](humint.md)
+{% endcontent-ref %}
+{% endcolumn %}
+{% endcolumns %}
+
+{% content-ref url="osint/" %}
+[osint](osint/)
+{% endcontent-ref %}

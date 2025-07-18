@@ -1,3 +1,7 @@
+---
+icon: question
+---
+
 # WHOIS
 
 WHOIS is a widely used query and response protocol designed to access databases that store information about registered internet resources. Primarily associated with domain names, WHOIS can also provide details about IP address blocks and autonomous systems.

@@ -1,3 +1,7 @@
+---
+icon: square-code
+---
+
 # Snippets
 
 This section of the Field Manual serves as a concise repository of frequently used command-line instructions, code fragments, and tactical sequences.

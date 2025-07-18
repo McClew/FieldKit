@@ -1,3 +1,7 @@
+---
+icon: globe
+---
+
 # Network Enumeration
 
 {% content-ref url="dns.md" %}

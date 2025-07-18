@@ -1,3 +1,7 @@
+---
+icon: robot
+---
+
 # Automated Scanning
 
 ## Automated Scanning Tools

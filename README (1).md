@@ -1,3 +1,7 @@
+---
+icon: file-signature
+---
+
 # Pre-Engagement
 
 This section provides information on the foundational activities and preparatory steps undertaken before any technical penetration testing or cybersecurity assessment commences. This crucial phase is predominantly administrative and contractual, focusing on establishing a clear understanding, legal framework, and logistical parameters for the engagement.

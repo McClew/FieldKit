@@ -1,3 +1,7 @@
+---
+icon: computer
+---
+
 # Host Enumeration
 
 {% columns %}

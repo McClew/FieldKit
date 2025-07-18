@@ -1,3 +1,7 @@
+---
+icon: key-skeleton
+---
+
 # Password Policy
 
 ## Credentialed

@@ -1,3 +1,7 @@
+---
+icon: file-chart-column
+---
+
 # Post-Engagement
 
 This section outlines the essential activities performed _after_ all active penetration testing and exploitation phases have concluded. This critical final stage focuses on reporting findings, providing recommendations, and formally closing out the assessment.

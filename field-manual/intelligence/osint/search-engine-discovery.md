@@ -1,3 +1,7 @@
+---
+icon: google
+---
+
 # Search Engine Discovery
 
 **Search engine discovery** leverages the immense power of search algorithms to extract data that may not be readily visible on websites. Security professionals and researchers can delve deep into the indexed web by employing specialised search operators, techniques, and tools, uncovering everything from employee information and sensitive documents to hidden login pages and exposed credentials.

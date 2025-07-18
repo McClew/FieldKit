@@ -1,3 +1,7 @@
+---
+icon: magnifying-glass-chart
+---
+
 # Analysis
 
 This section of the Field Manual focuses on the critical process of interpreting and synthesising the raw data collected during the "Intelligence" phase. This stage moves beyond data collection to actively make sense of the gathered information: identifying patterns, prioritising findings, and formulating actionable strategies.

@@ -33,6 +33,7 @@
 * [Exploitation](field-manual/exploitation/README.md)
   * [Authentication Bypass](field-manual/exploitation/authentication-bypass.md)
   * [Brute-Force](field-manual/exploitation/brute-force/README.md)
+    * [Windows Domain](field-manual/exploitation/brute-force/windows-domain.md)
     * [RDP](field-manual/exploitation/brute-force/rdp.md)
     * [SMB](field-manual/exploitation/brute-force/smb.md)
     * [SSH](field-manual/exploitation/brute-force/ssh.md)

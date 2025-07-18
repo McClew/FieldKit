@@ -198,7 +198,7 @@ Using Kerbrute for username enumeration will generate event ID [4768: A Kerberos
 
 ## Credentialed Enumeration
 
-## Tools
+### Tools
 
 <table><thead><tr><th width="196">Name</th><th>Description</th></tr></thead><tbody><tr><td><a data-mention href="../../tooling/crackmapexec.md">crackmapexec.md</a></td><td>An open-source tool that automates the assessment of Active Directory networks by leveraging various protocols to perform reconnaissance, credential gathering, lateral movement, and exploitation.</td></tr></tbody></table>
 

@@ -1,18 +1,3 @@
----
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: false
----
-
 # Encrypted File Hunting Command
 
 Many different extensions correspond to encrypted files - a useful reference list can be found on FileInfo. As an example, consider this command we might use to locate commonly encrypted files on a Linux system:

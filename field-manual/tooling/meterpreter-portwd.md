@@ -1,18 +1,3 @@
----
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: false
----
-
 # Meterpreter Portwd
 
 Meterpreter, a powerful payload within the Metasploit Framework, includes built-in capabilities for port forwarding, which is crucial for pivoting through compromised systems. The `portfwd` command within Meterpreter allows you to create local and remote port forwarding rules.

@@ -1,17 +1,7 @@
----
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: false
----
-
 # Metasploit
 
+{% hint style="info" %}
+## Download & Install:
+
+[https://www.metasploit.com/](https://www.metasploit.com/)
+{% endhint %}

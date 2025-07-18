@@ -1,16 +1,5 @@
 ---
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: false
+icon: linux
 ---
 
 # Linux Software Enumeration
@@ -29,7 +18,7 @@ ps aux
 
 `x` (processes not attached to a terminal) This option selects processes not associated with a terminal. When combined with `a`, it shows almost all processes running on the system.
 
-### What it Tells You:
+### What it Tells You
 
 `ps aux` provides a snapshot of all processes running on your system, presenting them in a comprehensive, user-friendly format. The most important columns include:
 
@@ -39,7 +28,7 @@ ps aux
 * STAT: The process status (e.g., `R` for running, `S` for sleeping, `Z` for zombie, `T` for stopped).
 * COMMAND: The command that started the process, including its arguments.
 
-### Example Output:
+### Example Output
 
 ```bash
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND

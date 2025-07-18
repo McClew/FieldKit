@@ -1,18 +1,3 @@
----
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: false
----
-
 # Tooling
 
 The "Tooling" section provides a practical compendium of the various software applications, scripts, and utilities utilised throughout a cybersecurity assessment or penetration testing engagement.

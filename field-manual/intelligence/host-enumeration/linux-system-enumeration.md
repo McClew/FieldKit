@@ -1,21 +1,10 @@
 ---
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: false
+icon: linux
 ---
 
 # Linux System Enumeration
 
-## Unix Name:
+## Unix Name
 
 ```bash
 uname -a
@@ -25,7 +14,7 @@ uname -a
 
 `-a`: This option tells `uname` to print all available information.
 
-### What it Tells You:
+### What it Tells You
 
 This command provides a comprehensive overview of your system's kernel and hardware, including:
 
@@ -38,7 +27,7 @@ This command provides a comprehensive overview of your system's kernel and hardw
 * Hardware platform: (e.g., x86\_64)
 * Operating system: (e.g., GNU/Linux)
 
-### Example Output:
+### Example Output
 
 {% code overflow="wrap" %}
 ```bash
@@ -46,7 +35,7 @@ Linux my-machine 5.15.0-76-generic #83-Ubuntu SMP Mon Jun 19 16:32:04 UTC 2023 x
 ```
 {% endcode %}
 
-## Proc File System:
+## Proc File System
 
 ```bash
 cat /proc/version
@@ -58,7 +47,7 @@ cat /proc/version
 
 This file contains a string that identifies the version of the Linux kernel currently running, including the GCC version used to compile it and the time of compilation. It's often very similar to the "Kernel version" part of `uname -a`.
 
-### Example Output:
+### Example Output
 
 {% code overflow="wrap" %}
 ```bash
@@ -74,19 +63,19 @@ cat /etc/issue
 
 `/etc/issue`: This file contains a system identification string that is displayed _before_ the login prompt. It's often used by distributions to show their name and version.
 
-### What it shows you:
+### What it shows you
 
 This file typically displays the operating system's name and version, and sometimes additional information like the architecture. It's a quick way to see what Linux distribution is running.
 
-### Example Output:
+### Example Output
 
-#### Ubuntu:
+#### Ubuntu
 
 ```bash
 Ubuntu 22.04.2 LTS \n \l
 ```
 
-#### CentOS/RHEL:
+#### CentOS/RHEL
 
 <pre class="language-bash"><code class="lang-bash"><strong>CentOS Linux release 8.5.2111 (Core)
 </strong>Kernel \r on an \m

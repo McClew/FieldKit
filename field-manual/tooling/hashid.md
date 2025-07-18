@@ -1,18 +1,3 @@
----
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: false
----
-
 # hashid
 
 hashID checks supplied hashes against a built-in list to suggest potential formats and can provide specific information for password cracking tools.

@@ -1,18 +1,3 @@
----
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: false
----
-
 # DNS
 
 DNS offers a variety of information about public - and sometimes private - servers, such as IP addresses, server names, and server functionality.

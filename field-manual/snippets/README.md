@@ -1,18 +1,3 @@
----
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: false
----
-
 # Snippets
 
 This section of the Field Manual serves as a concise repository of frequently used command-line instructions, code fragments, and tactical sequences.

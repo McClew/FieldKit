@@ -1,18 +1,3 @@
----
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: false
----
-
 # 2john
 
 JohnTheRipper comes with many different "2john" tools. These toolets can be used to convert different formats and produce hashes that are comatible with John.

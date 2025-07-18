@@ -1,18 +1,3 @@
----
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: false
----
-
 # Intelligence
 
 This section details reconnaissance and information gathering activities performed throughout a cybersecurity engagement, encompassing _both_ initial pre-exploitation efforts and subsequent post-exploitation reconnaissance. This phase focuses on systematically collecting relevant data about the target environment, its infrastructure, and its personnel.
@@ -26,8 +11,8 @@ By thoroughly understanding the target's landscape and potential weaknesses, the
 
 {% columns %}
 {% column %}
-{% content-ref url="footprinting/" %}
-[footprinting](footprinting/)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 {% endcolumn %}
 

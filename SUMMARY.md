@@ -4,7 +4,11 @@
 
 ## Field Manual
 
-* [Pre-Engagement](<README (1).md>)
+* [Pre-Engagement](field-manual/pre-engagement/README.md)
+  * [Non-Disclosure Agreement](field-manual/pre-engagement/non-disclosure-agreement.md)
+  * [Scope Definition](field-manual/pre-engagement/scope-definition.md)
+  * [Rules of Engagement](field-manual/pre-engagement/rules-of-engagement.md)
+  * [Agreement / Contract](field-manual/pre-engagement/agreement-contract.md)
 * [Intelligence](field-manual/intelligence/README.md)
   * [Windows Domain Enumeration](field-manual/intelligence/windows-domain-enumeration/README.md)
     * [User List](field-manual/intelligence/windows-domain-enumeration/user-list.md)
@@ -59,7 +63,7 @@
     * [Linux Ruby Web Server](field-manual/post-exploitation/file-transfer/linux-ruby-web-server.md)
     * [Linux SSH Server](field-manual/post-exploitation/file-transfer/linux-ssh-server.md)
     * [Linux Web Download](field-manual/post-exploitation/file-transfer/linux-web-download.md)
-    * [NetCat  Transfer](field-manual/post-exploitation/file-transfer/netcat-transfer.md)
+    * [NetCat Transfer](field-manual/post-exploitation/file-transfer/netcat-transfer.md)
     * [Perl Download](field-manual/post-exploitation/file-transfer/perl-download.md)
     * [PHP Download](field-manual/post-exploitation/file-transfer/php-download.md)
     * [PowerShell Base64 Encode & Decode](field-manual/post-exploitation/file-transfer/powershell-base64-encode-and-decode.md)

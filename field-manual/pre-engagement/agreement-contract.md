@@ -1,4 +1,5 @@
 ---
+icon: file-contract
 layout:
   width: default
   title:

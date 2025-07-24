@@ -23,9 +23,10 @@ layout:
 Default port: 22
 {% endhint %}
 
-<pre class="language-bash"><code class="lang-bash">PORT   STATE SERVICE
-<strong>22/tcp open  ssh     syn-ack
-</strong></code></pre>
+```bash
+PORT   STATE SERVICE
+22/tcp open  ssh     syn-ack
+```
 
 ## Banner Grabbing <a href="#banner-grabbing" id="banner-grabbing"></a>
 

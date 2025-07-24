@@ -39,7 +39,7 @@ openssl s_client -connect crossfit.htb:21 -starttls ftp # Get certificate if any
 
 ## Connect to FTP using starttls <a href="#connect-to-ftp-using-starttls" id="connect-to-ftp-using-starttls"></a>
 
-```
+```bash
 lftp
 lftp :~> set ftp:ssl-force true
 lftp :~> set ssl:verify-certificate no

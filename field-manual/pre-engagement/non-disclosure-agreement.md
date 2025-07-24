@@ -1,4 +1,5 @@
 ---
+icon: message-slash
 layout:
   width: default
   title:

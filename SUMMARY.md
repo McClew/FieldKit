@@ -177,3 +177,4 @@
   * [Encrypted File Hunting Command](field-manual/snippets/encrypted-file-hunting-command.md)
   * [PHP Reverse Shell](field-manual/snippets/php-reverse-shell.md)
   * [SSH Key Hunting Command](field-manual/snippets/ssh-key-hunting-command.md)
+  * [SMB Version Enumeration Script](field-manual/snippets/smb-version-enumeration-script.md)

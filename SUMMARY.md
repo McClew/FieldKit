@@ -161,6 +161,7 @@
     * [Service Enumeration](field-manual/tooling/nmap/service-enumeration.md)
     * [Scripting Engine](field-manual/tooling/nmap/scripting-engine.md)
     * [Performance](field-manual/tooling/nmap/performance.md)
+    * [Firewall & IDS/IPS Evasion](field-manual/tooling/nmap/firewall-and-ids-ips-evasion.md)
   * [PowerView](field-manual/tooling/powerview.md)
   * [Responder](field-manual/tooling/responder.md)
   * [rpcclient](field-manual/tooling/rpcclient.md)

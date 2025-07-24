@@ -25,7 +25,7 @@ Default Port: 21
 
 It is a **plain-text** protocol that uses as **new line character `0x0d 0x0a`** so sometimes you need to **connect using `telnet`** or **`nc -C`**.
 
-```
+```bash
 PORT   STATE SERVICE
 21/tcp open  ftp
 ```

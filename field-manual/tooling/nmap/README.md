@@ -40,7 +40,7 @@
 | -oG filename | Stores the results in "grepable" format with the name of "filename".              |
 | -oX filename | Stores the results in XML format with the name of "filename".                     |
 
-## Output Options
+## Other Options
 
 | Nmap Option                | Description                                                  |
 | -------------------------- | ------------------------------------------------------------ |

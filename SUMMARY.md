@@ -155,6 +155,7 @@
   * [Nikto](field-manual/tooling/nikto.md)
   * [Nmap](field-manual/tooling/nmap/README.md)
     * [Alive or Not](field-manual/tooling/nmap/alive-or-not.md)
+    * [Host & Port Enumeration](field-manual/tooling/nmap/host-and-port-enumeration.md)
     * [Host Discovery](field-manual/tooling/nmap/host-discovery.md)
   * [PowerView](field-manual/tooling/powerview.md)
   * [Responder](field-manual/tooling/responder.md)

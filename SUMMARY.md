@@ -165,6 +165,7 @@
   * [PowerView](field-manual/tooling/powerview.md)
   * [Responder](field-manual/tooling/responder.md)
   * [rpcclient](field-manual/tooling/rpcclient.md)
+  * [SMBClient](field-manual/tooling/smbclient.md)
   * [Wafw00f](field-manual/tooling/wafw00f.md)
   * [wsgidav](field-manual/tooling/wsgidav.md)
   * [xFreeRDP](field-manual/tooling/xfreerdp.md)

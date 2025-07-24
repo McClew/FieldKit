@@ -14,31 +14,3 @@ Key elements covered in this section include:
 * **Technical Report:** A comprehensive and detailed document outlining all findings, methodologies used, technical steps for reproduction, and specific remediation advice for technical teams.
 
 The objective of the Post-Engagement phase is to effectively communicate the results of the assessment, provide clear guidance for remediation, and ensure that the client gains maximum benefit from the penetration test, ultimately enhancing their overall security resilience.
-
-{% columns %}
-{% column %}
-{% content-ref url="executive-report.md" %}
-[executive-report.md](executive-report.md)
-{% endcontent-ref %}
-{% endcolumn %}
-
-{% column %}
-{% content-ref url="proof-of-concept.md" %}
-[proof-of-concept.md](proof-of-concept.md)
-{% endcontent-ref %}
-{% endcolumn %}
-{% endcolumns %}
-
-{% columns %}
-{% column %}
-{% content-ref url="quantifying-risk.md" %}
-[quantifying-risk.md](quantifying-risk.md)
-{% endcontent-ref %}
-{% endcolumn %}
-
-{% column %}
-{% content-ref url="technical-report.md" %}
-[technical-report.md](technical-report.md)
-{% endcontent-ref %}
-{% endcolumn %}
-{% endcolumns %}

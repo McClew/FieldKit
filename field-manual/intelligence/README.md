@@ -1,5 +1,19 @@
 ---
 icon: magnifying-glass
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+  metadata:
+    visible: true
 ---
 
 # Intelligence
@@ -12,31 +26,3 @@ The primary goal of intelligence gathering is to build a comprehensive understan
 * **Post-Exploitation Reconnaissance:** Once initial access is gained, intelligence gathering shifts to internal network discovery, host enumeration, and privilege escalation reconnaissance to identify additional assets, trust relationships, and pathways for lateral movement and further compromise.
 
 By thoroughly understanding the target's landscape and potential weaknesses, the intelligence phase provides the critical foundation for effective and targeted exploitation.
-
-{% content-ref url="windows-domain-enumeration/" %}
-[windows-domain-enumeration](windows-domain-enumeration/)
-{% endcontent-ref %}
-
-{% content-ref url="network-enumeration/" %}
-[network-enumeration](network-enumeration/)
-{% endcontent-ref %}
-
-{% content-ref url="host-enumeration/" %}
-[host-enumeration](host-enumeration/)
-{% endcontent-ref %}
-
-{% content-ref url="web-enumeration/" %}
-[web-enumeration](web-enumeration/)
-{% endcontent-ref %}
-
-{% content-ref url="cloud-enumeration.md" %}
-[cloud-enumeration.md](cloud-enumeration.md)
-{% endcontent-ref %}
-
-{% content-ref url="humint.md" %}
-[humint.md](humint.md)
-{% endcontent-ref %}
-
-{% content-ref url="osint/" %}
-[osint](osint/)
-{% endcontent-ref %}

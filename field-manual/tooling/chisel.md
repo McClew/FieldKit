@@ -2,20 +2,24 @@
 
 Chisel is a fast TCP/UDP tunnel, transported over HTTP, secured with SSH. It's a powerful and versatile tool for creating reverse shells, setting up SOCKS proxies for pivoting, and forwarding ports in a highly flexible manner. Chisel is often preferred over standard SSH for its performance, ease of use in certain scenarios, and ability to bypass restrictive firewall rules that might block SSH directly.
 
+{% hint style="info" %}
 ## Download & Install:
 
 Download the appropriate static binary from the Chisel GitHub releases page for your attacker machine and the target architecture. Transfer the client binary to the target machine.
 
 [https://github.com/jpillora/chisel](https://github.com/jpillora/chisel)
+{% endhint %}
 
-## Basic Concepts:
+## Basic Concepts
 
 * Server Mode: Chisel listens for incoming connections.
 * Client Mode: Chisel connects to a Chisel server.
 
-## Common Use Cases:
+## Common Use Cases
 
-### Setting up a SOCKS5 Proxy for Pivoting:
+### Setting up a SOCKS5 Proxy for Pivoting
+
+This TCP/UDP tunnel over HTTP is secured via SSH. It employs the client-server architecture for its operation. This technique can be used to bypass firewalls and access resources that are not directly accessible from your local machine.
 
 1.  On your attacker machine (server):
 
@@ -34,7 +38,7 @@ Download the appropriate static binary from the Chisel GitHub releases page for 
 
 You can then configure `proxychains` or your browser to use `localhost:1080` as a SOCKS5 proxy to pivot through the compromised machine.
 
-### Reverse Port Forwarding:
+### Reverse Port Forwarding
 
 (Exposing a local service to the target)
 
@@ -51,7 +55,7 @@ You can then configure `proxychains` or your browser to use `localhost:1080` as 
 
     This tells the target to open port `80` on its localhost, and any traffic to that port will be forwarded to your attacker machine's `localhost:8080`.
 
-### Local Port Forwarding:
+### Local Port Forwarding
 
 (Accessing a target service from your machine)
 

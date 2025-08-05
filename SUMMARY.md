@@ -148,6 +148,7 @@
   * [Hashcat](field-manual/tooling/hashcat.md)
   * [hashid](field-manual/tooling/hashid.md)
   * [Hydra](field-manual/tooling/hydra.md)
+  * [Impacket](field-manual/tooling/impacket.md)
   * [Inveigh](field-manual/tooling/inveigh.md)
   * [JohnTheRipper](field-manual/tooling/johntheripper.md)
   * [linkedin2username](field-manual/tooling/linkedin2username.md)

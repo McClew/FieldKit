@@ -87,6 +87,7 @@
   * [Attacking Services](field-manual/exploitation/attacking-services/README.md)
     * [FTP](field-manual/exploitation/attacking-services/ftp.md)
     * [SMB](field-manual/exploitation/attacking-services/smb.md)
+    * [MSSQL](field-manual/exploitation/attacking-services/mssql.md)
 * [Post-Exploitation](field-manual/post-exploitation/README.md)
   * [Command & Control](field-manual/post-exploitation/command-and-control.md)
   * [Evasion](field-manual/post-exploitation/evasion/README.md)

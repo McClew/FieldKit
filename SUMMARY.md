@@ -84,6 +84,8 @@
   * [Privilege Escalation](field-manual/exploitation/privilege-escalation/README.md)
     * [Internal Monologue Attack](field-manual/exploitation/privilege-escalation/internal-monologue-attack.md)
   * [Remote Code Execution](field-manual/exploitation/remote-code-execution.md)
+  * [Attacking Services](field-manual/exploitation/attacking-services/README.md)
+    * [FTP](field-manual/exploitation/attacking-services/ftp.md)
 * [Post-Exploitation](field-manual/post-exploitation/README.md)
   * [Command & Control](field-manual/post-exploitation/command-and-control.md)
   * [Evasion](field-manual/post-exploitation/evasion/README.md)

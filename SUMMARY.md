@@ -84,6 +84,7 @@
     * [LLMNR/NBT-NS Poisoning](field-manual/exploitation/man-in-the-middle/llmnr-nbt-ns-poisoning.md)
   * [Privilege Escalation](field-manual/exploitation/privilege-escalation/README.md)
     * [Internal Monologue Attack](field-manual/exploitation/privilege-escalation/internal-monologue-attack.md)
+    * [Kerberoasting](field-manual/exploitation/privilege-escalation/kerberoasting.md)
   * [Remote Code Execution](field-manual/exploitation/remote-code-execution.md)
   * [Attacking Services](field-manual/exploitation/attacking-services/README.md)
     * [FTP](field-manual/exploitation/attacking-services/ftp.md)

@@ -79,6 +79,7 @@
     * [MySQL](field-manual/exploitation/attacking-services/mysql.md)
     * [MSSQL](field-manual/exploitation/attacking-services/mssql.md)
     * [DNS](field-manual/exploitation/attacking-services/dns.md)
+  * [Attacking Applications](field-manual/exploitation/attacking-applications.md)
   * [Authentication Bypass](field-manual/exploitation/authentication-bypass.md)
   * [Brute-Force](field-manual/exploitation/brute-force/README.md)
     * [Windows Domain](field-manual/exploitation/brute-force/windows-domain.md)

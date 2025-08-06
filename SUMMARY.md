@@ -160,6 +160,7 @@
   * [Ettercap](field-manual/tooling/ettercap.md)
   * [Evil-WinRM](field-manual/tooling/evil-winrm.md)
   * [Fierce](field-manual/tooling/fierce.md)
+  * [Ffuf](field-manual/tooling/ffuf.md)
   * [Hashcat](field-manual/tooling/hashcat.md)
   * [hashid](field-manual/tooling/hashid.md)
   * [Hydra](field-manual/tooling/hydra.md)

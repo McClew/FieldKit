@@ -162,6 +162,7 @@
 
 * [Tooling](toolbox/tooling/README.md)
   * [2john](toolbox/tooling/2john.md)
+  * [Aquatone](toolbox/tooling/aquatone.md)
   * [Bettercap](toolbox/tooling/bettercap.md)
   * [CeWL](toolbox/tooling/cewl.md)
   * [Chisel](toolbox/tooling/chisel.md)
@@ -173,6 +174,7 @@
   * [enum4linux](toolbox/tooling/enum4linux.md)
   * [Ettercap](toolbox/tooling/ettercap.md)
   * [Evil-WinRM](toolbox/tooling/evil-winrm.md)
+  * [EyeWitness](toolbox/tooling/eyewitness.md)
   * [Fierce](toolbox/tooling/fierce.md)
   * [Ffuf](toolbox/tooling/ffuf.md)
   * [Hashcat](toolbox/tooling/hashcat.md)

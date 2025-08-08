@@ -31,3 +31,8 @@ SYN Stealth Scan Timing: About 3.64% done; ETC: 19:45 (0:00:53 remaining)
 | -------------------- | ------------------------------------------------------ |
 | `-sV`                | Performs service version detection on specified ports. |
 
+## Web Discovery
+
+```bash
+nmap -p 80,443,8000,8080,8180,8888,10000 --open -oA web_discovery -iL scope_list
+```

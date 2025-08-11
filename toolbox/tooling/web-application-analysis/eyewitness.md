@@ -29,7 +29,7 @@ EyeWitness is designed to run on Kali Linux. It will auto detect the file you gi
 
 ## Using EyeWitness
 
-EyeWitness can take the XML output from both [nmap](nmap/ "mention") and Nessus and create a report with screenshots of each web application present on the various ports using Selenium. It will also take things a step further and categorise the applications where possible, fingerprint them, and suggest default credentials based on the application.
+EyeWitness can take the XML output from both [nmap](../information-gathering/nmap/ "mention") and Nessus and create a report with screenshots of each web application present on the various ports using Selenium. It will also take things a step further and categorise the applications where possible, fingerprint them, and suggest default credentials based on the application.
 
 It can also be given a list of IP addresses and URLs and be told to pre-pend `http://` and `https://` to the front of each. It will perform DNS resolution for IPs and can be given a specific set of ports to attempt to connect to and screenshot.
 

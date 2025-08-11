@@ -42,7 +42,7 @@ PORT    STATE  SERVICE     VERSION
 
 ## Subdomain Enumeration
 
-Subdomains can be enumerated for a target domain using tools like [subfinder.md](../../../toolbox/tooling/subfinder.md "mention"). This tool can scrape subdomains from open sources like [dnsdumpster.md](../../../toolbox/tooling/dnsdumpster.md "mention").
+Subdomains can be enumerated for a target domain using tools like [subfinder.md](../../../toolbox/tooling/information-gathering/subfinder.md "mention"). This tool can scrape subdomains from open sources like [dnsdumpster.md](../../../toolbox/tooling/information-gathering/dnsdumpster.md "mention").
 
 ```bash
 clue@machine[~]$ ./subfinder -d inlanefreight.com -v       
@@ -70,9 +70,9 @@ support.inlanefreight.com
 [INF] Found 4 subdomains for inlanefreight.com in 20 seconds 11 milliseconds
 ```
 
-Other tools like [sublist3r.md](../../../toolbox/tooling/sublist3r.md "mention") can also be used to brute-force subdomains by supplying a wordlist.&#x20;
+Other tools like [sublist3r.md](../../../toolbox/tooling/information-gathering/sublist3r.md "mention") can also be used to brute-force subdomains by supplying a wordlist.&#x20;
 
-An excellent alternative is a tool called [subbrute.md](../../../toolbox/tooling/subbrute.md "mention"). This tool allows us to use self-defined resolvers and perform pure DNS brute-forcing attacks during internal penetration tests on hosts that do not have Internet access.
+An excellent alternative is a tool called [subbrute.md](../../../toolbox/tooling/information-gathering/subbrute.md "mention"). This tool allows us to use self-defined resolvers and perform pure DNS brute-forcing attacks during internal penetration tests on hosts that do not have Internet access.
 
 ```shell-session
 clue@machine[~]$ git clone https://github.com/TheRook/subbrute.git >> /dev/null 2>&1
@@ -135,7 +135,7 @@ inlanefrieght.htb.         604800  IN      SOA     localhost. root.localhost. 2 
 
 ### Zone Transfer with Fierce
 
-Tools like [fierce.md](../../../toolbox/tooling/fierce.md "mention") can also be used to enumerate all DNS servers of the root domain and scan for a DNS zone transfer:
+Tools like [fierce.md](../../../toolbox/tooling/information-gathering/fierce.md "mention") can also be used to enumerate all DNS servers of the root domain and scan for a DNS zone transfer:
 
 ```bash
 clue@machine[~]$ fierce --domain zonetransfer.me

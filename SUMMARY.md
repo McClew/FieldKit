@@ -240,5 +240,6 @@
 ## Play Books
 
 * [Initial Enumeration Methodology](play-books/initial-enumeration-methodology.md)
-* [Webserver Enumeration Methodology](play-books/webserver-enumeration-methodology.md)
 * [Network Enumeration Methodology](play-books/network-enumeration-methodology.md)
+* [Webserver Enumeration Methodology](play-books/webserver-enumeration-methodology.md)
+* [Linux Privilege Escalation Methodology](play-books/linux-privilege-escalation-methodology.md)

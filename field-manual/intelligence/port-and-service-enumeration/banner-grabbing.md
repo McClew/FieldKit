@@ -1,4 +1,5 @@
 ---
+icon: flag-pennant
 layout:
   width: default
   title:

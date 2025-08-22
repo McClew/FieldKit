@@ -1,4 +1,5 @@
 ---
+icon: ethernet
 layout:
   width: default
   title:
@@ -15,5 +16,5 @@ layout:
     visible: true
 ---
 
-# 22 - SSH
+# 22 - SFTP
 

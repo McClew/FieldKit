@@ -1,4 +1,5 @@
 ---
+icon: ethernet
 layout:
   width: default
   title:

@@ -61,7 +61,7 @@
     * [5985, 5986 - WinRM](field-manual/intelligence/port-and-service-enumeration/5985-5986-winrm.md)
     * [27017, 27018 - MongoDB](field-manual/intelligence/port-and-service-enumeration/27017-27018-mongodb.md)
   * [Application Enumeration](field-manual/intelligence/application-enumeration/README.md)
-    * [MySQL](field-manual/intelligence/application-enumeration/mysql.md)
+    * [Application Discovery & Fingerprinting](field-manual/intelligence/application-enumeration/application-discovery-and-fingerprinting.md)
   * [Cloud Enumeration](field-manual/intelligence/cloud-enumeration/README.md)
     * [SMTP](field-manual/intelligence/cloud-enumeration/smtp.md)
   * [HUMINT](field-manual/intelligence/humint.md)

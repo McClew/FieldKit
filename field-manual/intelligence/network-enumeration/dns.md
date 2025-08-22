@@ -1,3 +1,7 @@
+---
+icon: at
+---
+
 # DNS
 
 DNS offers a variety of information about public - and sometimes private - servers, such as IP addresses, server names, and server functionality.

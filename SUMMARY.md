@@ -172,6 +172,7 @@
     * [DNSDumpster](toolbox/tooling/information-gathering/dnsdumpster.md)
     * [enum4linux](toolbox/tooling/information-gathering/enum4linux.md)
     * [Nmap](toolbox/tooling/information-gathering/nmap/README.md)
+      * [Common Commands](toolbox/tooling/information-gathering/nmap/common-commands.md)
       * [Alive or Not](toolbox/tooling/information-gathering/nmap/alive-or-not.md)
       * [Host & Port Enumeration](toolbox/tooling/information-gathering/nmap/host-and-port-enumeration.md)
       * [Host Discovery](toolbox/tooling/information-gathering/nmap/host-discovery.md)

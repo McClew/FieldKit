@@ -240,4 +240,5 @@
 ## Play Books
 
 * [Initial Enumeration Methodology](play-books/initial-enumeration-methodology.md)
+* [Webserver Enumeration Methodology](play-books/webserver-enumeration-methodology.md)
 * [Network Enumeration Methodology](play-books/network-enumeration-methodology.md)

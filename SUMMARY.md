@@ -243,3 +243,4 @@
 * [Network Enumeration Methodology](play-books/network-enumeration-methodology.md)
 * [Webserver Enumeration Methodology](play-books/webserver-enumeration-methodology.md)
 * [Linux Privilege Escalation Methodology](play-books/linux-privilege-escalation-methodology.md)
+* [Windows Privilege Escalation Methodology](play-books/windows-privilege-escalation-methodology.md)

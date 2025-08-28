@@ -88,6 +88,7 @@
       * [Drupal Vulnerabilities](field-manual/exploitation/attacking-applications/drupal/drupal-vulnerabilities/README.md)
         * [CVE-2014-3704 (Drupalgeddon)](field-manual/exploitation/attacking-applications/drupal/drupal-vulnerabilities/cve-2014-3704-drupalgeddon.md)
         * [CVE-2018-7600 (Drupalgeddon2)](field-manual/exploitation/attacking-applications/drupal/drupal-vulnerabilities/cve-2018-7600-drupalgeddon2.md)
+        * [CVE-2018-7602 (Drupalgeddon3)](field-manual/exploitation/attacking-applications/drupal/drupal-vulnerabilities/cve-2018-7602-drupalgeddon3.md)
     * [Joomla](field-manual/exploitation/attacking-applications/joomla/README.md)
       * [Joomla Vulnerabilities](field-manual/exploitation/attacking-applications/joomla/joomla-vulnerabilities/README.md)
         * [CVE-2019-10945](field-manual/exploitation/attacking-applications/joomla/joomla-vulnerabilities/cve-2019-10945.md)

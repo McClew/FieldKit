@@ -64,6 +64,7 @@
     * [Application Discovery & Fingerprinting](field-manual/intelligence/application-enumeration/application-discovery-and-fingerprinting.md)
     * [Drupal Enumeration](field-manual/intelligence/application-enumeration/drupal-enumeration.md)
     * [Joomla Enumeration](field-manual/intelligence/application-enumeration/joomla-enumeration.md)
+    * [Tomcat Enumeration](field-manual/intelligence/application-enumeration/tomcat-enumeration.md)
     * [WordPress Enumeration](field-manual/intelligence/application-enumeration/wordpress-enumeration.md)
   * [Cloud Enumeration](field-manual/intelligence/cloud-enumeration/README.md)
     * [SMTP](field-manual/intelligence/cloud-enumeration/smtp.md)

@@ -65,6 +65,7 @@
     * [Drupal Enumeration](field-manual/intelligence/application-enumeration/drupal-enumeration.md)
     * [Jenkins Enumeration](field-manual/intelligence/application-enumeration/jenkins-enumeration.md)
     * [Joomla Enumeration](field-manual/intelligence/application-enumeration/joomla-enumeration.md)
+    * [Splunk Enumeration](field-manual/intelligence/application-enumeration/splunk-enumeration.md)
     * [Tomcat Enumeration](field-manual/intelligence/application-enumeration/tomcat-enumeration.md)
     * [WordPress Enumeration](field-manual/intelligence/application-enumeration/wordpress-enumeration.md)
   * [Cloud Enumeration](field-manual/intelligence/cloud-enumeration/README.md)

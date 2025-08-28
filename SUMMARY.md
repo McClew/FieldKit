@@ -96,6 +96,7 @@
     * [Joomla](field-manual/exploitation/attacking-applications/joomla/README.md)
       * [Joomla Vulnerabilities](field-manual/exploitation/attacking-applications/joomla/joomla-vulnerabilities/README.md)
         * [CVE-2019-10945](field-manual/exploitation/attacking-applications/joomla/joomla-vulnerabilities/cve-2019-10945.md)
+    * [Splunk](field-manual/exploitation/attacking-applications/splunk.md)
     * [Tomcat](field-manual/exploitation/attacking-applications/tomcat/README.md)
       * [Tomcat Vulnerabilities](field-manual/exploitation/attacking-applications/tomcat/tomcat-vulnerabilities/README.md)
         * [CVE-2020-1938 (Ghostcat)](field-manual/exploitation/attacking-applications/tomcat/tomcat-vulnerabilities/cve-2020-1938-ghostcat.md)

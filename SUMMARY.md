@@ -104,6 +104,8 @@
       * [Plugin Vulnerabilities](field-manual/exploitation/attacking-applications/wordpress/plugin-vulnerabilities/README.md)
         * [mail-masta 1.0](field-manual/exploitation/attacking-applications/wordpress/plugin-vulnerabilities/mail-masta-1.0.md)
         * [wpDiscuz 7.0.4](field-manual/exploitation/attacking-applications/wordpress/plugin-vulnerabilities/wpdiscuz-7.0.4.md)
+    * [Misc Vulnerabilities](field-manual/exploitation/attacking-applications/misc-vulnerabilities/README.md)
+      * [CVE-2014-6271 - Shellshock via CGI](field-manual/exploitation/attacking-applications/misc-vulnerabilities/cve-2014-6271-shellshock-via-cgi.md)
   * [Attacking Services](field-manual/exploitation/attacking-services/README.md)
     * [FTP](field-manual/exploitation/attacking-services/ftp.md)
     * [SMB](field-manual/exploitation/attacking-services/smb.md)

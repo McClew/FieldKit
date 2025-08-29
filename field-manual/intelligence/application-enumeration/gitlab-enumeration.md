@@ -94,7 +94,7 @@ wget https://raw.githubusercontent.com/dpgg101/GitLabUserEnum/main/gitlab_useren
 
 {% code title="Execution" %}
 ```bash
-python3 gitlab_userenum.py --url <URL> --wordlist /usr/share/wordlists/rockyou.txt
+python3 gitlab_userenum.py --url <URL> --wordlist /usr/share/wordlists/<USER_LIST>
 ```
 {% endcode %}
 

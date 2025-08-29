@@ -22,7 +22,7 @@ layout:
 
 It can be installed on **Windows** or **Linux**.
 
-## Discovery/Footprinting
+## Discovery & Footprinting
 
 {% hint style="info" %}
 ## Nmap Scan

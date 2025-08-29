@@ -26,7 +26,7 @@ Jenkins is often installed on Windows servers running as the all-powerful SYSTEM
 If we can gain access via Jenkins and gain remote code execution as the SYSTEM account, we would have a foothold in Active Directory to begin enumeration of the domain environment.
 {% endhint %}
 
-## Discovery/Footprinting
+## Discovery & Footprinting
 
 Jenkins runs on Tomcat port `8080` by default. It also utilises port `5000` to attach slave servers.This port is used to communicate between masters and slaves.
 

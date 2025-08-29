@@ -18,7 +18,7 @@ layout:
 
 # WordPress Enumeration
 
-## Discovery / Footprinting
+## Discovery & Footprinting
 
 ### robots.txt
 

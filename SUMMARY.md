@@ -13,6 +13,7 @@
   * [Application Enumeration](field-manual/intelligence/application-enumeration/README.md)
     * [Application Discovery & Fingerprinting](field-manual/intelligence/application-enumeration/application-discovery-and-fingerprinting.md)
     * [Drupal Enumeration](field-manual/intelligence/application-enumeration/drupal-enumeration.md)
+    * [GitLab](field-manual/intelligence/application-enumeration/gitlab.md)
     * [Jenkins Enumeration](field-manual/intelligence/application-enumeration/jenkins-enumeration.md)
     * [Joomla Enumeration](field-manual/intelligence/application-enumeration/joomla-enumeration.md)
     * [osTicket](field-manual/intelligence/application-enumeration/osticket.md)

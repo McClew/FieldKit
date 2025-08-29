@@ -18,7 +18,7 @@ layout:
 
 # Joomla Enumeration
 
-## Discovery / Footprinting
+## Discovery & Footprinting
 
 ### robots.txt
 

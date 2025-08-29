@@ -18,7 +18,7 @@ layout:
 
 # PRTG Network Monitor Enumeration
 
-## Discovery/Footprinting
+## Discovery & Footprinting
 
 ### Nmap
 

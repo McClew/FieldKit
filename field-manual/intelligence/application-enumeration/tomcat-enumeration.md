@@ -20,7 +20,7 @@ layout:
 
 [Apache Tomcat](https://tomcat.apache.org) is an open-source web server that hosts applications written in Java.
 
-## Discovery/Footprinting
+## Discovery & Footprinting
 
 ### Error Pages
 

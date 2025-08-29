@@ -18,7 +18,7 @@ layout:
 
 # Drupal Enumeration
 
-## Discovery/Footprinting
+## Discovery & Footprinting
 
 ### Public Files
 

@@ -32,7 +32,7 @@ The Splunk Enterprise trial converts to a free version after 60 days, which does
 
 This will automatically convert to the free version that **does not have any form of authentication**, introducing a security hole in the environment. Some organisations may opt for the free version due to budget constraints, not fully understanding the implications of having no user/role management.
 
-## Discovery/Footprinting
+## Discovery & Footprinting
 
 We can discover Splunk with a quick Nmap service scan. Here we can see that Nmap identified the `Splunkd httpd` service on port 8000 and port 8089, the Splunk management port for communication with the Splunk REST API.
 

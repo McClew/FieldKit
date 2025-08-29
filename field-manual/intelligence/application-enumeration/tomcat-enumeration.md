@@ -226,3 +226,31 @@ The `tomcat-users.xml` file is used to allow or disallow access to the `/manager
 ```
 
 The file shows us what each of the roles `manager-gui`, `manager-script`, `manager-jmx`, and `manager-status` provide access to. In this example, we can see that a user `tomcat` with the password `tomcat` has the `manager-gui` role, and a second weak password `admin` is set for the user account `admin`.
+
+## Common Gateway Interface
+
+The CGI Servlet is a vital component of Apache Tomcat that enables web servers to communicate with external applications beyond the Tomcat JVM. These external applications are typically CGI scripts written in languages like Perl, Python, or Bash. The CGI Servlet receives requests from web browsers and forwards them to CGI scripts for processing.
+
+### enableCmdLineArguments
+
+The `enableCmdLineArguments` setting for Apache Tomcat's CGI Servlet controls whether command line arguments are created from the query string. If set to true, the CGI Servlet parses the query string and passes it to the CGI script as arguments. This feature can make CGI scripts more flexible and easier to write by allowing parameters to be passed to the script without using environment variables or standard input.
+
+### Finding CGI Scripts
+
+One way to uncover web server content is by utilising the [ffuf.md](../../../toolbox/tooling/web-application-analysis/ffuf.md "mention") web enumeration tool along with the `dirb common.txt` wordlist. Knowing that the default directory for CGI scripts is `/cgi`, we can use the URLs:
+
+`http://<DOMAIN/IP>:8080/cgi/FUZZ.cmd`
+
+`http://<DOMAIN/IP>:8080/cgi/FUZZ.bat`
+
+{% code title="Command" %}
+```bash
+ffuf -w /usr/share/dirb/wordlists/common.txt -u http://10.129.204.227:8080/cgi/FUZZ.cmd
+```
+{% endcode %}
+
+{% code title="Command" %}
+```bash
+ffuf -w /usr/share/dirb/wordlists/common.txt -u http://10.129.204.227:8080/cgi/FUZZ.bat
+```
+{% endcode %}

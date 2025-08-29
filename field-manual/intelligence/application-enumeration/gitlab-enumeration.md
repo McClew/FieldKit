@@ -84,6 +84,14 @@ However, if these settings are not manually configured, they will still default 
 
 Additionally, while admins can modify the minimum password length to encourage stronger passwords, this alone will not fully mitigate the risk of password attacks.
 
+{% hint style="info" %}
+## User List
+
+Use the Usernames provided in SecLists:
+
+[https://github.com/danielmiessler/SecLists](https://github.com/danielmiessler/SecLists)
+{% endhint %}
+
 ### gitlab\_userenum.py
 
 {% code title="Download Command" %}

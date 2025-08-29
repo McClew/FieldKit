@@ -16,7 +16,7 @@ layout:
     visible: true
 ---
 
-# GitLab
+# GitLab Enumeration
 
 ## Discovery & Footprinting
 
@@ -52,7 +52,9 @@ Once we are done digging through what is available externally, we should check a
 
 Suppose the organisation did not set up GitLab only to allow company emails to register or require an admin to approve a new account. In that case, we may be able to access additional data.
 
-### Enumerating Users
+## Enumerating Users
+
+### Manual Enumeration
 
 We can use the registration form to enumerate valid users. On this some instances of GitLab we can also enumerate emails. If we try to register with an email that has already been taken, we will get the error:&#x20;
 
@@ -69,6 +71,32 @@ Even if the `Sign-up enabled` checkbox is cleared within the settings page under
 
 Mitigations include enforcing 2FA on all user accounts, using `Fail2Ban` to block failed login attempts which are indicative of brute-forcing attacks, and even restricting which IP addresses can access a GitLab instance if it must be accessible outside of the internal corporate network.
 {% endhint %}
+
+### Automated Enumeration
+
+We can use scripts like [this one](https://www.exploit-db.com/exploits/49821) to enumerate a list of valid users. The Python3 version of this same tool can be found [here](https://github.com/dpgg101/GitLabUserEnum). As with any type of password spraying attack, we should be mindful of account lockout and other kinds of interruptions.
+
+GitLab's defaults are set to 10 failed login attempts, resulting in an automatic unlock after 10 minutes.
+
+Starting with GitLab version 16.6, administrators can now configure these values directly through the admin UI. The number of authentication attempts before locking an account and the unlock period can be set using the `max_login_attempts` and `failed_login_attempts_unlock_period_in_minutes` settings, respectively. This configuration can be found [here](https://gitlab.com/gitlab-org/gitlab-foss/-/blob/master/config/initializers/8_devise.rb).
+
+However, if these settings are not manually configured, they will still default to 10 failed login attempts and an unlock period of 10 minutes.
+
+Additionally, while admins can modify the minimum password length to encourage stronger passwords, this alone will not fully mitigate the risk of password attacks.
+
+### gitlab\_userenum.py
+
+{% code title="Download Command" %}
+```bash
+wget https://raw.githubusercontent.com/dpgg101/GitLabUserEnum/main/gitlab_userenum.py
+```
+{% endcode %}
+
+{% code title="Execution" %}
+```bash
+python3 gitlab_userenum.py --url <URL> --wordlist /usr/share/wordlists/rockyou.txt
+```
+{% endcode %}
 
 ## Advanced Git Enumeration
 

@@ -12,6 +12,7 @@
 * [Intelligence](field-manual/intelligence/README.md)
   * [Application Enumeration](field-manual/intelligence/application-enumeration/README.md)
     * [Application Discovery & Fingerprinting](field-manual/intelligence/application-enumeration/application-discovery-and-fingerprinting.md)
+    * [ColdFusion Enumeration](field-manual/intelligence/application-enumeration/coldfusion-enumeration.md)
     * [Drupal Enumeration](field-manual/intelligence/application-enumeration/drupal-enumeration.md)
     * [GitLab Enumeration](field-manual/intelligence/application-enumeration/gitlab-enumeration.md)
     * [Jenkins Enumeration](field-manual/intelligence/application-enumeration/jenkins-enumeration.md)

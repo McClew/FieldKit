@@ -146,6 +146,68 @@ The mere existence of a SUID/SGID binary is not a vulnerability, the next step i
 
 ***
 
+### Writable Directories
+
+It is important to discover which directories are writeable if we need to download tools to the system. We may discover a writeable directory where a cron job places files, which provides an idea of how often the cron job runs and could be used to elevate privileges if the script that the cron job runs is also writeable.
+
+#### Finding Writable Directories
+
+{% code title="Command" %}
+```bash
+find / -path /proc -prune -o -type d -perm -o+w 2>/dev/null
+```
+{% endcode %}
+
+{% code title="Example Output" %}
+```bash
+/dmz-backups
+/tmp
+/tmp/VMwareDnD
+/tmp/.XIM-unix
+/tmp/.Test-unix
+/tmp/.X11-unix
+/tmp/systemd-private-8a2c51fcbad240d09578916b47b0bb17-systemd-timesyncd.service-TIecv0/tmp
+/tmp/.font-unix
+/tmp/.ICE-unix
+/proc
+/dev/mqueue
+/dev/shm
+/var/tmp
+/var/tmp/systemd-private-8a2c51fcbad240d09578916b47b0bb17-systemd-timesyncd.service-hm6Qdl/tmp
+/var/crash
+/run/lock
+
+```
+{% endcode %}
+
+***
+
+### Writeable Files
+
+Are any scripts or configuration files globally writable? While altering configuration files can be extremely destructive, there may be instances where a minor modification can open up further access. Also, any scripts that are run as root using cron jobs can be modified slightly to append a command.
+
+#### Finding Writable Files
+
+{% code title="Command" %}
+```bash
+find / -path /proc -prune -o -type f -perm -o+w 2>/dev/null
+```
+{% endcode %}
+
+{% code title="Example Output" %}
+```bash
+/etc/cron.daily/backup
+/dmz-backups/backup.sh
+/proc
+/sys/fs/cgroup/memory/init.scope/cgroup.event_control
+<SNIP>
+/home/backupsvc/backup.sh
+<SNIP>
+```
+{% endcode %}
+
+***
+
 ## User Accounts
 
 ### Hunting for Usernames

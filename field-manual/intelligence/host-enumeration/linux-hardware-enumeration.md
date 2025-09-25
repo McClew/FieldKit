@@ -6,13 +6,7 @@ icon: linux
 
 ## List CPU
 
-```bash
-lscpu
-```
-
 `lscpu`: This command (short for "list CPU") displays information about the CPU architecture. It gathers this information from `/proc/cpuinfo` and presents it in a more human-readable format.
-
-### What it Tells You
 
 `lscpu` provides a wealth of detail about your system's CPUs, including:
 
@@ -30,8 +24,13 @@ lscpu
 * L1d cache, L1i cache, L2 cache, L3 cache: Information about the different levels of CPU cache.
 * Vulnerability information: Details on known CPU vulnerabilities and their mitigation status (e.g., Spectre, Meltdown).
 
-### Example Output
+{% code title="Command" %}
+```bash
+lscpu
+```
+{% endcode %}
 
+{% code title="Example Output" %}
 ```bash
 <snip>
 Architecture:        x86_64
@@ -57,3 +56,4 @@ L2 cache:            2 MiB
 L3 cache:            16 MiB
 <snip>
 ```
+{% endcode %}

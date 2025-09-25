@@ -18,7 +18,7 @@ layout:
 
 # Linux User & Group Enumeration
 
-## Current User Enumeration
+## Current User
 
 ### sudo Privileges
 
@@ -88,7 +88,65 @@ total 8
 
 ***
 
-## User Enumeration
+### SETUID & SETGID Permissions
+
+Binaries are set with these permissions to allow a user to run a command as root, without having to grant root-level access to the user. Many binaries contain functionality that can be exploited to get a root shell.
+
+#### 1. Using Find
+
+The most comprehensive and standard command to search the entire file system for files with either SUID or SGID bits set is:
+
+{% code title="Command" %}
+```bash
+find / -type f -perm /6000 2>/dev/null
+```
+{% endcode %}
+
+`find /` Start the search from the root directory (`/`).
+
+`-type f` Only look for files (executables), not directories.
+
+`-perm /6000` Search for files where _ANY_ of the following bits are set:
+
+* 4000 (SUID - Set User ID)
+* 2000 (SGID - Set Group ID)
+* The `/` operator acts as an OR, matching files with _either_ bit set.
+
+`2>/dev/null` Suppress permission denied and other error messages for a cleaner output.
+
+You can also search for the permissions individually:
+
+Only SUID (Set User ID): `find / -type f -perm /4000 2>/dev/null4000`
+
+Only SGID (Set Group ID): `find / -type f -perm /2000 2>/dev/null2000`
+
+#### 2. Analysing the Output with `ls -l`
+
+Once we have a list of files, use `ls -l` on them to confirm the special permission.
+
+{% code title="Example SUID Output: Runs as the owner (root)" %}
+```
+-rwsr-xr-x 1 root root ... /bin/passwd
+```
+{% endcode %}
+
+{% code title="Example SGID Output: Runs with the privileges of the group (tty)" %}
+```bash
+-rwxr-sr-x 1 root tty ... /usr/bin/wall
+```
+{% endcode %}
+
+#### 3. Post-Enumeration Steps
+
+The mere existence of a SUID/SGID binary is not a vulnerability, the next step is to check the binaries against a known database of exploits:
+
+1. Check GTFObins: This is the most crucial step. Use the list of SUID/SGID binaries you found and search for them on the [GTFObins](https://gtfobins.github.io/) website. This resource documents known ways to abuse Linux binaries (often with SUID set) to gain a shell, read/write files, or bypass security restrictions.
+2. Look for Suspect Files: Pay extra attention to SUID binaries owned by `root` that are not standard system utilities (like `passwd`, `su`, or `mount`). Custom-compiled programs in unusual directories are prime targets.
+3. Check Path Variable/Relative Execution: Look for SUID/SGID binaries that call other programs using a relative path (e.g., calling `ls` instead of `/bin/ls`). If we can inject our own malicious version of that program into a directory that is checked earlier in the `$PATH` environment variable, we can hijack the execution and gain the elevated privileges.
+
+***
+
+## User Accounts
 
 ### Hunting for Usernames
 
@@ -129,7 +187,7 @@ sysadm:$6$vdH7vuQIv6anIBWg$Ysk.UZzI7WxYUBYt8WRIWF0EzWlksOElDE0HLYinee38QI1A.0HW7
 
 ***
 
-## Group Enumeration
+## Groups
 
 ***
 
@@ -137,5 +195,8 @@ sysadm:$6$vdH7vuQIv6anIBWg$Ysk.UZzI7WxYUBYt8WRIWF0EzWlksOElDE0HLYinee38QI1A.0HW7
 
 ### /etc/passwd
 
-Occasionally, you will see password hashes directly in the /etc/passwd file. This file is readable by all users, and as with hashes in the `shadow` file, these can be subjected to an offline password cracking attack. This configuration, while not common, can sometimes be seen on embedded devices and routers.
+Occasionally, we may see password hashes directly in the `/etc/passwd` file. This file is readable by all users, and as with hashes in the `shadow` file, these can be subjected to an offline password cracking attack. This configuration, while not common, can sometimes be seen on embedded devices and routers.
 
+### /etc/shadow
+
+If the shadow file is readable, we will be able to gather password hashes for all users who have a password set. While this does not guarantee further access, these hashes can be subjected to an offline brute-force attack to recover the cleartext password.

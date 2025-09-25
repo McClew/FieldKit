@@ -8,6 +8,8 @@ icon: linux
 
 Scripts such as [LinEnum](https://github.com/rebootuser/LinEnum) can help automate these processes.
 
+***
+
 ## Unix Name
 
 ```bash
@@ -39,6 +41,8 @@ Linux my-machine 5.15.0-76-generic #83-Ubuntu SMP Mon Jun 19 16:32:04 UTC 2023 x
 ```
 {% endcode %}
 
+***
+
 ## Proc File System
 
 ```bash
@@ -59,6 +63,8 @@ Linux version 5.15.0-76-generic (buildd@lcy02-amd64-060) (gcc (Ubuntu 11.3.0-1ub
 ```
 {% endcode %}
 
+***
+
 ## Operating System Identification
 
 ```bash
@@ -73,14 +79,12 @@ This file typically displays the operating system's name and version, and someti
 
 ### Example Output
 
-#### Ubuntu
-
+{% code title="Ubuntu Output" %}
 ```bash
 Ubuntu 22.04.2 LTS \n \l
 ```
+{% endcode %}
 
-#### CentOS/RHEL
-
-<pre class="language-bash"><code class="lang-bash"><strong>CentOS Linux release 8.5.2111 (Core)
+<pre class="language-bash" data-title="CentOS/RHEL Output"><code class="lang-bash"><strong>CentOS Linux release 8.5.2111 (Core)
 </strong>Kernel \r on an \m
 </code></pre>

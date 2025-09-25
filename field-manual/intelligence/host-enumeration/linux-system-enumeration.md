@@ -4,6 +4,10 @@ icon: linux
 
 # Linux System Enumeration
 
+## Tools
+
+Scripts such as [LinEnum](https://github.com/rebootuser/LinEnum) can help automate these processes.
+
 ## Unix Name
 
 ```bash

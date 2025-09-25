@@ -88,6 +88,26 @@ total 8
 
 ***
 
+## $PATH Variable
+
+We should check out our current user's PATH, which is where the Linux system looks every time a command is executed for any executables to match the name of what we type, i.e., `id` which on this system is located at `/usr/bin/id`.
+
+As we'll see later in this module, if the PATH variable for a target user is misconfigured we may be able to leverage it to escalate privileges. For now we'll note it down and add it to our note-taking tool of choice.
+
+{% code title="Command" %}
+```bash
+Cecho $PATH
+```
+{% endcode %}
+
+{% code title="Example Output" %}
+```bash
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+```
+{% endcode %}
+
+***
+
 ### SETUID & SETGID Permissions
 
 Binaries are set with these permissions to allow a user to run a command as root, without having to grant root-level access to the user. Many binaries contain functionality that can be exploited to get a root shell.

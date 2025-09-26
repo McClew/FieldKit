@@ -85,6 +85,31 @@ Ubuntu 22.04.2 LTS \n \l
 
 ***
 
+## Login Shells
+
+{% code title="Command" %}
+```bash
+cat /etc/shells
+```
+{% endcode %}
+
+{% code title="Example Output" %}
+```bash
+# /etc/shells: valid login shells
+/bin/sh
+/bin/bash
+/usr/bin/bash
+/bin/rbash
+/usr/bin/rbash
+/bin/dash
+/usr/bin/dash
+/usr/bin/tmux
+/usr/bin/screen
+```
+{% endcode %}
+
+***
+
 ## File System & Unmounted Drives
 
 If we discover - and can mount - an additional drive or unmounted file system, we may find sensitive files, passwords, or backups that can be leveraged to escalate privileges.

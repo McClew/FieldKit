@@ -108,6 +108,31 @@ echo $PATH
 
 ***
 
+### Environment Variables
+
+We can also check out all environment variables that are set for our current user, we may get lucky and find something sensitive in there such as a password.
+
+{% code title="Command" %}
+```bash
+env
+```
+{% endcode %}
+
+{% code title="Example Output" %}
+```bash
+SHELL=/bin/bash
+PWD=/home/htb-student
+LOGNAME=htb-student
+XDG_SESSION_TYPE=tty
+MOTD_SHOWN=pam
+HOME=/home/htb-student
+LANG=en_US.UTF-8
+<SNIP>
+```
+{% endcode %}
+
+***
+
 ### SETUID & SETGID Permissions
 
 Binaries are set with these permissions to allow a user to run a command as root, without having to grant root-level access to the user. Many binaries contain functionality that can be exploited to get a root shell.

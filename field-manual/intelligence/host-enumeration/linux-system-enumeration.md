@@ -112,6 +112,8 @@ cat /etc/shells
 
 ## File System & Unmounted Drives
 
+### Discovering Drives
+
 If we discover - and can mount - an additional drive or unmounted file system, we may find sensitive files, passwords, or backups that can be leveraged to escalate privileges.
 
 {% code title="Command" %}
@@ -130,3 +132,51 @@ sda      8:0    0   30G  0 disk
 sr0     11:0    1  848M  0 rom  
 ```
 {% endcode %}
+
+### Protected Drive Passwords
+
+`/etc/fstab` may contain credentials for protect drives. We can attempt to find these credentials - or where they're stored by grepping for common words such as password, username, credential, etc in `/etc/fstab`.
+
+{% code title="Command" %}
+```bash
+cat /etc/fstab | grep -E 'credential|password|username'
+```
+{% endcode %}
+
+{% code title="Example Output: Network share with credentials (common)" %}
+```bash
+//192.168.1.10/share /mnt/share cifs credentials=/home/user/.smbcreds 0 0
+```
+{% endcode %}
+
+{% code title="Example Output: Credentials stored directly (uncommon but possible)" %}
+```bash
+//192.168.1.11/backup /mnt/backup cifs rw,user,username=backupuser,password=secretpass 0 0
+```
+{% endcode %}
+
+***
+
+## Discover Printers
+
+The command `lpstat` can be used to find information about any printers attached to the system. If there are active or queued print jobs we can attempt to gain access and maybe find some sensitive information.
+
+{% code title="Command" %}
+```bash
+lpstat
+```
+{% endcode %}
+
+{% code title="Example Output (if jobs are queued)" %}
+```bash
+LaserJet_P2-14  jdoe  81920   Sep 26 10:35
+PDF_Printer-15  jdoe  15360   Sep 26 12:05
+```
+{% endcode %}
+
+| Command   | Purpose | Example Output |
+| --------- | ------- | -------------- |
+| lpstat -d |         |                |
+| lpstat -p |         |                |
+|           |         |                |
+|           |         |                |

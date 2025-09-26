@@ -29,6 +29,7 @@
     * [SMTP](field-manual/intelligence/cloud-enumeration/smtp.md)
   * [Host Enumeration](field-manual/intelligence/host-enumeration/README.md)
     * [Linux Configuration Enumeration](field-manual/intelligence/host-enumeration/linux-configuration-enumeration.md)
+    * [Linux Defence Enumeration](field-manual/intelligence/host-enumeration/linux-defence-enumeration.md)
     * [Linux Hardware Enumeration](field-manual/intelligence/host-enumeration/linux-hardware-enumeration.md)
     * [Linux Software Enumeration](field-manual/intelligence/host-enumeration/linux-software-enumeration.md)
     * [Linux System Enumeration](field-manual/intelligence/host-enumeration/linux-system-enumeration.md)

@@ -110,6 +110,49 @@ cat /etc/shells
 
 ***
 
+## Network Enumeration
+
+By using `route` or `netstat -rn` we can identify what networks are available and via which interface.
+
+### route
+
+{% code title="Command" %}
+```bash
+route
+```
+{% endcode %}
+
+{% code title="Example Output" %}
+```bash
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+default         _gateway        0.0.0.0         UG    0      0        0 ens192
+10.129.0.0      0.0.0.0         255.255.0.0     U     0      0        0 ens192
+```
+{% endcode %}
+
+### netstat
+
+{% code title="Command" %}
+```bash
+netstat -r
+```
+{% endcode %}
+
+{% code title="Example Output" %}
+```bash
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
+0.0.0.0         192.168.1.1     0.0.0.0         UG      0 0         0 eth0
+192.168.1.0     0.0.0.0         255.255.255.0   U       0 0         0 eth0
+10.10.10.0      192.168.1.10    255.255.255.0   UG      0 0         0 eth0
+172.17.0.0      0.0.0.0         255.255.0.0     U       0 0         0 docker0
+127.0.0.0       0.0.0.0         255.0.0.0       U       0 0         0 lo
+```
+{% endcode %}
+
+***
+
 ## File System & Unmounted Drives
 
 ### Discovering Drives
@@ -173,3 +216,16 @@ LaserJet_P2-14  jdoe  81920   Sep 26 10:35
 PDF_Printer-15  jdoe  15360   Sep 26 12:05
 ```
 {% endcode %}
+
+Use the below command to get a more verbose output:
+
+```
+lpstat -t
+```
+
+This will show all status information including:
+
+* Default printer destination
+* Status of all printers
+* CUPS scheduler status
+* Status summary

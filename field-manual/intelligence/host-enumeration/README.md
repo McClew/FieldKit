@@ -1,6 +1,6 @@
 ---
-icon: computer
+icon: linux
 ---
 
-# Host Enumeration
+# Linux Host Enumeration
 

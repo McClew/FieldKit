@@ -255,7 +255,7 @@ find / -path /proc -prune -o -type f -perm -o+w 2>/dev/null
 
 ## User Accounts
 
-### Hunting for Usernames
+### Hunting for Users
 
 An easy way for us to find other users is from the `/etc/passwd` file. This file is readable by all users and should provide all of the required information:
 
@@ -294,15 +294,116 @@ sysadm:$6$vdH7vuQIv6anIBWg$Ysk.UZzI7WxYUBYt8WRIWF0EzWlksOElDE0HLYinee38QI1A.0HW7
 
 ***
 
+### Login Shells
+
+We can check which users have login shells. Once we see what shells are on the system, we can check each version for vulnerabilities. Because outdated versions, such as Bash version 4.1, are vulnerable to a `shellshock` exploit.
+
+{% code title="Command" %}
+```bash
+grep "sh$" /etc/passwd
+```
+{% endcode %}
+
+{% code title="Example Output" %}
+```bash
+root:x:0:0:root:/root:/bin/bash
+mrb3n:x:1000:1000:mrb3n:/home/mrb3n:/bin/bash
+bjones:x:1001:1001::/home/bjones:/bin/sh
+administrator.ilfreight:x:1002:1002::/home/administrator.ilfreight:/bin/sh
+backupsvc:x:1003:1003::/home/backupsvc:/bin/sh
+cliff.moore:x:1004:1004::/home/cliff.moore:/bin/bash
+logger:x:1005:1005::/home/logger:/bin/sh
+shared:x:1006:1006::/home/shared:/bin/sh
+stacey.jenkins:x:1007:1007::/home/stacey.jenkins:/bin/bash
+htb-student:x:1008:1008::/home/htb-student:/bin/bash
+```
+{% endcode %}
+
+***
+
 ## Groups
+
+### Identifying Groups
+
+Information about the available groups can be found in the `/etc/group` file, which shows us both the group name and the assigned user names.
+
+{% code title="Command" %}
+```bash
+cat /etc/group
+```
+{% endcode %}
+
+{% code title="Example Output" %}
+```bash
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,htb-student
+tty:x:5:syslog
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:
+fax:x:21:
+voice:x:22:
+cdrom:x:24:htb-student
+floppy:x:25:
+tape:x:26:
+sudo:x:27:mrb3n,htb-student
+audio:x:29:pulse
+dip:x:30:htb-student
+www-data:x:33:
+...SNIP...
+
+```
+{% endcode %}
+
+***
+
+### Listing Group Members
+
+We can use the [getent](https://man7.org/linux/man-pages/man1/getent.1.html) command to list members of any interesting groups.
+
+{% code title="Command" %}
+```bash
+getent group sudo
+```
+{% endcode %}
+
+{% code title="Example Output" %}
+```bash
+sudo:x:27:mrb3n
+```
+{% endcode %}
 
 ***
 
 ## Password Enumeration
 
+### Hashing Algorithms
+
+With Linux, several different hash algorithms can be used to secure passwords. Identifying them from the first hash blocks can help us to use and work with them later if needed. Here is a list of the most used ones:
+
+* Salted MD5 `$1$...`
+* SHA-256 `$5$...`
+* SHA-512 `$6$...`
+* BCrypt `$2a$...`
+* Scrypt `$7$...`
+* Argon2 `$argon2i$...`
+
+***
+
 ### /etc/passwd
 
 Occasionally, we may see password hashes directly in the `/etc/passwd` file. This file is readable by all users, and as with hashes in the `shadow` file, these can be subjected to an offline password cracking attack. This configuration, while not common, can sometimes be seen on embedded devices and routers.
+
+***
 
 ### /etc/shadow
 

@@ -157,6 +157,104 @@ cat /etc/fstab | grep -E 'credential|password|username'
 
 ***
 
+### Finding Hidden Files
+
+{% code title="Command" %}
+```bash
+find / -type f -name ".*" -exec ls -l {} \; 2>/dev/null | grep rhys
+```
+{% endcode %}
+
+{% code title="Example Output" %}
+```bash
+-rw-r--r-- 1 rhys rhys 3771 Nov 27 11:16 /home/rhys/.bashrc
+-rw-rw-r-- 1 rhys rhys 180 Nov 27 11:36 /home/rhys/.wget-hsts
+-rw------- 1 rhys rhys 387 Nov 27 14:02 /home/rhys/.bash_history
+-rw-r--r-- 1 rhys rhys 807 Nov 27 11:16 /home/rhys/.profile
+-rw-r--r-- 1 rhys rhys 0 Nov 27 11:31 /home/rhys/.sudo_as_admin_successful
+-rw-r--r-- 1 rhys rhys 220 Nov 27 11:16 /home/rhys/.bash_logout
+-rw-rw-r-- 1 rhys rhys 162 Nov 28 13:26 /home/rhys/.notes
+```
+{% endcode %}
+
+***
+
+### Finding Hidden Directories
+
+{% code title="Command" %}
+```bash
+find / -type d -name ".*" -ls 2>/dev/null
+```
+{% endcode %}
+
+{% code title="Example Output" %}
+```bash
+   684822      4 drwx------   3 rhys rhys                   4096 Nov 28 12:32 /home/rhys/.gnupg
+   790793      4 drwx------   2 rhys rhys                   4096 Okt 27 11:31 /home/rhys/.ssh
+   684804      4 drwx------  10 rhys rhys                   4096 Okt 27 11:30 /home/rhys/.cache
+   790827      4 drwxrwxr-x   8 rhys rhys                   4096 Okt 27 11:32 /home/rhys/CVE-2021-3156/.git
+   684796      4 drwx------  10 rhys rhys                   4096 Okt 27 11:30 /home/rhys/.config
+   655426      4 drwxr-xr-x   3 rhys rhys                   4096 Okt 27 11:19 /home/rhys/.local
+   524808      4 drwxr-xr-x   7 gdm         gdm             4096 Okt 27 11:19 /var/lib/gdm3/.cache
+   544027      4 drwxr-xr-x   7 gdm         gdm             4096 Okt 27 11:19 /var/lib/gdm3/.config
+   544028      4 drwxr-xr-x   3 gdm         gdm             4096 Aug 31 08:54 /var/lib/gdm3/.local
+   524938      4 drwx------   2 colord      colord          4096 Okt 27 11:19 /var/lib/colord/.cache
+     1408      2 dr-xr-xr-x   1 rhys rhys                   2048 Aug 31 09:17 /media/rhys/Ubuntu\ 20.04.5\ LTS\ amd64/.disk
+   280101      4 drwxrwxrwt   2 root        root            4096 Nov 28 12:31 /tmp/.font-unix
+   262364      4 drwxrwxrwt   2 root        root            4096 Nov 28 12:32 /tmp/.ICE-unix
+   262362      4 drwxrwxrwt   2 root        root            4096 Nov 28 12:32 /tmp/.X11-unix
+   280103      4 drwxrwxrwt   2 root        root            4096 Nov 28 12:31 /tmp/.Test-unix
+   262830      4 drwxrwxrwt   2 root        root            4096 Nov 28 12:31 /tmp/.XIM-unix
+   661820      4 drwxr-xr-x   5 root        root            4096 Aug 31 08:55 /usr/lib/modules/5.15.0-46-generic/vdso/.build-id
+   666709      4 drwxr-xr-x   5 root        root            4096 Okt 27 11:18 /usr/lib/modules/5.15.0-52-generic/vdso/.build-id
+   657527      4 drwxr-xr-x 170 root        root            4096 Aug 31 08:55 /usr/lib/debug/.build-id
+```
+{% endcode %}
+
+***
+
+### Temporary Files
+
+There are three default folders are intended for temporary files. These folders are visible to all users and can be read. In addition, temporary logs or script output can be found there.
+
+Both `/tmp` and `/var/tmp` are used to store data temporarily. However, the key difference is how long the data is stored in these file systems. The data retention time for `/var/tmp` is much longer than that of the `/tmp` directory.
+
+{% hint style="info" %}
+By default, all files and data stored in **/var/tmp** are retained for **up to 30 days**. In **/tmp**, on the other hand, the data is **automatically deleted after ten days**.
+{% endhint %}
+
+Additionally all temporary files stored in the `/tmp` directory are deleted immediately when the system is restarted. Therefore, the `/var/tmp` directory is used by programs to store data that must be kept between reboots temporarily.
+
+{% code title="Command" %}
+```bash
+ls -l /tmp /var/tmp /dev/shm
+```
+{% endcode %}
+
+{% code title="Example Output" %}
+```bash
+/dev/shm:
+total 0
+
+/tmp:
+total 52
+-rw------- 1 htb-student htb-student    0 Nov 28 12:32 config-err-v8LfEU
+drwx------ 3 root        root        4096 Nov 28 12:37 snap.snap-store
+drwx------ 2 htb-student htb-student 4096 Nov 28 12:32 ssh-OKlLKjlc98xh
+<SNIP>
+drwx------ 2 htb-student htb-student 4096 Nov 28 12:37 tracker-extract-files.1000
+drwx------ 2 gdm         gdm         4096 Nov 28 12:31 tracker-extract-files.125
+
+/var/tmp:
+total 28
+drwx------ 3 root root 4096 Nov 28 12:31 systemd-private-7b455e62ec09484b87eff41023c4ca53-colord.service-RrPcyi
+drwx------ 3 root root 4096 Nov 28 12:31 systemd-private-7b455e62ec09484b87eff41023c4ca53-ModemManager.service-4Rej9e
+...SNIP...
+```
+{% endcode %}
+
+***
+
 ## Discover Printers
 
 The command `lpstat` can be used to find information about any printers attached to the system. If there are active or queued print jobs we can attempt to gain access and maybe find some sensitive information.

@@ -88,7 +88,7 @@ total 8
 
 ***
 
-## $PATH Variable
+### $PATH Variable
 
 We should check out our current user's PATH, which is where the Linux system looks every time a command is executed for any executables to match the name of what we type, i.e., `id` which on this system is located at `/usr/bin/id`.
 
@@ -96,7 +96,7 @@ As we'll see later in this module, if the PATH variable for a target user is mis
 
 {% code title="Command" %}
 ```bash
-Cecho $PATH
+echo $PATH
 ```
 {% endcode %}
 

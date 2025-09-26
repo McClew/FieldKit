@@ -173,10 +173,3 @@ LaserJet_P2-14  jdoe  81920   Sep 26 10:35
 PDF_Printer-15  jdoe  15360   Sep 26 12:05
 ```
 {% endcode %}
-
-| Command   | Purpose | Example Output |
-| --------- | ------- | -------------- |
-| lpstat -d |         |                |
-| lpstat -p |         |                |
-|           |         |                |
-|           |         |                |

@@ -325,13 +325,15 @@ htb-student:x:1008:1008::/home/htb-student:/bin/bash
 
 {% code title="Command" %}
 ```bash
-// Some code
+who
 ```
 {% endcode %}
 
 {% code title="Example Output" %}
 ```bash
-// Some code
+ 12:27:21 up 1 day, 16:55,  1 user,  load average: 0.00, 0.00, 0.00
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+cliff.mo pts/0    10.10.14.16      Tue19   40:54m  0.02s  0.02s -bash
 ```
 {% endcode %}
 

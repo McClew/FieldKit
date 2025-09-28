@@ -321,6 +321,22 @@ htb-student:x:1008:1008::/home/htb-student:/bin/bash
 
 ***
 
+### Currently Logged in Users
+
+{% code title="Command" %}
+```bash
+// Some code
+```
+{% endcode %}
+
+{% code title="Example Output" %}
+```bash
+// Some code
+```
+{% endcode %}
+
+***
+
 ### Users Last Login
 
 {% code title="Command" %}

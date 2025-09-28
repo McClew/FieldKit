@@ -321,6 +321,39 @@ htb-student:x:1008:1008::/home/htb-student:/bin/bash
 
 ***
 
+### Users Last Login
+
+{% code title="Command" %}
+```bash
+lastlog
+```
+{% endcode %}
+
+{% code title="Example Output" %}
+```bash
+Username         Port     From             Latest
+root                                       **Never logged in**
+daemon                                     **Never logged in**
+bin                                        **Never logged in**
+sys                                        **Never logged in**
+sync                                       **Never logged in**
+...SNIP...
+systemd-coredump                           **Never logged in**
+mrb3n            pts/1    10.10.14.15      Tue Aug  2 19:33:16 +0000 2022
+lxd                                        **Never logged in**
+bjones                                     **Never logged in**
+administrator.ilfreight                           **Never logged in**
+backupsvc                                  **Never logged in**
+cliff.moore      pts/0    127.0.0.1        Tue Aug  2 19:32:29 +0000 2022
+logger                                     **Never logged in**
+shared                                     **Never logged in**
+stacey.jenkins   pts/0    10.10.14.15      Tue Aug  2 18:29:15 +0000 2022
+htb-student      pts/0    10.10.14.15      Wed Aug  3 13:37:22 +0000 2022      
+```
+{% endcode %}
+
+***
+
 ## Groups
 
 ### Identifying Groups

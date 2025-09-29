@@ -33,6 +33,7 @@
     * [Linux Defence Enumeration](field-manual/intelligence/host-enumeration/linux-defence-enumeration.md)
     * [Linux Hardware Enumeration](field-manual/intelligence/host-enumeration/linux-hardware-enumeration.md)
     * [Linux Network Enumeration](field-manual/intelligence/host-enumeration/linux-network-enumeration.md)
+    * [Linux Credential Hunting](field-manual/intelligence/host-enumeration/linux-credential-hunting.md)
     * [Linux Software Enumeration](field-manual/intelligence/host-enumeration/linux-software-enumeration.md)
     * [Linux System Enumeration](field-manual/intelligence/host-enumeration/linux-system-enumeration.md)
     * [Linux User & Group Enumeration](field-manual/intelligence/host-enumeration/linux-user-and-group-enumeration.md)

@@ -201,6 +201,7 @@
   * [Password Extraction](field-manual/post-exploitation/password-extraction.md)
   * [Persistence](field-manual/post-exploitation/persistence.md)
   * [Shells](field-manual/post-exploitation/shells/README.md)
+    * [Escaping Restrictive Shells](field-manual/post-exploitation/shells/escaping-restrictive-shells.md)
     * [NetCat Bind Shell](field-manual/post-exploitation/shells/netcat-bind-shell.md)
     * [NetCat Reverse Shell](field-manual/post-exploitation/shells/netcat-reverse-shell.md)
     * [Payloads](field-manual/post-exploitation/shells/payloads.md)

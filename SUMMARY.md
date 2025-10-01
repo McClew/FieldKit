@@ -148,6 +148,7 @@
       * [Special Permissions](field-manual/exploitation/privilege-escalation/permissions-based-privilege-escalation/special-permissions.md)
       * [Sudo Rights Abuse](field-manual/exploitation/privilege-escalation/permissions-based-privilege-escalation/sudo-rights-abuse.md)
       * [Privileged Groups](field-manual/exploitation/privilege-escalation/permissions-based-privilege-escalation/privileged-groups.md)
+      * [Capabilities](field-manual/exploitation/privilege-escalation/permissions-based-privilege-escalation/capabilities.md)
   * [Windows Privilege Escalation](field-manual/exploitation/privilege-escalation-1/README.md)
     * [Internal Monologue Attack](field-manual/exploitation/privilege-escalation-1/internal-monologue-attack.md)
     * [Kerberoasting](field-manual/exploitation/privilege-escalation-1/kerberoasting/README.md)

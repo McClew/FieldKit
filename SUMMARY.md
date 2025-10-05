@@ -151,6 +151,7 @@
       * [Capabilities](field-manual/exploitation/privilege-escalation/permissions-based-privilege-escalation/capabilities.md)
     * [Service-based Privilege Escalation](field-manual/exploitation/privilege-escalation/service-based-privilege-escalation/README.md)
       * [Vulnerable Services](field-manual/exploitation/privilege-escalation/service-based-privilege-escalation/vulnerable-services.md)
+      * [Cron Job Abuse](field-manual/exploitation/privilege-escalation/service-based-privilege-escalation/cron-job-abuse.md)
   * [Windows Privilege Escalation](field-manual/exploitation/privilege-escalation-1/README.md)
     * [Internal Monologue Attack](field-manual/exploitation/privilege-escalation-1/internal-monologue-attack.md)
     * [Kerberoasting](field-manual/exploitation/privilege-escalation-1/kerberoasting/README.md)

@@ -155,6 +155,7 @@
       * [LXD](field-manual/exploitation/privilege-escalation/service-based-privilege-escalation/lxd.md)
       * [Docker](field-manual/exploitation/privilege-escalation/service-based-privilege-escalation/docker.md)
       * [Kubernetes](field-manual/exploitation/privilege-escalation/service-based-privilege-escalation/kubernetes.md)
+      * [Logrotate](field-manual/exploitation/privilege-escalation/service-based-privilege-escalation/logrotate.md)
   * [Windows Privilege Escalation](field-manual/exploitation/privilege-escalation-1/README.md)
     * [Internal Monologue Attack](field-manual/exploitation/privilege-escalation-1/internal-monologue-attack.md)
     * [Kerberoasting](field-manual/exploitation/privilege-escalation-1/kerberoasting/README.md)

@@ -279,6 +279,8 @@
       * [Meterpreter Portwd](toolbox/tooling/exploitation-tools/metasploit/meterpreter-portwd.md)
     * [NetExec](toolbox/tooling/exploitation-tools/netexec.md)
     * [Searchsploit](toolbox/tooling/exploitation-tools/searchsploit.md)
+    * [Service Exploitation Tools](toolbox/tooling/exploitation-tools/service-exploitation-tools/README.md)
+      * [Kubeletctl](toolbox/tooling/exploitation-tools/service-exploitation-tools/kubeletctl.md)
   * [Sniffing & Spoofing](toolbox/tooling/sniffing-and-spoofing/README.md)
     * [Bettercap](toolbox/tooling/sniffing-and-spoofing/bettercap.md)
     * [Ettercap](toolbox/tooling/sniffing-and-spoofing/ettercap.md)

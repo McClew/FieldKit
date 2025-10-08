@@ -163,6 +163,7 @@
       * [Kernel Exploitation](field-manual/exploitation/privilege-escalation/linux-internals-privilege-escalation/kernel-exploitation.md)
       * [Shared Libraries](field-manual/exploitation/privilege-escalation/linux-internals-privilege-escalation/shared-libraries.md)
       * [Shared Object Hijacking](field-manual/exploitation/privilege-escalation/linux-internals-privilege-escalation/shared-object-hijacking.md)
+      * [Python Library Hijacking](field-manual/exploitation/privilege-escalation/linux-internals-privilege-escalation/python-library-hijacking.md)
   * [Windows Privilege Escalation](field-manual/exploitation/privilege-escalation-1/README.md)
     * [Internal Monologue Attack](field-manual/exploitation/privilege-escalation-1/internal-monologue-attack.md)
     * [Kerberoasting](field-manual/exploitation/privilege-escalation-1/kerberoasting/README.md)

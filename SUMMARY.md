@@ -158,6 +158,7 @@
       * [Logrotate](field-manual/exploitation/privilege-escalation/service-based-privilege-escalation/logrotate.md)
     * [Passive Traffic Capture](field-manual/exploitation/privilege-escalation/passive-traffic-capture.md)
     * [Weak NFS Privileges](field-manual/exploitation/privilege-escalation/weak-nfs-privileges.md)
+    * [Hijacking Tmux Sessions](field-manual/exploitation/privilege-escalation/hijacking-tmux-sessions.md)
   * [Windows Privilege Escalation](field-manual/exploitation/privilege-escalation-1/README.md)
     * [Internal Monologue Attack](field-manual/exploitation/privilege-escalation-1/internal-monologue-attack.md)
     * [Kerberoasting](field-manual/exploitation/privilege-escalation-1/kerberoasting/README.md)

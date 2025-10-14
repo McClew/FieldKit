@@ -43,6 +43,7 @@
     * [Windows Protections Enumeration](field-manual/intelligence/windows-host-enumeration/windows-protections-enumeration.md)
     * [Windows System Enumeration](field-manual/intelligence/windows-host-enumeration/windows-system-enumeration.md)
     * [Windows Software Enumeration](field-manual/intelligence/windows-host-enumeration/windows-software-enumeration.md)
+    * [Windows User & Group Enumeration](field-manual/intelligence/windows-host-enumeration/windows-user-and-group-enumeration.md)
   * [Network Enumeration](field-manual/intelligence/network-enumeration/README.md)
     * [DNS](field-manual/intelligence/network-enumeration/dns.md)
   * [OSINT](field-manual/intelligence/osint/README.md)

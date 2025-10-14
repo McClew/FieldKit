@@ -41,7 +41,7 @@ eyewitness --web -x nmap.xml -d eyewitness
 
 For more information view [aquatone.md](../../../toolbox/tooling/web-application-analysis/aquatone.md "mention").
 
-In the below example we are piping the [nmap](../../../toolbox/tooling/information-gathering/nmap/ "mention") results XML file directly to Aquatone.
+In the below example we are piping the [nmap](../../../toolbox/tooling/information-gathering/network-enumeration/nmap/ "mention") results XML file directly to Aquatone.
 
 ```bash
 cat web_discovery.xml | ./aquatone -nmap

@@ -22,7 +22,7 @@ layout:
 
 ### Nmap
 
-We can quickly discover PRTG from an [nmap](../../../toolbox/tooling/information-gathering/nmap/ "mention") scan. It can typically be found on common web ports such as **80**, **443**, or **8080.** It is possible to change the web interface port in the Setup section when logged in as an admin.
+We can quickly discover PRTG from an [nmap](../../../toolbox/tooling/information-gathering/network-enumeration/nmap/ "mention") scan. It can typically be found on common web ports such as **80**, **443**, or **8080.** It is possible to change the web interface port in the Setup section when logged in as an admin.
 
 {% code title="Scan Command" %}
 ```bash

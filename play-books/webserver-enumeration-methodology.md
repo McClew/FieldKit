@@ -41,7 +41,7 @@ layout:
    * Use BuiltWith to discover web server technologies ( external only ).
    * Use WhatsWeb CLI tool to discover web server technologies.
    * Scan the webserver with [nikto.md](../toolbox/tooling/vulnerability-analysis/nikto.md "mention") to discover web technologies and vulnerabilities.
-   * Scan the website with [nmap](../toolbox/tooling/information-gathering/nmap/ "mention"), using web discovery scripts.
+   * Scan the website with [nmap](../toolbox/tooling/information-gathering/network-enumeration/nmap/ "mention"), using web discovery scripts.
    * Attempt [banner-grabbing.md](../field-manual/intelligence/port-and-service-enumeration/banner-grabbing.md "mention") the webserver using curl.
    * Discover [web-application-firewalls.md](../field-manual/intelligence/web-enumeration/web-application-firewalls.md "mention") ( WAFs ) using [wafw00f.md](../toolbox/tooling/web-application-analysis/wafw00f.md "mention").
 9. Look for web service versions on discovered pages. Use enumeration techniques specific to the technology:

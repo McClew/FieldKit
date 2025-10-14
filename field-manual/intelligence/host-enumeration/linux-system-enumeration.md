@@ -1,7 +1,3 @@
----
-icon: linux
----
-
 # Linux System Enumeration
 
 ## Tools

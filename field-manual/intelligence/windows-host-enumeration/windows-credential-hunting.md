@@ -15,5 +15,5 @@ layout:
     visible: true
 ---
 
-# Credential Theft
+# Windows Credential Hunting
 

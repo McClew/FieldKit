@@ -1,7 +1,3 @@
----
-icon: linux
----
-
 # Linux Hardware Enumeration
 
 ## List CPU

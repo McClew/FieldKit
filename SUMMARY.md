@@ -39,6 +39,7 @@
     * [Linux User & Group Enumeration](field-manual/intelligence/host-enumeration/linux-user-and-group-enumeration.md)
   * [Windows Host Enumeration](field-manual/intelligence/windows-host-enumeration/README.md)
     * [Windows Credential Hunting](field-manual/intelligence/windows-host-enumeration/windows-credential-hunting.md)
+    * [Windows Network Enumeration](field-manual/intelligence/windows-host-enumeration/windows-network-enumeration.md)
   * [Network Enumeration](field-manual/intelligence/network-enumeration/README.md)
     * [DNS](field-manual/intelligence/network-enumeration/dns.md)
   * [OSINT](field-manual/intelligence/osint/README.md)

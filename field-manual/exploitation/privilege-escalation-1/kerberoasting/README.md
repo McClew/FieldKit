@@ -1,5 +1,4 @@
 ---
-icon: windows
 layout:
   width: default
   title:

@@ -1,5 +1,4 @@
 ---
-icon: linux
 layout:
   width: default
   title:

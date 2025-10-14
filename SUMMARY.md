@@ -41,6 +41,8 @@
     * [Windows Credential Hunting](field-manual/intelligence/windows-host-enumeration/windows-credential-hunting.md)
     * [Windows Network Enumeration](field-manual/intelligence/windows-host-enumeration/windows-network-enumeration.md)
     * [Windows Protections Enumeration](field-manual/intelligence/windows-host-enumeration/windows-protections-enumeration.md)
+    * [Windows System Enumeration](field-manual/intelligence/windows-host-enumeration/windows-system-enumeration.md)
+    * [Windows Software Enumeration](field-manual/intelligence/windows-host-enumeration/windows-software-enumeration.md)
   * [Network Enumeration](field-manual/intelligence/network-enumeration/README.md)
     * [DNS](field-manual/intelligence/network-enumeration/dns.md)
   * [OSINT](field-manual/intelligence/osint/README.md)

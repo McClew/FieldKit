@@ -21,6 +21,40 @@ Many organisations utilise some sort of application whitelisting solution to con
 
 A popular solution offered by Microsoft is [AppLocker](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview). We can use the [GetAppLockerPolicy](https://docs.microsoft.com/en-us/powershell/module/applocker/get-applockerpolicy?view=windowsserver2019-ps) cmdlet to enumerate the local, effective (enforced), and domain AppLocker policies. This will help us see what binaries or file types may be blocked and whether we will have to perform some sort of AppLocker bypass either during our enumeration or before running a tool or technique to escalate privileges.
 
+## **Discover Protections**
+
+### Processes
+
+We can use running process to discover what protections a host has, for example, in the below output we can see that `MsMpEng.exe` (Windows Defender) is running.
+
+```sh
+C:\> tasklist /svc
+
+Image Name                     PID Services
+========================= ======== ============================================
+System Idle Process              0 N/A
+System                           4 N/A
+smss.exe                       316 N/A
+csrss.exe                      424 N/A
+wininit.exe                    528 N/A
+csrss.exe                      540 N/A
+winlogon.exe                   612 N/A
+services.exe                   664 N/A
+lsass.exe                      672 KeyIso, SamSs, VaultSvc
+svchost.exe                    776 BrokerInfrastructure, DcomLaunch, LSM,
+                                   PlugPlay, Power, SystemEventsBroker
+svchost.exe                    836 RpcEptMapper, RpcSs
+LogonUI.exe                    952 N/A
+dwm.exe                        964 N/A
+svchost.exe                    972 TermService
+svchost.exe                   1008 Dhcp, EventLog, lmhosts, TimeBrokerSvc
+svchost.exe                    364 NcbService, PcaSvc, ScDeviceEnum, TrkWks,
+                                   UALSVC, UmRdpService
+<...SNIP...>
+
+MsMpEng.exe                   2136 WinDefend
+```
+
 ## **Windows Defender**
 
 ### Check Defender Status

@@ -199,3 +199,48 @@ Active Routes:
 Persistent Routes:
   None
 ```
+
+## Network Services
+
+The most common way people interact with processes is through a network socket (DNS, HTTP, SMB, etc.). The [netstat](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/netstat) command will display active TCP and UDP connections which will give us a better idea of what services are listening on which port(s) both locally and accessible to the outside. We may find a vulnerable service only accessible to the localhost (when logged on to the host) that we can exploit to escalate privileges.
+
+### Display Active Connections
+
+The main thing to look for with Active Network Connections are entries listening on loopback addresses (`127.0.0.1` and `::1`) that are not listening on the IP Address (`10.129.43.8`) or broadcast (`0.0.0.0`, `::/0`). The reason for this is network sockets on localhost are often insecure due to the thought that "they aren't accessible to the network."
+
+```sh
+C:\> netstat -ano
+
+Active Connections
+
+  Proto  Local Address          Foreign Address        State           PID
+  TCP    0.0.0.0:21             0.0.0.0:0              LISTENING       3812
+  TCP    0.0.0.0:80             0.0.0.0:0              LISTENING       4
+  TCP    0.0.0.0:135            0.0.0.0:0              LISTENING       836
+  TCP    0.0.0.0:445            0.0.0.0:0              LISTENING       4
+  TCP    0.0.0.0:3389           0.0.0.0:0              LISTENING       936
+  TCP    0.0.0.0:5985           0.0.0.0:0              LISTENING       4
+  TCP    0.0.0.0:8080           0.0.0.0:0              LISTENING       5044
+  TCP    0.0.0.0:47001          0.0.0.0:0              LISTENING       4
+  TCP    0.0.0.0:49664          0.0.0.0:0              LISTENING       528
+  TCP    0.0.0.0:49665          0.0.0.0:0              LISTENING       996
+  TCP    0.0.0.0:49666          0.0.0.0:0              LISTENING       1260
+  TCP    0.0.0.0:49668          0.0.0.0:0              LISTENING       2008
+  TCP    0.0.0.0:49669          0.0.0.0:0              LISTENING       600
+  TCP    0.0.0.0:49670          0.0.0.0:0              LISTENING       1888
+  TCP    0.0.0.0:49674          0.0.0.0:0              LISTENING       616
+  TCP    10.129.43.8:139        0.0.0.0:0              LISTENING       4
+  TCP    10.129.43.8:3389       10.10.14.3:63191       ESTABLISHED     936
+  TCP    10.129.43.8:49671      40.67.251.132:443      ESTABLISHED     1260
+  TCP    10.129.43.8:49773      52.37.190.150:443      ESTABLISHED     2608
+  TCP    10.129.43.8:51580      40.67.251.132:443      ESTABLISHED     3808
+  TCP    10.129.43.8:54267      40.67.254.36:443       ESTABLISHED     3808
+  TCP    10.129.43.8:54268      40.67.254.36:443       ESTABLISHED     1260
+  TCP    10.129.43.8:54269      64.233.184.189:443     ESTABLISHED     2608
+  TCP    10.129.43.8:54273      216.58.210.195:443     ESTABLISHED     2608
+  TCP    127.0.0.1:14147        0.0.0.0:0              LISTENING       3812
+<SNIP>
+```
+
+The one that sticks out immediately will be port `14147`, which is used for FileZilla's administrative interface. By connecting to this port, it may be possible to extract FTP passwords in addition to creating an FTP Share at c:\ as the FileZilla Server user (potentially Administrator).
+

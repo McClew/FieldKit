@@ -177,6 +177,7 @@
       * [Kerberoasting with Impacket GetUserSPNs.py](field-manual/exploitation/privilege-escalation-1/kerberoasting/kerberoasting-with-impacket-getuserspns.py.md)
       * [Kerberoasting Semi-Manually From Windows](field-manual/exploitation/privilege-escalation-1/kerberoasting/kerberoasting-semi-manually-from-windows.md)
       * [Kerberoasting From Windows using Automated Tools](field-manual/exploitation/privilege-escalation-1/kerberoasting/kerberoasting-from-windows-using-automated-tools.md)
+    * [Named Pipe Attack](field-manual/exploitation/privilege-escalation-1/named-pipe-attack.md)
     * [User Privileges](field-manual/exploitation/privilege-escalation-1/user-privileges.md)
     * [Group Privileges](field-manual/exploitation/privilege-escalation-1/group-privileges.md)
     * [Attacking the OS](field-manual/exploitation/privilege-escalation-1/attacking-the-os.md)

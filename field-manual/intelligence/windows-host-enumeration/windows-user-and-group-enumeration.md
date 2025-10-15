@@ -146,6 +146,22 @@ The command completed successfully.
 
 It is worth checking out the details for any non-standard groups. Though unlikely, we may find a password or other interesting information stored in the group's description. During our enumeration, we may discover credentials of another non-admin user who is a member of a local group that can be leveraged to escalate privileges.
 
+```sh
+C:\> net localgroup administrators
+
+Alias name     administrators
+Comment        Administrators have complete and unrestricted access to the computer/domain
+
+Members
+
+-------------------------------------------------------------------------------
+Administrator
+helpdesk
+sarah
+secsvc
+The command completed successfully. 
+```
+
 ## Password Enumeration
 
 ### Password Policy

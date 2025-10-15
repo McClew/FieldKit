@@ -15,13 +15,13 @@ layout:
     visible: true
 ---
 
-# Windows Protections Enumeration
+# Windows Defence Enumeration
 
 Many organisations utilise some sort of application whitelisting solution to control what types of applications and files certain users can run. This may be used to attempt to block non-admin users from running `cmd.exe` or `powershell.exe` or other binaries and file types not needed for their day-to-day work.
 
 A popular solution offered by Microsoft is [AppLocker](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview). We can use the [GetAppLockerPolicy](https://docs.microsoft.com/en-us/powershell/module/applocker/get-applockerpolicy?view=windowsserver2019-ps) cmdlet to enumerate the local, effective (enforced), and domain AppLocker policies. This will help us see what binaries or file types may be blocked and whether we will have to perform some sort of AppLocker bypass either during our enumeration or before running a tool or technique to escalate privileges.
 
-## **Discover Protections**
+## **Discover Defences**
 
 ### Processes
 

@@ -17,11 +17,9 @@ layout:
 
 # Windows Network Enumeration
 
-## Basic Network Enumeration
+## **I**nterfaces, IP Addresses & DNS Information
 
-### **I**nterfaces, IP Addresses & DNS Information
-
-#### ipconfig
+### ipconfig
 
 Using the `ipconfig /all` command can provide us with crucial information such as:
 
@@ -107,7 +105,7 @@ Tunnel adapter isatap.{02D6F04C-A625-49D1-A85D-4FB454FBB3DB}:
    Autoconfiguration Enabled . . . . : Yes
 ```
 
-#### ARP Table
+### ARP Table
 
 It is important to use the `arp` command to view the ARP cache for each interface and view other hosts the machine has recently communicated with. This could help us with lateral movement after obtaining credentials and could be a good indication of which hosts administrators are connecting to via RDP or WinRM from this host.
 
@@ -135,7 +133,7 @@ Interface: 192.168.20.56 --- 0x9
   255.255.255.255       ff-ff-ff-ff-ff-ff     static
 ```
 
-#### Routing Table
+### Routing Table
 
 We should always look at [routing tables](https://en.wikipedia.org/wiki/Routing_table) to view information about the local network and networks around it. We can also gather information about the local domain (if the host is part of an Active Directory environment), including the IP addresses of domain controllers.
 

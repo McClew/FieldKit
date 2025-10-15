@@ -172,6 +172,12 @@ sarah
 The command completed successfully.
 ```
 
+## Access Tokens
+
+In Windows, [access tokens](https://docs.microsoft.com/en-us/windows/win32/secauthz/access-tokens) are used to describe the security context (security attributes or rules) of a process or thread. The token includes information about the user account's identity and privileges related to a specific process or thread.
+
+When a user authenticates to a system, their password is verified against a security database, and if properly authenticated, they will be assigned an access token. Every time a user interacts with a process, a copy of this token will be presented to determine their privilege level.
+
 ## Password Enumeration
 
 ### Password Policy

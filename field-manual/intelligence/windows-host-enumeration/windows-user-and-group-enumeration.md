@@ -43,6 +43,12 @@ SeChangeNotifyPrivilege       Bypass traverse checking       Enabled
 SeIncreaseWorkingSetPrivilege Increase a process working set Disabled
 ```
 
+{% hint style="warning" %}
+#### Token Dependant Output
+
+The `whoami /priv` output is limited to the privileges held by the current process token. This list is generally shorter than the full set of privileges associated with the underlying user account, as some privileges will not show unless the command is ran with a higher privileged (elevated) token.
+{% endhint %}
+
 ### Current User Groups
 
 Has our user inherited any rights through their group membership? Are they privileged in the Active Directory domain environment, which could be leveraged to gain access to more systems?

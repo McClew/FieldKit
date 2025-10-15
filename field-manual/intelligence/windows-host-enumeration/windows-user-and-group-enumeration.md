@@ -159,7 +159,17 @@ Administrator
 helpdesk
 sarah
 secsvc
-The command completed successfully. 
+The command completed successfully.
+
+C:\>net localgroup "backup operators"
+Alias name     backup operators
+Comment        Backup Operators can override security restrictions for the sole purpose of backing up or restoring files
+
+Members
+
+-------------------------------------------------------------------------------
+sarah
+The command completed successfully.
 ```
 
 ## Password Enumeration

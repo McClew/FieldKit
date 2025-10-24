@@ -181,6 +181,7 @@
     * [SeImpersonatePrivilege Exploitation](field-manual/exploitation/privilege-escalation-1/seimpersonateprivilege-exploitation/README.md)
       * [JuicyPotato](field-manual/exploitation/privilege-escalation-1/seimpersonateprivilege-exploitation/juicypotato.md)
       * [PrintSpoofer](field-manual/exploitation/privilege-escalation-1/seimpersonateprivilege-exploitation/printspoofer.md)
+    * [SeTakeOwnershipPrivlege Exploitation](field-manual/exploitation/privilege-escalation-1/setakeownershipprivlege-exploitation.md)
     * [Named Pipe Attack](field-manual/exploitation/privilege-escalation-1/named-pipe-attack.md)
     * [Restricted Environments](field-manual/exploitation/privilege-escalation-1/restricted-environments.md)
     * [Legacy Exploitation](field-manual/exploitation/privilege-escalation-1/legacy-exploitation.md)

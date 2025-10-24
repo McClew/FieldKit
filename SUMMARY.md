@@ -177,6 +177,7 @@
       * [Kerberoasting with Impacket GetUserSPNs.py](field-manual/exploitation/privilege-escalation-1/kerberoasting/kerberoasting-with-impacket-getuserspns.py.md)
       * [Kerberoasting Semi-Manually From Windows](field-manual/exploitation/privilege-escalation-1/kerberoasting/kerberoasting-semi-manually-from-windows.md)
       * [Kerberoasting From Windows using Automated Tools](field-manual/exploitation/privilege-escalation-1/kerberoasting/kerberoasting-from-windows-using-automated-tools.md)
+    * [SeDebugPrivilege Exploitation](field-manual/exploitation/privilege-escalation-1/sedebugprivilege-exploitation.md)
     * [SeImpersonatePrivilege Exploitation](field-manual/exploitation/privilege-escalation-1/seimpersonateprivilege-exploitation/README.md)
       * [JuicyPotato](field-manual/exploitation/privilege-escalation-1/seimpersonateprivilege-exploitation/juicypotato.md)
       * [PrintSpoofer](field-manual/exploitation/privilege-escalation-1/seimpersonateprivilege-exploitation/printspoofer.md)

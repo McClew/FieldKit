@@ -190,6 +190,7 @@
       * [Hyper-V Administrators](field-manual/exploitation/privilege-escalation-1/group-privileges/hyper-v-administrators.md)
       * [Print Operators](field-manual/exploitation/privilege-escalation-1/group-privileges/print-operators.md)
       * [Server Operators](field-manual/exploitation/privilege-escalation-1/group-privileges/server-operators.md)
+    * [User Account Control](field-manual/exploitation/privilege-escalation-1/user-account-control.md)
     * [Named Pipe Attack](field-manual/exploitation/privilege-escalation-1/named-pipe-attack.md)
     * [Restricted Environments](field-manual/exploitation/privilege-escalation-1/restricted-environments.md)
     * [Legacy Exploitation](field-manual/exploitation/privilege-escalation-1/legacy-exploitation.md)

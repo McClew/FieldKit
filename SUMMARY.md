@@ -198,7 +198,7 @@
     * [Kernel Exploits](field-manual/exploitation/privilege-escalation-1/kernel-exploits/README.md)
       * [HiveNightmare - CVE-2021–36934](field-manual/exploitation/privilege-escalation-1/kernel-exploits/hivenightmare-cve-2021-36934.md)
       * [CVE-2020-0668](field-manual/exploitation/privilege-escalation-1/kernel-exploits/cve-2020-0668.md)
-    * [Page](field-manual/exploitation/privilege-escalation-1/page.md)
+    * [DLL Injection](field-manual/exploitation/privilege-escalation-1/dll-injection.md)
     * [Named Pipe Attack](field-manual/exploitation/privilege-escalation-1/named-pipe-attack.md)
     * [Restricted Environments](field-manual/exploitation/privilege-escalation-1/restricted-environments.md)
     * [Legacy Exploitation](field-manual/exploitation/privilege-escalation-1/legacy-exploitation.md)

@@ -191,6 +191,7 @@
       * [Print Operators](field-manual/exploitation/privilege-escalation-1/group-privileges/print-operators.md)
       * [Server Operators](field-manual/exploitation/privilege-escalation-1/group-privileges/server-operators.md)
     * [User Account Control](field-manual/exploitation/privilege-escalation-1/user-account-control.md)
+    * [Weak Permissions](field-manual/exploitation/privilege-escalation-1/weak-permissions.md)
     * [Named Pipe Attack](field-manual/exploitation/privilege-escalation-1/named-pipe-attack.md)
     * [Restricted Environments](field-manual/exploitation/privilege-escalation-1/restricted-environments.md)
     * [Legacy Exploitation](field-manual/exploitation/privilege-escalation-1/legacy-exploitation.md)

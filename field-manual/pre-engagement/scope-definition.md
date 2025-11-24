@@ -46,4 +46,4 @@ Before we can start with the penetration testing engagement, the final plan need
 * **Methods**: How the testing will be done - Black box, without prior knowledge of the web application, the Linux host nor the Windows host
 * **Schedule**: When things will happen - for us: take your time as much as you need
 * **Our Role**: Assisting our penetration testing team during their engagement
-* **Results**: What reports and recommendations will be provided - we are tasked to provide our findings to the team lead\
+* **Results**: What reports and recommendations will be provided - we are tasked to provide our findings to the team lead<br>

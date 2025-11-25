@@ -202,6 +202,7 @@
     * [Named Pipe Attack](field-manual/exploitation/privilege-escalation-1/named-pipe-attack.md)
     * [Restricted Environments](field-manual/exploitation/privilege-escalation-1/restricted-environments/README.md)
       * [Citrix Breakout](field-manual/exploitation/privilege-escalation-1/restricted-environments/citrix-breakout.md)
+    * [User Exploitation](field-manual/exploitation/privilege-escalation-1/user-exploitation.md)
     * [Legacy Exploitation](field-manual/exploitation/privilege-escalation-1/legacy-exploitation.md)
   * [Remote Code Execution](field-manual/exploitation/remote-code-execution.md)
   * [Web Attacks](field-manual/exploitation/web-attacks/README.md)

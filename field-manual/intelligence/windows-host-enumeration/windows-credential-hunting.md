@@ -253,7 +253,7 @@ We can copy the three `plum.sqlite*` files down to our system and open them with
 SELECT Text FROM Note;
 ```
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
 ### Viewing Sticky Notes Data Using PowerShell
 

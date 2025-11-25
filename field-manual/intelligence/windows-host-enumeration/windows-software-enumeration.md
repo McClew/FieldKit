@@ -19,6 +19,49 @@ layout:
 
 ## Installed Programs
 
+### CMD
+
+```cmd-session
+C:\>dir "C:\Program Files"
+ Volume in drive C has no label.
+ Volume Serial Number is 900E-A7ED
+
+ Directory of C:\Program Files
+
+07/14/2022  08:31 PM    <DIR>          .
+07/14/2022  08:31 PM    <DIR>          ..
+05/16/2022  03:57 PM    <DIR>          Adobe
+05/16/2022  12:33 PM    <DIR>          Corsair
+05/16/2022  10:17 AM    <DIR>          Google
+05/16/2022  11:07 AM    <DIR>          Microsoft Office 15
+07/10/2022  11:30 AM    <DIR>          mRemoteNG
+07/13/2022  09:14 AM    <DIR>          OpenVPN
+07/19/2022  09:04 PM    <DIR>          Streamlabs OBS
+07/20/2022  07:06 AM    <DIR>          TeamViewer
+               0 File(s)              0 bytes
+              16 Dir(s)  351,524,651,008 bytes free
+```
+
+### PowerShell & Registry Keys
+
+```powershell
+PS C:\> $INSTALLED = Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* |  Select-Object DisplayName, DisplayVersion, InstallLocation
+PS C:\> $INSTALLED += Get-ItemProperty HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* | Select-Object DisplayName, DisplayVersion, InstallLocation
+PS C:\> $INSTALLED | ?{ $_.DisplayName -ne $null } | sort-object -Property DisplayName -Unique | Format-Table -AutoSize
+
+DisplayName                                         DisplayVersion    InstallLocation
+-----------                                         --------------    ---------------
+Adobe Acrobat DC (64-bit)                           22.001.20169      C:\Program Files\Adobe\Acrobat DC\
+CORSAIR iCUE 4 Software                             4.23.137          C:\Program Files\Corsair\CORSAIR iCUE 4 Software
+Google Chrome                                       103.0.5060.134    C:\Program Files\Google\Chrome\Application
+Google Drive                                        60.0.2.0          C:\Program Files\Google\Drive File Stream\60.0.2.0\GoogleDriveFS.exe
+Microsoft Office Profesional Plus 2016 - es-es      16.0.15330.20264  C:\Program Files (x86)\Microsoft Office
+Microsoft Office Professional Plus 2016 - en-us     16.0.15330.20264  C:\Program Files (x86)\Microsoft Office
+mRemoteNG                                           1.62              C:\Program Files\mRemoteNG
+TeamViewer                                          15.31.5           C:\Program Files\TeamViewer
+...SNIP...
+```
+
 ### WMI
 
 WMI can be used to display installed software. This information can often guide us towards hard-to-find exploits. Is FileZilla, Putty, etc. installed? Run **LaZagne** to check if stored credentials for those applications are installed. Also, some programs may be installed and running as a service that is vulnerable.

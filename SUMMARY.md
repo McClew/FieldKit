@@ -311,6 +311,8 @@
       * [SMBmap](toolbox/tooling/information-gathering/service-enumeration/smbmap.md)
   * [Vulnerability Analysis](toolbox/tooling/vulnerability-analysis/README.md)
     * [Nikto](toolbox/tooling/vulnerability-analysis/nikto.md)
+    * [Windows Exploit Suggester](toolbox/tooling/vulnerability-analysis/windows-exploit-suggester.md)
+    * [Sherlock](toolbox/tooling/vulnerability-analysis/sherlock.md)
   * [Web Application Analysis](toolbox/tooling/web-application-analysis/README.md)
     * [Aquatone](toolbox/tooling/web-application-analysis/aquatone.md)
     * [Burp Suite](toolbox/tooling/web-application-analysis/burp-suite.md)

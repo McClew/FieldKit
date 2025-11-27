@@ -167,3 +167,18 @@ USERNAME=Administrator
 USERPROFILE=C:\Users\Administrator
 windir=C:\Windows 
 ```
+
+## CLSID
+
+For some exploits - like [juicypotato.md](../../exploitation/privilege-escalation-1/user-privileges/seimpersonateprivilege-exploitation/juicypotato.md "mention") - we may need to get CLSID values.
+
+```powershell
+PS C:\> reg query HKEY_CLASSES_ROOT\CLSID /s /f LocalService
+reg query HKEY_CLASSES_ROOT\CLSID /s /f LocalService
+
+HKEY_CLASSES_ROOT\CLSID\{8BC3F05E-D86B-11D0-A075-00C04FB68820}
+    LocalService    REG_SZ    winmgmt
+
+HKEY_CLASSES_ROOT\CLSID\{C49E32C6-BC8B-11d2-85D4-00105A1F8304}
+    LocalService    REG_SZ    winmgmt
+```

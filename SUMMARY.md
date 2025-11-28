@@ -194,6 +194,8 @@
       * [Print Operators](field-manual/exploitation/privilege-escalation-1/group-privileges/print-operators.md)
       * [Server Operators](field-manual/exploitation/privilege-escalation-1/group-privileges/server-operators.md)
     * [User Account Control](field-manual/exploitation/privilege-escalation-1/user-account-control.md)
+    * [Windows Authentication](field-manual/exploitation/privilege-escalation-1/windows-authentication/README.md)
+      * [Attacking SAM, SYSTEM & SECURITY](field-manual/exploitation/privilege-escalation-1/windows-authentication/attacking-sam-system-and-security.md)
     * [Weak Permissions](field-manual/exploitation/privilege-escalation-1/weak-permissions.md)
     * [Kernel Exploits](field-manual/exploitation/privilege-escalation-1/kernel-exploits/README.md)
       * [HiveNightmare - CVE-2021–36934](field-manual/exploitation/privilege-escalation-1/kernel-exploits/hivenightmare-cve-2021-36934.md)

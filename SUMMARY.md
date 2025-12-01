@@ -263,13 +263,19 @@
     * [NetCat Reverse Shell](field-manual/post-exploitation/shells/netcat-reverse-shell.md)
     * [Payloads](field-manual/post-exploitation/shells/payloads.md)
 * [Post-Engagement](field-manual/post-engagement/README.md)
-  * [Report Writing](field-manual/post-engagement/report-writing.md)
+  * [Report Writing](field-manual/post-engagement/report-writing/README.md)
+    * [Executive Summary](field-manual/post-engagement/report-writing/executive-summary/README.md)
+      * [HTB Example Report](field-manual/post-engagement/report-writing/executive-summary/htb-example-report.md)
+    * [Recommendations Summary](field-manual/post-engagement/report-writing/recommendations-summary.md)
+    * [Findings](field-manual/post-engagement/report-writing/findings.md)
+    * [Appendices](field-manual/post-engagement/report-writing/appendices.md)
+    * [Attack Chain](field-manual/post-engagement/report-writing/attack-chain.md)
+    * [Proof-of-Concept](field-manual/post-engagement/report-writing/proof-of-concept.md)
+    * [Quantifying Risk](field-manual/post-engagement/report-writing/quantifying-risk.md)
+    * [Slide Deck](field-manual/post-engagement/report-writing/slide-deck.md)
   * [Executive Report](field-manual/post-engagement/executive-report.md)
-  * [Proof-of-Concept](field-manual/post-engagement/proof-of-concept.md)
-  * [Quantifying Risk](field-manual/post-engagement/quantifying-risk.md)
   * [Technical Report](field-manual/post-engagement/technical-report.md)
   * [Attestation Report / Letter](field-manual/post-engagement/attestation-report-letter.md)
-  * [Slide Deck](field-manual/post-engagement/slide-deck.md)
 
 ## Toolbox
 

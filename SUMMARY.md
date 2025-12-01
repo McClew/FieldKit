@@ -267,15 +267,16 @@
     * [Executive Summary](field-manual/post-engagement/report-writing/executive-summary/README.md)
       * [HTB Example Report](field-manual/post-engagement/report-writing/executive-summary/htb-example-report.md)
     * [Recommendations Summary](field-manual/post-engagement/report-writing/recommendations-summary.md)
-    * [Findings](field-manual/post-engagement/report-writing/findings.md)
+    * [Findings](field-manual/post-engagement/report-writing/findings/README.md)
+      * [HTB Example Findings](field-manual/post-engagement/report-writing/findings/htb-example-findings.md)
     * [Appendices](field-manual/post-engagement/report-writing/appendices.md)
     * [Attack Chain](field-manual/post-engagement/report-writing/attack-chain.md)
     * [Proof-of-Concept](field-manual/post-engagement/report-writing/proof-of-concept.md)
     * [Quantifying Risk](field-manual/post-engagement/report-writing/quantifying-risk.md)
-    * [Slide Deck](field-manual/post-engagement/report-writing/slide-deck.md)
   * [Executive Report](field-manual/post-engagement/executive-report.md)
   * [Technical Report](field-manual/post-engagement/technical-report.md)
   * [Attestation Report / Letter](field-manual/post-engagement/attestation-report-letter.md)
+  * [Slide Deck](field-manual/post-engagement/slide-deck.md)
 
 ## Toolbox
 

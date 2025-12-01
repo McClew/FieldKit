@@ -1,5 +1,5 @@
 ---
-icon: folder-open
+icon: square-terminal
 ---
 
 # Technical Report

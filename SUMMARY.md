@@ -267,6 +267,8 @@
   * [Proof-of-Concept](field-manual/post-engagement/proof-of-concept.md)
   * [Quantifying Risk](field-manual/post-engagement/quantifying-risk.md)
   * [Technical Report](field-manual/post-engagement/technical-report.md)
+  * [Attestation Report / Letter](field-manual/post-engagement/attestation-report-letter.md)
+  * [Slide Deck](field-manual/post-engagement/slide-deck.md)
 
 ## Toolbox
 

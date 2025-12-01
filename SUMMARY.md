@@ -9,6 +9,7 @@
   * [Scope Definition](field-manual/pre-engagement/scope-definition.md)
   * [Rules of Engagement](field-manual/pre-engagement/rules-of-engagement.md)
   * [Agreement / Contract](field-manual/pre-engagement/agreement-contract.md)
+  * [Note Taking](field-manual/pre-engagement/note-taking.md)
 * [Intelligence](field-manual/intelligence/README.md)
   * [Application Enumeration](field-manual/intelligence/application-enumeration/README.md)
     * [Application Discovery & Fingerprinting](field-manual/intelligence/application-enumeration/application-discovery-and-fingerprinting.md)

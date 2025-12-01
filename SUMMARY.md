@@ -263,6 +263,7 @@
     * [NetCat Reverse Shell](field-manual/post-exploitation/shells/netcat-reverse-shell.md)
     * [Payloads](field-manual/post-exploitation/shells/payloads.md)
 * [Post-Engagement](field-manual/post-engagement/README.md)
+  * [Report Writing](field-manual/post-engagement/report-writing.md)
   * [Executive Report](field-manual/post-engagement/executive-report.md)
   * [Proof-of-Concept](field-manual/post-engagement/proof-of-concept.md)
   * [Quantifying Risk](field-manual/post-engagement/quantifying-risk.md)

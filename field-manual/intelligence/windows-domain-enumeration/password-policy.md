@@ -1,10 +1,42 @@
 ---
 icon: key-skeleton
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
+  metadata:
+    visible: true
 ---
 
 # Password Policy
 
-## Credentialed
+## Cheatsheet
+
+{% tabs %}
+{% tab title="Authenticated" %}
+<table data-full-width="true"><thead><tr><th>Command</th><th>Description</th></tr></thead><tbody><tr><td><code>nxc smb &#x3C;dc> -u &#x3C;user> -p &#x3C;password> --pass-pol</code></td><td><strong>(Linux)</strong> Retrieves password policy from a domain controller using SMB via NetExec.</td></tr><tr><td><code>Get-DomainPolicy</code></td><td><strong>(</strong><a href="https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1"><strong>PowerView</strong></a><strong>)</strong> Retrieves domain-wide password and Kerberos policy from Active Directory.</td></tr><tr><td><code>net accounts</code></td><td><strong>(CMD)</strong> Displays local password and account lockout policies on a Windows host.</td></tr></tbody></table>
+{% endtab %}
+
+{% tab title="SMB NULL Sessions" %}
+
+{% endtab %}
+
+{% tab title="LDAP Anonymous Binds" %}
+
+{% endtab %}
+{% endtabs %}
+
+***
+
+## Authenticated
 
 With valid domain credentials, the password policy can also be obtained remotely.
 
@@ -15,6 +47,8 @@ crackmapexec smb $IP -u $USER -p $PASS --pass-pol
 ### Tools
 
 <table><thead><tr><th width="196">Name</th><th>Description</th></tr></thead><tbody><tr><td><a data-mention href="../../../toolbox/tooling/post-exploitation/crackmapexec.md">crackmapexec.md</a></td><td>An open-source tool that automates the assessment of Active Directory networks by leveraging various protocols to perform reconnaissance, credential gathering, lateral movement, and exploitation.</td></tr><tr><td><a data-mention href="../../../toolbox/tooling/information-gathering/service-enumeration/rpcclient.md">rpcclient.md</a></td><td>A command-line tool, part of the Samba suite, used to connect to and interact with Windows SMB/MS-RPC services, primarily for administration and network enumeration of users, groups, shares, and other domain information.</td></tr></tbody></table>
+
+***
 
 ## SMB NULL Sessions
 
@@ -28,13 +62,17 @@ rpcclient -U "" -N $IP
 
 <table><thead><tr><th width="196">Name</th><th>Description</th></tr></thead><tbody><tr><td><a data-mention href="../../../toolbox/tooling/post-exploitation/crackmapexec.md">crackmapexec.md</a></td><td>An open-source tool that automates the assessment of Active Directory networks by leveraging various protocols to perform reconnaissance, credential gathering, lateral movement, and exploitation.</td></tr><tr><td><a data-mention href="../../../toolbox/tooling/information-gathering/service-enumeration/rpcclient.md">rpcclient.md</a></td><td>A command-line tool, part of the Samba suite, used to connect to and interact with Windows SMB/MS-RPC services, primarily for administration and network enumeration of users, groups, shares, and other domain information.</td></tr><tr><td><a data-mention href="../../../toolbox/tooling/exploitation-tools/netexec.md">netexec.md</a></td><td>The successor to CrackMapExec, designed for assessments of Active Directory environments, by performing reconnaissance, authentication testing, lateral movement, and exploitation across various protocols.</td></tr><tr><td><a data-mention href="../../../toolbox/tooling/information-gathering/linux-enumeration/enum4linux.md">enum4linux.md</a></td><td>A Perl script that wraps around various Samba tools (like <code>smbclient</code> and <code>rpcclient</code>) to automate information gathering from Windows and Samba systems, including users, groups, shares, and password policies.</td></tr></tbody></table>
 
-## LDAP Anonymous Bind
+***
+
+## LDAP Anonymous Binds
 
 [LDAP anonymous binds](https://docs.microsoft.com/en-us/troubleshoot/windows-server/identity/anonymous-ldap-operations-active-directory-disabled) allow unauthenticated attackers to retrieve information from the domain, such as a complete listing of users, groups, computers, user account attributes, and the domain password policy. This is a legacy configuration, and as of **Windows Server 2003**, only authenticated users are permitted to initiate LDAP requests.
 
 ### Tools
 
 <table><thead><tr><th width="213">Name</th><th>Description</th></tr></thead><tbody><tr><td>windapsearch.py</td><td>A Python script for enumerating users, groups, computers, and other objects from Active Directory domains by querying the LDAP protocol.</td></tr><tr><td>ldapsearch</td><td>A command-line utility for querying LDAP directories, including Active Directory, to retrieve specific entries and attributes based on defined filters and scope.</td></tr><tr><td>ad-ldapdomaindump.py</td><td>A Python script that extracts detailed Active Directory information, including users, groups, computers, and policies, by querying LDAP and outputs the data into human-readable HTML, JSON, and greppable formats.</td></tr></tbody></table>
+
+***
 
 ## Authenticated Windows Host
 

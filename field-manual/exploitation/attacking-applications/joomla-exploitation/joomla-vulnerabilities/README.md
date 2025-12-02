@@ -1,5 +1,4 @@
 ---
-icon: joomla
 layout:
   width: default
   title:

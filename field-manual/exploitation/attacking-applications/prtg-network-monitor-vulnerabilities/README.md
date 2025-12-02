@@ -1,5 +1,4 @@
 ---
-icon: network-wired
 layout:
   width: default
   title:

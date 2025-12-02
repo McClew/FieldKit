@@ -1,5 +1,4 @@
 ---
-icon: code-simple
 layout:
   width: default
   title:

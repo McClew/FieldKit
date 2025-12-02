@@ -387,6 +387,7 @@
     * [xFreeRDP](toolbox/tooling/post-exploitation/xfreerdp.md)
   * [Utilities](toolbox/tooling/utilities/README.md)
     * [Tmux Logging](toolbox/tooling/utilities/tmux-logging.md)
+    * [Vim](toolbox/tooling/utilities/vim.md)
 * [Snippets](toolbox/snippets/README.md)
   * [Enumeration Scripts](toolbox/snippets/enumeration-scripts/README.md)
     * [DNS Lookup Brute Force](toolbox/snippets/enumeration-scripts/dns-lookup-brute-force.md)

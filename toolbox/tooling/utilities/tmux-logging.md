@@ -25,11 +25,29 @@ Tmux Logging is a tool that will capture all of a terminals acitivity within a T
 [https://github.com/tmux-plugins/tmux-logging](https://github.com/tmux-plugins/tmux-logging)
 {% endhint %}
 
+***
+
+## Cheatsheet
+
+| Command          | Description                    |
+| ---------------- | ------------------------------ |
+| `tmux`           | Start tmux                     |
+| `ctrl+b`         | tmux: default prefix           |
+| `prefix c`       | tmux: new window               |
+| `prefix 1`       | tmux: switch to window (`1`)   |
+| `prefix shift+%` | tmux: split pane vertically    |
+| `prefix shift+"` | tmux: split pane horizontally  |
+| `prefix ->`      | tmux: switch to the right pane |
+
+***
+
 ## Start Tmux Session
 
 ```bash
 tmux new -s setup
 ```
+
+***
 
 ## Basic Setup
 
@@ -82,6 +100,8 @@ To stop logging, repeat the `prefix` + `[Shift] + [P]` key combo or type `exit` 
 
 Once logging is complete, you can find all commands and output in the associated log file. See the demo below for a short visual on starting and stopping Tmux logging and viewing the results.
 
+***
+
 ## Retroactive Logging
 
 If we forget to enable Tmux logging and are deep into a project, we can perform retroactive logging by typing `[Ctrl] + [B]` and then hitting `[Alt] + [Shift] + [P]` (`prefix` + `[Alt] + [Shift] + [P]`), and the entire pane will be saved.
@@ -94,6 +114,8 @@ To safeguard against this situation, we can add the following lines to the `.tmu
 set -g history-limit 50000
 ```
 
+***
+
 ## Screen Capture
 
 Another handy trick is the ability to take a screen capture of the current Tmux window or an individual pane. Let's say we are working with a split window (2 panes), one with `Responder` and one with `ntlmrelayx.py`. If we attempt to copy/paste the output from one pane, we will grab data from the other pane along with it, which will look very messy and require cleanup.
@@ -103,6 +125,8 @@ We can avoid this by taking a screen capture as follows: `[Ctrl] + [B]` followed
 Here we can see we're working with two panes. If we try to copy text from one pane, we'll grab text from the other pane, which would make a mess of the output. But, with Tmux logging enabled, we can take a capture of the pane and output it neatly to a file.
 
 <figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+***
 
 ## Additional Plugins
 

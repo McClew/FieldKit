@@ -60,7 +60,7 @@ layout:
 13. Test submitting data on _**EVERY user input field**_ and looking at interaction with [burp-suite.md](../toolbox/tooling/web-application-analysis/burp-suite.md "mention").
     * If input appears to be used in a system command, test for [command-injections.md](../field-manual/exploitation/web-attacks/command-injections.md "mention").
     * If a file upload function exists, test for [file-upload.md](../field-manual/exploitation/web-attacks/file-upload.md "mention") vulnerabilities.
-    * If the webserver appears to be populating data from a database, test for [sql-injection-sqli.md](../field-manual/exploitation/web-attacks/sql-injection-sqli.md "mention").
+    * If the webserver appears to be populating data from a database, test for [sql-injection-sqli](../field-manual/exploitation/web-attacks/sql-injection-sqli/ "mention").
     * If URLs use sequential values for data retrieval, test for [insecure-direct-object-references-idor.md](../field-manual/exploitation/web-attacks/insecure-direct-object-references-idor.md "mention") vulnerabilities.
     * If local files are retrieved based on dynamic inputs, test for [file-inclusion.md](../field-manual/exploitation/web-attacks/file-inclusion.md "mention") and path traversal vulnerabilities.
     * Check user input fields for [cross-site-scripting-xss.md](../field-manual/exploitation/web-attacks/cross-site-scripting-xss.md "mention") vulnerabilities.

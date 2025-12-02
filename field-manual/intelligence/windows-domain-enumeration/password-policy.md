@@ -22,15 +22,17 @@ layout:
 
 {% tabs %}
 {% tab title="Authenticated" %}
-<table data-full-width="true"><thead><tr><th>Command</th><th>Description</th></tr></thead><tbody><tr><td><code>nxc smb &#x3C;dc> -u &#x3C;user> -p &#x3C;password> --pass-pol</code></td><td><strong>(Linux)</strong> Retrieves password policy from a domain controller using SMB via NetExec.</td></tr><tr><td><code>Get-DomainPolicy</code></td><td><strong>(</strong><a href="https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1"><strong>PowerView</strong></a><strong>)</strong> Retrieves domain-wide password and Kerberos policy from Active Directory.</td></tr><tr><td><code>net accounts</code></td><td><strong>(CMD)</strong> Displays local password and account lockout policies on a Windows host.</td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="333">Command</th><th>Description</th></tr></thead><tbody><tr><td><p><code>nxc smb &#x3C;dc> -u &#x3C;user> -p &#x3C;password></code></p><p> <code>--pass-pol</code></p></td><td><strong>(Linux)</strong> Retrieves password policy from a domain controller using SMB via NetExec.</td></tr><tr><td><code>Get-DomainPolicy</code></td><td><strong>(PowerView)</strong> Retrieves domain-wide password and Kerberos policy from Active Directory.</td></tr><tr><td><code>net accounts</code></td><td><strong>(CMD)</strong> Displays local password and account lockout policies on a Windows host.</td></tr></tbody></table>
 {% endtab %}
 
 {% tab title="SMB NULL Sessions" %}
-
+<table><thead><tr><th width="259">Command</th><th>Description</th></tr></thead><tbody><tr><td><code>nxc smb &#x3C;dc> -pass-pol</code></td><td><strong>(Linux)</strong> Retrieves domain password policy via SMB NULL session, if allowed, using NetExec.</td></tr><tr><td><code>rpcclient -U "" -N &#x3C;dc></code><br><code>querydominfo</code><br><code>getdompwinfo</code></td><td><strong>(Linux)</strong> Uses SMB NULL session, if enabled, to query domain and password policy info via <code>rpcclient</code>.</td></tr></tbody></table>
 {% endtab %}
 
 {% tab title="LDAP Anonymous Binds" %}
-
+| Command                                                                                                                                                                                                                                                                     | Description                                                                                            |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| <p><code>ldapsearch -H ldap://&#x3C;dc> -x -b "&#x3C;domain-dn>" -s sub "*" | grep -m 1 -B 10 pwdHistoryLength</code><br><br>The Distinguished Name (DN) for the domain follows a structure like this:<br>Domain: <code>BRM.COM</code> → DN: <code>DC=BRM,DC=COM</code></p> | **(Linux)** Retrieves password policy from the domain controller using anonymous SMB bind, if allowed. |
 {% endtab %}
 {% endtabs %}
 

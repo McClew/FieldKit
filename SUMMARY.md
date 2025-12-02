@@ -91,7 +91,7 @@
     * [Web Application Firewalls](field-manual/intelligence/web-enumeration/web-application-firewalls.md)
     * [WHOIS](field-manual/intelligence/web-enumeration/whois.md)
   * [Windows Domain Enumeration](field-manual/intelligence/windows-domain-enumeration/README.md)
-    * [User List](field-manual/intelligence/windows-domain-enumeration/user-list.md)
+    * [Users & Groups](field-manual/intelligence/windows-domain-enumeration/user-list.md)
     * [Password Policy](field-manual/intelligence/windows-domain-enumeration/password-policy.md)
 * [Analysis](field-manual/analysis/README.md)
   * [Attack Path Planning](field-manual/analysis/attack-path-planning.md)

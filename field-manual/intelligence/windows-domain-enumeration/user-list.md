@@ -2,7 +2,31 @@
 icon: user
 ---
 
-# User List
+# Users & Groups
+
+## Cheatsheet
+
+{% tabs %}
+{% tab title="Without Access" %}
+| Command                                                                                                                                                                                                                                                                                                      | Description                                                                                                                                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p><code>nxc smb &#x3C;dc> --users</code><br><code>nxc smb &#x3C;dc> -u '' -p '' --users</code></p>                                                                                                                                                                                                          | <p><strong>(SMB)</strong> Attempts to enumerate users via an SMB NULL session.<br><br><em>Only works if the target allows SMB NULL sessions.</em></p>                                                                                                |
+| <p><code>ldapsearch -H ldap://&#x3C;dc> -x -b "&#x3C;domain-dn>" -s sub "(&#x26;(objectclass=user))" | grep sAMAccountName: | cut -f2 -d" "</code><br><br><br>The Distinguished Name (DN) for the domain follows a structure like this:<br>Domain: <code>BRM.COM</code> → DN: <code>DC=BRM,DC=COM</code></p> | <p><strong>(LDAP)</strong> Attempts to enumerate users via an anonymous LDAP bind.<br><br><em>Only works if anonymous binding is enabled (rare).</em></p>                                                                                            |
+| <p><code>nxc smb &#x3C;target> -u '' -p '' --rid-brute --rid-brute &#x3C;max_rid></code><br><code>nxc smb &#x3C;target> -u 'guest' -p '' --rid-brute --rid-brute &#x3C;max_rid></code></p>                                                                                                                   | <p><strong>(Brute Force)</strong> Uses RID brute forcing to enumerate domain objects.<br><br>Defaults to RIDs up to 4000; using 8000+ is recommended for better coverage.</p>                                                                        |
+| <p><code>kerbrute userenum -d &#x3C;domain> --dc &#x3C;dc> &#x3C;wordlist> -o &#x3C;output-file></code><br><br>Copy the output to a file, then extract users with:<br><code>sed -n 's/.*VALID USERNAME:[[:space:]]*\([^@]*\)@.*/\1/p' output.txt > users.lst</code></p>                                      | <p><strong>(Brute Force)</strong> Uses Kerbrute and a worslist to enumerate valid usernames via Kerberos pre-authentication.<br><br>Does not trigger account lockouts.<br><br>Try to determine the username format and find a suitable wordlist.</p> |
+| <p><code>sudo responder -r</code> </p><p><code>-I &#x3C;network-interface></code></p>                                                                                                                                                                                                                        | <p><strong>(Network Poisoning)</strong> Launches Responder with default settings.<br><br>Intercepts LLMNR/NBT-NS requests to capture usernames and password hashes.<br><br>Usernames must be extracted manually.</p>                                 |
+{% endtab %}
+
+{% tab title="With Access (windows)" %}
+<table><thead><tr><th width="326">Command</th><th>Description</th></tr></thead><tbody><tr><td><code>Get-NetDomain</code></td><td><strong>(PowerView)</strong> Retrieves basic information about the current Active Directory domain.</td></tr><tr><td><p>All information:<br><code>Get-NetUser</code><br>Only crucial information:</p><p><code>Get-NetUser | select</code> </p><p><code>cn,pwdlastset,lastlogon</code></p></td><td><strong>(PowerView)</strong> Lists all domain users, including details like password last set and last logon time.</td></tr><tr><td>All information:<br><code>Get-NetGroup</code><br>Only crucial information:<br><code>Get-NetGroup | select cn</code></td><td><strong>(PowerView)</strong> Enumerates all domain groups.</td></tr><tr><td><code>Get-NetUser -SPN | select samaccountname,serviceprincipalname</code></td><td><strong>(PowerView)</strong> Finds accounts with Service Principal Names (SPNs), useful for Kerberoasting.</td></tr><tr><td><p><code>Get-NetSession -Verbose</code> </p><p><code>-ComputerName &#x3C;cn></code></p></td><td><strong>(PowerView)</strong> Lists active user sessions on a remote computer (requires local admin rights).<br><br>This could be a valuable opportunity to steal domain admin credentials from memory or impersonate them.</td></tr><tr><td>All users:<br><code>net user /domain</code><br>Specific user:<br><code>net user &#x3C;user> /domain</code></td><td><strong>(CMD)</strong> Lists all domain users or detailed info for a specific user.</td></tr><tr><td>All groups:<br><code>net group /domain</code><br>Specific group:<br><code>net group &#x3C;group> /domain</code></td><td><strong>(CMD)</strong> Lists all domain groups or members of a specified group.</td></tr></tbody></table>
+{% endtab %}
+
+{% tab title="With Access (Linux)" %}
+<table><thead><tr><th width="343">Command</th><th>Description</th></tr></thead><tbody><tr><td><p><code>nxc smb &#x3C;dc-ip> -u &#x3C;user></code> </p><p><code>-p &#x3C;password> --users</code><br><br>Copy the output to a file, then extract users with:<br><code>awk '$5 ~ /^[a-zA-Z0-9_]+$/ &#x26;&#x26; NF >= 5 { print $5 }' output.txt > users.lst</code></p></td><td><strong>(SMB)</strong> Retrieves a list of all users in the domain.<br><br>Also shows the count of bad password attempts for each user.<br><br></td></tr><tr><td><p><code>nxc smb &#x3C;dc-ip> -u &#x3C;user></code> </p><p><code>-p &#x3C;password> --groups</code></p></td><td><strong>(SMB)</strong> Retrieves a list of all groups in the domain.<br><br>Includes the member count for each group.<br><br>Pay special attention to key groups such as:<br>- Administrators<br>- Domain Admins<br>- Executives</td></tr><tr><td><code>nxc smb &#x3C;host> -u &#x3C;user> -p &#x3C;password> --loggedon-users</code></td><td><strong>(SMB)</strong> Lists users currently logged on to the specified host (requires local admin rights).<br><br>This could be a valuable opportunity to steal domain admin credentials from memory or impersonate them.</td></tr></tbody></table>
+{% endtab %}
+{% endtabs %}
+
+***
 
 ## SMB NULL Session
 
@@ -77,6 +101,8 @@ SMB         172.16.5.5      445    ACADEMY-EA-DC01  INLANEFREIGHT.LOCAL\avazquez
 <SNIP>
 ```
 
+***
+
 ## LDAP Anonymous Bind
 
 ### Tools
@@ -149,6 +175,8 @@ userPrincipalName: wdillard@inlanefreight.local
 Specify anonymous access by providing a blank username with the `-u` flag and the `-U` flag to tell the tool to retrieve just users.
 {% endhint %}
 
+***
+
 ## Kerberose Pre-Authentication
 
 ### Kerbrute
@@ -195,6 +223,8 @@ Using Kerbrute for username enumeration will generate event ID [4768: A Kerberos
 {% hint style="success" %}
 &#x20;Defenders can tune their SIEM tools to look for an influx of this event ID, which may indicate an attack. If we are successful with this method during a penetration test, this can be an excellent recommendation to add to our report.
 {% endhint %}
+
+***
 
 ## Credentialed Enumeration
 

@@ -51,6 +51,8 @@ For example, the blog post above is found to be at `/node/1`. This representatio
 Not every Drupal installation will look the same or display the login page or even allow users to access the login page from the internet.
 {% endhint %}
 
+***
+
 ## Users
 
 Drupal supports three types of users by default:
@@ -58,6 +60,8 @@ Drupal supports three types of users by default:
 1. `Administrator`: This user has complete control over the Drupal website.
 2. `Authenticated User`: These users can log in to the website and perform operations such as adding and editing articles based on their permissions.
 3. `Anonymous`: All website visitors are designated as anonymous. By default, these users are only allowed to read posts.
+
+***
 
 ## Manual Enumeration
 
@@ -92,6 +96,8 @@ curl -s http://drupal.acme.com/CHANGELOG.txt
 {% endcode %}
 
 There are several other things we could check in this instance to identify the version, such as using [droopescan.md](../../../toolbox/tooling/web-application-analysis/droopescan.md "mention").
+
+***
 
 ## Automated Enumeration
 

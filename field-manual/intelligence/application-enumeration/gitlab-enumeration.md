@@ -38,6 +38,8 @@ If we have no way to enumerate the version number (such as a date on the page, t
 **Do not blindly launch various exploits at an application**
 {% endhint %}
 
+***
+
 ## Enumeration
 
 ### Public Projects
@@ -51,6 +53,8 @@ Public projects can be interesting because we may be able to use them to find ou
 Once we are done digging through what is available externally, we should check and see if we can register an account and access additional projects.
 
 Suppose the organisation did not set up GitLab only to allow company emails to register or require an admin to approve a new account. In that case, we may be able to access additional data.
+
+***
 
 ## Enumerating Users
 
@@ -105,6 +109,8 @@ wget https://raw.githubusercontent.com/dpgg101/GitLabUserEnum/main/gitlab_useren
 python3 gitlab_userenum.py --url <URL> --wordlist /usr/share/wordlists/<USER_LIST>
 ```
 {% endcode %}
+
+***
 
 ## Advanced Git Enumeration
 

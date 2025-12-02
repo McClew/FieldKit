@@ -120,6 +120,8 @@ curl -s http://dev.acme.com/ | grep Joomla
 ```
 {% endcode %}
 
+***
+
 ## Enumeration
 
 ### droopescan

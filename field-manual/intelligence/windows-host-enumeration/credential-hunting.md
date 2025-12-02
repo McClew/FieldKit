@@ -15,7 +15,7 @@ layout:
     visible: true
 ---
 
-# Windows Credential Hunting
+# Credential Hunting
 
 ## Application Configuration Files
 
@@ -29,6 +29,8 @@ findstr /SIM /C:"password" *.txt *.ini *.cfg *.config *.xml
 
 Sensitive IIS information such as credentials may be stored in a `web.config` file. For the default IIS website, this could be located at `C:\inetpub\wwwroot\web.config`, but there may be multiple versions of this file in different locations, which we can search for recursively.
 
+***
+
 ## Dictionary Files
 
 ### Chrome Dictionary Files
@@ -38,6 +40,8 @@ Another interesting case is dictionary files. For example, sensitive information
 ```powershell
 gc 'C:\Users\htb-student\AppData\Local\Google\Chrome\User Data\Default\Custom Dictionary.txt' | Select-String password
 ```
+
+***
 
 ## Unattended Installation Files
 
@@ -65,6 +69,8 @@ Unattended installation files may define auto-logon settings or additional accou
 ```
 
 Although these files should be automatically deleted as part of the installation, sysadmins may have created copies of the file in other folders during the development of the image and answer file.
+
+***
 
 ## PowerShell History File
 
@@ -132,6 +138,8 @@ wevtutil qe Application "/q:*[Application [(EventID=3005)]]" /f:text /rd:true /u
 ```
 {% endcode %}
 
+***
+
 ## PowerShell Credentials
 
 PowerShell credentials are often used for scripting and automation tasks as a way to store encrypted credentials conveniently. The credentials are protected using [DPAPI](https://en.wikipedia.org/wiki/Data_Protection_API), which typically means they can only be decrypted by the same user on the same computer they were created on.
@@ -160,6 +168,8 @@ PS C:\htb> $credential.GetNetworkCredential().password
 
 Str0ng3ncryptedP@ss!
 ```
+
+***
 
 ## Manually Searching the File System for Credentials
 
@@ -224,6 +234,8 @@ Mode                 LastWriteTime         Length Name
 
 <SNIP>
 ```
+
+***
 
 ## Sticky Notes Passwords
 
@@ -323,6 +335,8 @@ U	93b49900-6530-42e0-b35c-2663989ae4b3
 <SNIP >
 ```
 
+***
+
 ## Other Files of Interest
 
 ### Other Interesting Files
@@ -350,6 +364,8 @@ C:\ProgramData\Configs\*
 C:\Program Files\Windows PowerShell\*
 ```
 
+***
+
 ## Cmdkey Saved Credentials
 
 ### Listing Saved Credentials
@@ -373,6 +389,8 @@ We can also attempt to reuse the credentials using `runas` to send ourselves a r
 ```powershell
 PS C:\> runas /savecred /user:inlanefreight\bob "COMMAND HERE"
 ```
+
+***
 
 ## Browser Credentials
 
@@ -411,6 +429,8 @@ C:\Users\bob\AppData\Local\Google\Chrome\User Data\Default\Login Data,https://vc
 
 Credential collection from Chromium-based browsers typically generates additional events that could be logged and identified by the blue team such as `4688` (process creation) and `16385` (DPAPI activity); defenders may also consider filesystem/object access events such as `4662` (object access) and `4663` (file access) to improve detection fidelity.
 {% endhint %}
+
+***
 
 ## Password Managers
 
@@ -470,9 +490,13 @@ Started: Fri Aug  6 11:17:45 2021
 Stopped: Fri Aug  6 11:18:11 2021
 ```
 
+***
+
 ## Email
 
 If we gain access to a domain-joined system in the context of a domain user with a Microsoft Exchange inbox, we can attempt to search the user's email for terms such as "pass," "creds," "credentials," etc. using the tool [MailSniper](https://github.com/dafthack/MailSniper).
+
+***
 
 ## Clear-Text Password Storage in the Registry
 
@@ -559,6 +583,8 @@ In this example, we can imagine the scenario that the IT administrator has confi
 
 For additional information on `reg.exe` and working with the registry, be sure to check out the [Introduction to Windows Command Line](https://academy.hackthebox.com/module/167/section/1623) module.
 
+***
+
 ## Wifi Passwords
 
 ### Viewing Saved Wireless Networks
@@ -632,6 +658,8 @@ Cost settings
     Roaming                : No
     Cost Source            : Default
 ```
+
+***
 
 ## Automated Credential Hunting
 

@@ -21,7 +21,7 @@ layout:
 The **File Transfer Protocol (FTP)** serves as a standard protocol for file transfer across a computer network between a server and a client.
 
 {% hint style="info" %}
-Default Port: 21
+The default ports for FTP are TCP port 21 for control commands and TCP port 20 for data transfer.
 {% endhint %}
 
 It is a **plain-text** protocol that uses as **new line character `0x0d 0x0a`** so sometimes you need to **connect using `telnet`** or **`nc -C`**.
@@ -31,12 +31,34 @@ PORT   STATE SERVICE
 21/tcp open  ftp
 ```
 
+Common anonymous login credentials include:
+
+* `anonymous`:`anonymous`
+* `anonymous`:\<blank>
+* `ftp`:`ftp`
+* `guest`:`guest`
+
+***
+
+## Cheatsheet
+
+| Action                                                                                                                | Description                                                                                                          |
+| --------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `sudo nmap -sC -sV -p 21 -v <target>`                                                                                 | Performs an Nmap scan on the FTP service to identify versions, scripts, and checks for anonymous login. Quite noisy. |
+| <p><code>sudo nmap -sV -p21 --script</code>   </p><p><code>ftp-anon &#x3C;target-ip></code></p>                       | Runs an Nmap script to check for anonymous authentication on the target FTP server.                                  |
+| <p><code>ftp &#x3C;target></code><br><code>nc -nv &#x3C;target> 21</code><br><code>telnet &#x3C;target> 21</code></p> | Different ways to connect to a remote FTP service.                                                                   |
+| `wget -m --no-passive ftp://<user>:<password>@<target-ip>`                                                            | Recursively downloads all accessible files from the target FTP server using Wget.                                    |
+
+***
+
 ## Banner Grabbing
 
 ```bash
 nc -vn <IP> 21
 openssl s_client -connect crossfit.htb:21 -starttls ftp # Get certificate if any
 ```
+
+***
 
 ## Connect to FTP using starttls <a href="#connect-to-ftp-using-starttls" id="connect-to-ftp-using-starttls"></a>
 
@@ -49,6 +71,8 @@ lftp 10.10.10.208:~> login
 Usage: login <user|URL> [<pass>]
 lftp 10.10.10.208:~> login username Password
 ```
+
+***
 
 ## Unauth enum <a href="#unauth-enum" id="unauth-enum"></a>
 
@@ -96,6 +120,8 @@ STAT
 #Info about the FTP server (version, configs, status...)
 ```
 
+***
+
 ## Anonymous login <a href="#anonymous-login" id="anonymous-login"></a>
 
 _anonymous : anonymous_\
@@ -112,11 +138,15 @@ ftp <IP>
 >bye     # Exit
 ```
 
+***
+
 ## Brute force
 
 Here you can find a nice list with default ftp credentials:
 
 [https://github.com/danielmiessler/SecLists/blob/master/Passwords/Default-Credentials/ftp-betterdefaultpasslist.txt](https://github.com/danielmiessler/SecLists/blob/master/Passwords/Default-Credentials/ftp-betterdefaultpasslist.txt)
+
+***
 
 ## Automated <a href="#automated" id="automated"></a>
 

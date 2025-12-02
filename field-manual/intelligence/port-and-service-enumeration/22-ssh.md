@@ -29,11 +29,27 @@ PORT   STATE SERVICE
 22/tcp open  ssh     syn-ack
 ```
 
+***
+
+## Cheatsheet
+
+| Action                                                                        | Description                                                                                                   |
+| ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `ssh-audit <target>`                                                          | Perform a security audit of the target SSH service, checking for vulnerabilities and misconfigurations.       |
+| `ssh <user>@<target>`                                                         | Log in to the SSH server using the SSH client.                                                                |
+| `ssh -i private.key <user>@<target>`                                          | Log in to the SSH server using a private key for authentication.                                              |
+| `ssh <user>@<target> -o PreferredAuthentications=password`                    | Force password-based authentication for login.                                                                |
+| `cat /etc/ssh/sshd_config \| grep -E 'PermitRootLogin\|PubkeyAuthentication'` | If you have a shell on the target, check if root login or public key authentication is enabled on the server. |
+
+***
+
 ## Banner Grabbing <a href="#banner-grabbing" id="banner-grabbing"></a>
 
 ```bash
 nc -vn <IP> 22
 ```
+
+***
 
 ## Automated ssh-audit <a href="#automated-ssh-audit" id="automated-ssh-audit"></a>
 
@@ -76,15 +92,21 @@ usage: ssh-audit.py [-1246pbcnjvlt] <host>
 $ python3 ssh-audit <IP>
 ```
 
+***
+
 ## Public SSH key of server <a href="#public-ssh-key-of-server" id="public-ssh-key-of-server"></a>
 
 ```bash
 ssh-keyscan -t rsa <IP> -p <PORT>
 ```
 
+***
+
 ## Weak Cipher Algorithms <a href="#weak-cipher-algorithms" id="weak-cipher-algorithms"></a>
 
 This is discovered by default by **nmap**. But you can also use **sslcan** or **sslyze**.
+
+***
 
 ## Nmap Scripts <a href="#nmap-scripts" id="nmap-scripts"></a>
 

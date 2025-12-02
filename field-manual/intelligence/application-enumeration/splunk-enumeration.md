@@ -26,11 +26,15 @@ Splunk is a log analytics tool used to gather, analyse and visualise data. Thoug
 The Splunk web server runs by default on port 8000.
 {% endhint %}
 
+***
+
 ## Trial Version
 
 The Splunk Enterprise trial converts to a free version after 60 days, which doesn’t require authentication. It is not uncommon for system administrators to install a trial of Splunk to test it out, which is subsequently forgotten about.
 
 This will automatically convert to the free version that **does not have any form of authentication**, introducing a security hole in the environment. Some organisations may opt for the free version due to budget constraints, not fully understanding the implications of having no user/role management.
+
+***
 
 ## Discovery & Footprinting
 

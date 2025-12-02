@@ -15,7 +15,7 @@ layout:
     visible: true
 ---
 
-# Windows Network Enumeration
+# Network
 
 ## **I**nterfaces, IP Addresses & DNS Information
 
@@ -200,6 +200,8 @@ Persistent Routes:
   None
 ```
 
+***
+
 ## Network Services
 
 The most common way people interact with processes is through a network socket (DNS, HTTP, SMB, etc.). The [netstat](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/netstat) command will display active TCP and UDP connections which will give us a better idea of what services are listening on which port(s) both locally and accessible to the outside. We may find a vulnerable service only accessible to the localhost (when logged on to the host) that we can exploit to escalate privileges.
@@ -243,4 +245,3 @@ Active Connections
 ```
 
 The one that sticks out immediately will be port `14147`, which is used for FileZilla's administrative interface. By connecting to this port, it may be possible to extract FTP passwords in addition to creating an FTP Share at c:\ as the FileZilla Server user (potentially Administrator).
-

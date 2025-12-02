@@ -21,7 +21,9 @@ Cloud service providers use their own implementation for email services. Those s
 
 [O365spray](https://github.com/0xZDH/o365spray) is a username enumeration and password spraying tool aimed at Microsoft Office 365 (O365) developed by [ZDH](https://twitter.com/0xzdh). This tool reimplements a collection of enumeration and spray techniques researched and identified by those mentioned in [Acknowledgments](https://github.com/0xZDH/o365spray#Acknowledgments).
 
-### **O365 Spray**
+***
+
+## **O365 Spray**
 
 Let's first validate if our target domain is using Office 365.
 

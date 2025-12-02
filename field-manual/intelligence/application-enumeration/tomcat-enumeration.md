@@ -20,6 +20,8 @@ layout:
 
 [Apache Tomcat](https://tomcat.apache.org) is an open-source web server that hosts applications written in Java.
 
+***
+
 ## Discovery & Footprinting
 
 ### Error Pages
@@ -54,6 +56,8 @@ curl -s http://app-dev.acme.com:8080/docs/ | grep Tomcat
 
 This is the default documentation page, which may not be removed by administrators. See the [#folder-structure](tomcat-enumeration.md#folder-structure "mention") section for more information.
 
+***
+
 ## Enumeration
 
 ### Gobuster
@@ -86,6 +90,8 @@ Progress: 49959 / 87665 (56.99%)^C
 We may be able to either log in to one of these using weak credentials such as `tomcat:tomcat`, `admin:admin`, etc. If these first few tries don't work, we can try a password brute force attack against the login page.
 
 If we are successful in logging in, we can upload a [Web Application Resource or Web Application ARchive (WAR)](https://en.wikipedia.org/wiki/WAR_\(file_format\)) file containing a JSP web shell and obtain remote code execution on the Tomcat server.
+
+***
 
 ## Folder Structure
 
@@ -226,6 +232,8 @@ The `tomcat-users.xml` file is used to allow or disallow access to the `/manager
 ```
 
 The file shows us what each of the roles `manager-gui`, `manager-script`, `manager-jmx`, and `manager-status` provide access to. In this example, we can see that a user `tomcat` with the password `tomcat` has the `manager-gui` role, and a second weak password `admin` is set for the user account `admin`.
+
+***
 
 ## Common Gateway Interface
 

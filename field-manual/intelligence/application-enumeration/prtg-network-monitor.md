@@ -50,6 +50,8 @@ http://<IP>:8080/index.htm
 
 <figure><img src="../../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
 
+***
+
 ## Enumeration
 
 ### Version Detection with cURL

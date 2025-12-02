@@ -15,7 +15,7 @@ layout:
     visible: true
 ---
 
-# Windows System Enumeration
+# System
 
 ## Configuration Information
 
@@ -113,6 +113,8 @@ WINLPE-SRV01 Security Update KB5001078 NT AUTHORITY\SYSTEM        3/25/2021 12:0
 WINLPE-SRV01 Security Update KB3200970 WINLPE-SRV01\Administrator 4/13/2021 12:00:00 AM
 ```
 
+***
+
 ## Environment Variables
 
 ### PATH
@@ -167,6 +169,8 @@ USERNAME=Administrator
 USERPROFILE=C:\Users\Administrator
 windir=C:\Windows 
 ```
+
+***
 
 ## CLSID
 

@@ -51,6 +51,8 @@ curl -s http://blog.acme.com | grep WordPress
 ```
 {% endcode %}
 
+***
+
 ## Theme & Plugin Enumeration
 
 ### Page Source
@@ -98,6 +100,8 @@ In this example we can see that the the plugins 'Contact Form 7' and 'mail-masta
 
 If directory listing is enabled, we may be able to navigate to a plugins directory. For example: `http://blog.acme.com/wp-content/plugins/mail-masta/`. Any files here are very often helpful in fingerprinting version numbers.
 
+***
+
 ## Enumerating Users
 
 ### User Permissions
@@ -123,6 +127,8 @@ However, an invalid username returns that the user was not found.
 <figure><img src="../../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
 This makes WordPress vulnerable to username enumeration, which can be used to obtain a list of potential usernames.
+
+***
 
 ## Automated Enumeration
 

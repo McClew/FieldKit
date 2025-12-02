@@ -15,7 +15,7 @@ layout:
     visible: true
 ---
 
-# Windows Software Enumeration
+# Software
 
 ## Installed Programs
 
@@ -112,6 +112,8 @@ Integration Services                                                    15.0.200
 <SNIP>
 ```
 
+***
+
 ## Running Processes
 
 ### Tasklist
@@ -187,6 +189,8 @@ Active Connections
   TCP    0.0.0.0:3389           0.0.0.0:0              LISTENING       968
 <SNIP>
 ```
+
+***
 
 ## Pipes
 

@@ -17,6 +17,12 @@ layout:
 
 # Linux User & Group Enumeration
 
+## Cheatsheet
+
+<table><thead><tr><th width="354">Action</th><th>Description</th></tr></thead><tbody><tr><td><code>cat /etc/passwd</code><br><br>Only usernames:<br><code>cut -d: -f1 /etc/passwd</code><br><br>Only username and home directories of users with shells.<br><code>awk -F: '($7 !~ /(false|nologin)$/) { print $1, $6 }' /etc/passwd</code></td><td>Lists all user accounts.<br><br>Make sure to check whether there are password hashes in <code>/etc/passwd</code>.</td></tr><tr><td>Lists all groups:<br><code>cat /etc/group</code><br><br>Only group with members:<br><code>awk -F: 'NF == 4 &#x26;&#x26; $4 != "" { print }' /etc/group</code></td><td>Lists all groups and its members.</td></tr><tr><td><code>id</code></td><td>Displays the name, UID and GID of the current user, alongside its group memberships.</td></tr><tr><td><code>env</code></td><td>Displays all shell environment variables.</td></tr><tr><td><code>who</code><br><code>w</code><br><code>finger</code></td><td>Lists currently logged in users.</td></tr><tr><td><code>lastlog</code></td><td>Lists when was the last time each user logged in.<br><br>Users who never logged in are less likely targets.</td></tr></tbody></table>
+
+***
+
 ## Current User
 
 ### sudo Privileges

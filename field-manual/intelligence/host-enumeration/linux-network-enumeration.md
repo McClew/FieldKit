@@ -17,6 +17,12 @@ layout:
 
 # Linux Network Enumeration
 
+## Cheatsheet
+
+<table><thead><tr><th width="367">Action</th><th>Description</th></tr></thead><tbody><tr><td><code>ip a</code></td><td>Displays all network interface configurations, including IP addresses and subnet masks.</td></tr><tr><td><code>ss -tunap | awk 'NR==1 || /ESTAB|LISTEN/'</code></td><td>Displays active network connections and their associated PID.<br><br><code>ESTAB</code>: Actively connected and exchanging data.<br><code>LISTEN</code>: Waiting for someone to connect.</td></tr><tr><td>Gateway:<br><code>ip route</code><br><br>DNS:<br><code>cat /etc/resolv.conf</code></td><td>Enumerates the default gateway and DNS server.</td></tr><tr><td><code>cat /etc/hosts</code></td><td>Displays the local host-to-IP address mappings on the system.</td></tr><tr><td><code>arp -a</code></td><td>Displays the system’s ARP cache.<br><br>Useful for identifying nearby or potentially new hosts.</td></tr></tbody></table>
+
+***
+
 ## Basic Network Enumeration
 
 By using `route` or `netstat -rn` we can identify what networks are available and via which interface.

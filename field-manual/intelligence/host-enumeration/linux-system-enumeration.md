@@ -1,5 +1,23 @@
 # Linux System Enumeration
 
+## Cheatsheet
+
+{% tabs %}
+{% tab title="Operating System" %}
+<table><thead><tr><th width="326">Action</th><th>Description</th></tr></thead><tbody><tr><td><code>hostname</code></td><td>Displays hostname of system.<br><br>This may hint at the purpose of the host.</td></tr><tr><td><p>Linux distro:<br><code>cat /etc/issue</code><br><code>cat /etc/*-release</code><br><br>Kernel version .<br><code>(cat /proc/version || uname -a )</code> </p><p><code>2>/dev/null</code></p></td><td>Displays the Linux distribution and kernel version.</td></tr><tr><td><code>arch</code></td><td>Displays the CPU architecture.</td></tr><tr><td><code>realm list</code></td><td>Check if Linux host is Active Directory domain-joined.<br><br>If it is, this command will output a bunch of information. Pay attention to the fields:<br>- <code>domain-name</code><br>- <code>permitted-logins</code><br>- <code>permitted-groups</code><br>- <code>configured</code> (if it’s <code>kerberos-member</code>, PtH is possible)</td></tr><tr><td><code>ps -ef | grep -i "winbind|sssd"</code></td><td>If the realms command does not exist, try to footprint by searching for AD tools such as <code>winbind</code> and <code>sssd</code>.</td></tr></tbody></table>
+{% endtab %}
+
+{% tab title="File System" %}
+| Action                                                                              | Description                                                              |
+| ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| `ls -la /opt /var/backups /var/opt /var/mail /tmp /var/tmp`                         | Check the contents of directories that often contains interesting files. |
+| `find / -writable -type d 2>/dev/null`                                              | Finds writable directories by the current user.                          |
+| `find /usr/bin /usr/sbin /usr/local/bin /usr/local/sbin -type f -exec getcap {} \;` | Finds files with capabilities set in common system binary directories.   |
+{% endtab %}
+{% endtabs %}
+
+***
+
 ## Tools
 
 Several helper scripts such as [LinPEAS](https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS) and [LinEnum](https://github.com/rebootuser/LinEnum) exist to assist with enumeration.

@@ -1,5 +1,24 @@
 # Linux Software Enumeration
 
+## Cheatsheet
+
+{% tabs %}
+{% tab title="Programs" %}
+| Action                                                                                                                                                                                                                                     | Description                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------- |
+| `which nmap aws nc ncat netcat nc.traditional wget curl ping gcc g++ make gdb base64 socat python python2 python3 python2.7 python2.6 python3.6 python3.7 perl php ruby xterm doas sudo fetch docker lxc ctr runc rkt kubectl 2>/dev/null` | Checks whether a bunch of useful programs are present on the system. |
+{% endtab %}
+
+{% tab title="Processes" %}
+| Action                                                                                                             | Description                                                               |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------- |
+| `./nmap -T4 -v 127.0.0.1`                                                                                          | Using a static binary of Nmap (LINK), runs an internal scan for services. |
+| <p><code>ps aux</code><br><br>Filter processes by a particular user:<br><code>ps aux | grep &#x3C;user></code></p> | <p>Lists system processes.<br><br>TODO what about pspy64</p>              |
+{% endtab %}
+{% endtabs %}
+
+***
+
 ## Processes
 
 ### Running Processes

@@ -174,7 +174,7 @@ windir=C:\Windows
 
 ## CLSID
 
-For some exploits - like [juicypotato.md](../../exploitation/privilege-escalation-1/user-privileges/seimpersonateprivilege-exploitation/juicypotato.md "mention") - we may need to get CLSID values.
+For some exploits - like [juicypotato.md](../../post-exploitation/privilege-escalation-1/user-privileges/seimpersonateprivilege-exploitation/juicypotato.md "mention") - we may need to get CLSID values.
 
 ```powershell
 PS C:\> reg query HKEY_CLASSES_ROOT\CLSID /s /f LocalService

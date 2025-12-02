@@ -161,7 +161,7 @@
     * [HTTP Verb Tampering](field-manual/exploitation/web-attacks/http-verb-tampering.md)
     * [Insecure Direct Object References (IDOR)](field-manual/exploitation/web-attacks/insecure-direct-object-references-idor.md)
     * [Mass Assignment Vulnerability](field-manual/exploitation/web-attacks/mass-assignment-vulnerability.md)
-    * [SQL Injection](field-manual/exploitation/web-attacks/sql-injection.md)
+    * [SQL Injection (SQLi)](field-manual/exploitation/web-attacks/sql-injection-sqli.md)
     * [XML External Entity (XXE) Injection](field-manual/exploitation/web-attacks/xml-external-entity-xxe-injection.md)
 * [Post-Exploitation](field-manual/post-exploitation/README.md)
   * [Command & Control](field-manual/post-exploitation/command-and-control.md)

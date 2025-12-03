@@ -1,5 +1,4 @@
 ---
-icon: jenkins
 layout:
   width: default
   title:

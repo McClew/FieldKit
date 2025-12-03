@@ -1,5 +1,4 @@
 ---
-icon: compact-disc
 layout:
   width: default
   title:

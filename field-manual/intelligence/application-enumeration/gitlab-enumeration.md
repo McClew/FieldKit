@@ -1,5 +1,4 @@
 ---
-icon: gitlab
 layout:
   width: default
   title:

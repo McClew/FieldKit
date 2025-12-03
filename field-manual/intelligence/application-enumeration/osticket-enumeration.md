@@ -1,5 +1,4 @@
 ---
-icon: ticket
 layout:
   width: default
   title:

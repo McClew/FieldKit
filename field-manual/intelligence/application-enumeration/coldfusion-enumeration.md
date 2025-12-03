@@ -1,5 +1,4 @@
 ---
-icon: icicles
 layout:
   width: default
   title:

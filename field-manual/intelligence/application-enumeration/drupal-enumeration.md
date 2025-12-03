@@ -1,5 +1,4 @@
 ---
-icon: drupal
 layout:
   width: default
   title:

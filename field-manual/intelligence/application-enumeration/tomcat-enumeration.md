@@ -1,5 +1,4 @@
 ---
-icon: cat
 layout:
   width: default
   title:

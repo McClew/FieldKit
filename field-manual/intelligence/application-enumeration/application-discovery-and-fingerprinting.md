@@ -1,5 +1,4 @@
 ---
-icon: eye
 layout:
   width: default
   title:

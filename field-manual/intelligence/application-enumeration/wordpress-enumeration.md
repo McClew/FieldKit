@@ -1,5 +1,4 @@
 ---
-icon: wordpress
 layout:
   width: default
   title:

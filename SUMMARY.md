@@ -228,7 +228,7 @@
   * [Pivoting, Tunnelling & Port Forwarding](field-manual/post-exploitation/pivoting-tunnelling-and-port-forwarding/README.md)
     * [Network Pivoting with SOCKS](field-manual/post-exploitation/pivoting-tunnelling-and-port-forwarding/network-pivoting-with-socks.md)
     * [Pivoting Reconnaisance](field-manual/post-exploitation/pivoting-tunnelling-and-port-forwarding/pivoting-reconnaisance.md)
-    * [SOCKS Proxy Pivoting](field-manual/post-exploitation/pivoting-tunnelling-and-port-forwarding/socks-proxy-pivoting.md)
+    * [SOCKS](field-manual/post-exploitation/pivoting-tunnelling-and-port-forwarding/socks-proxy-pivoting.md)
     * [SSH Tunnelling](field-manual/post-exploitation/pivoting-tunnelling-and-port-forwarding/ssh-tunnelling.md)
     * [SSH Local Port Forwarding](field-manual/post-exploitation/pivoting-tunnelling-and-port-forwarding/ssh-local-port-forwarding.md)
     * [SSH Remote Port Forwarding](field-manual/post-exploitation/pivoting-tunnelling-and-port-forwarding/ssh-remote-port-forwarding.md)

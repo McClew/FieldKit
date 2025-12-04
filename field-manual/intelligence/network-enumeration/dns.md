@@ -6,6 +6,8 @@ icon: at
 
 DNS offers a variety of information about public - and sometimes private - servers, such as IP addresses, server names, and server functionality.
 
+***
+
 ## DNS Enumeration
 
 | Tool                       | Description                                                                                             |
@@ -18,6 +20,8 @@ DNS offers a variety of information about public - and sometimes private - serve
 | dnsrecon                   | Combines multiple DNS reconnaissance techniques and supports various output formats.                    |
 | theHarvester               | OSINT tool that gathers information from various sources, including DNS records (email addresses).      |
 | Online DNS Lookup Services | User-friendly interfaces for performing DNS lookups.                                                    |
+
+***
 
 ## Subdomain Enumeration
 
@@ -34,7 +38,9 @@ Subdomain enumeration is the process of systematically identifying and listing s
 | assetfinder | Simple yet effective tool for finding subdomains using various techniques, ideal for quick and lightweight scans.                                              |
 | puredns     | Powerful and flexible DNS brute-forcing tool, capable of resolving and filtering results effectively.                                                          |
 
-Subdomains can also be enumerated using scripts: DNS Lookup Brute Force DNS Reverse Lookup Brute Force
+Subdomains can also be enumerated using scripts: DNS Lookup Brute Force DNS Reverse Lookup Brute Force.
+
+***
 
 ## Virtual Host (VHost) Enumeration
 
@@ -45,6 +51,8 @@ Virtual hosting is the ability of web servers to distinguish between multiple we
 | gobuster    | A multi-purpose tool often used for directory/file brute-forcing, but also effective for virtual host discovery. Fast, supports multiple HTTP methods, can use custom wordlists. |
 | Feroxbuster | Similar to Gobuster, but with a Rust-based implementation, known for its speed and flexibility. Supports recursion, wildcard discovery, and various filters.                     |
 | ffuf        | Another fast web fuzzer that can be used for virtual host discovery by fuzzing the Host header. Customizable wordlist input and filtering options.                               |
+
+***
 
 ## DNS Zone Transfer Enumeration
 

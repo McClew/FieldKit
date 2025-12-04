@@ -26,6 +26,8 @@ Default Port: 53
 
 DNS holds interesting information for an organisation, it can provide more data to understand how a company operates and the services they provide, as well as third-party service providers like emails.
 
+***
+
 ## Basic Enumeration
 
 The Nmap `-sC` (default scripts) and `-sV` (version scan) options can be used to perform initial enumeration against the target DNS servers:
@@ -40,6 +42,8 @@ Host is up (0.017s latency).
 PORT    STATE  SERVICE     VERSION
 53/tcp  open   domain      ISC BIND 9.11.3-1ubuntu1.2 (Ubuntu Linux)
 ```
+
+***
 
 ## Subdomain Enumeration
 
@@ -104,6 +108,8 @@ The `support` subdomain has an alias record pointing to an AWS S3 bucket. Howeve
 <figure><img src="../../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 The [can-i-take-over-xyz](https://github.com/EdOverflow/can-i-take-over-xyz) repository is also an excellent reference for a subdomain takeover vulnerability. It shows whether the target services are vulnerable to a subdomain takeover and provides guidelines on assessing the vulnerability.
+
+***
 
 ## DNS Zone Transfer
 

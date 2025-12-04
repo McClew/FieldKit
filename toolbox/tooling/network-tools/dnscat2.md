@@ -37,7 +37,7 @@ Dnscat2 can be an extremely stealthy approach to exfiltrate data while evading f
 
 ***
 
-## Setup
+## Setup & Basic Use
 
 {% stepper %}
 {% step %}

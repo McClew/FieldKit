@@ -393,6 +393,7 @@
   * [Network Tools](toolbox/tooling/network-tools/README.md)
     * [Chisel](toolbox/tooling/network-tools/chisel.md)
     * [Dnscat2](toolbox/tooling/network-tools/dnscat2.md)
+    * [Ligolo-ng](toolbox/tooling/network-tools/ligolo-ng.md)
     * [Proxychains](toolbox/tooling/network-tools/proxychains.md)
     * [Socat](toolbox/tooling/network-tools/socat.md)
     * [SocksOverRDP](toolbox/tooling/network-tools/socksoverrdp.md)

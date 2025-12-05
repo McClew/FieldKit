@@ -423,3 +423,7 @@
 * [Linux Privilege Escalation Methodology](play-books/linux-privilege-escalation-methodology.md)
 * [Windows Privilege Escalation Methodology](play-books/windows-privilege-escalation-methodology.md)
 * [Active Directory Methodology](play-books/active-directory-methodology.md)
+
+## Exam Guidance
+
+* [CPTS Exam Tactics and Survival Guide](exam-guidance/cpts-exam-tactics-and-survival-guide.md)

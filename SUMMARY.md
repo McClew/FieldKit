@@ -432,4 +432,4 @@
 
 ## Exam Guidance
 
-* [CPTS Exam Tactics and Survival Guide](exam-guidance/cpts-exam-tactics-and-survival-guide.md)
+* [CPTS Exam Tactics & Survival Guide](exam-guidance/cpts-exam-tactics-and-survival-guide.md)

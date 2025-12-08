@@ -192,6 +192,8 @@ For maximum data retrieval:
 * **Dump All Databases:** Use the `--dump-all` switch to retrieve all content from every database on the server. It is generally advised to combine this with `--exclude-sysdbs` to skip retrieving irrelevant data from system databases (e.g., `information_schema`).
 * **Automated Full Enumeration:** For convenience, the combination of the switches `--all` and `--batch` will automatically run the entire enumeration process against the target and provide all details.
 
+***
+
 ## Advanced Database Enumeration
 
 When you have covered the basics of database enumeration, you can move to more advanced techniques to retrieve specific data of interest.

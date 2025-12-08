@@ -354,6 +354,7 @@
   * [Database Assessment](toolbox/tooling/database-assessment/README.md)
     * [SQLMap](toolbox/tooling/database-assessment/sqlmap/README.md)
       * [Database Enumeration](toolbox/tooling/database-assessment/sqlmap/database-enumeration.md)
+      * [Handling Errors](toolbox/tooling/database-assessment/sqlmap/handling-errors.md)
   * [Password Attacks](toolbox/tooling/password-attacks/README.md)
     * [CeWL](toolbox/tooling/password-attacks/cewl.md)
     * [Crowbar](toolbox/tooling/password-attacks/crowbar.md)

@@ -18,36 +18,126 @@ layout:
 
 # Initial Enumeration Methodology
 
-## Passive Recon
+## Passive Reconnaissance
 
-1. Gather public info.\
-   ( [dns.md](../field-manual/intelligence/network-enumeration/dns.md "mention"), [whois.md](../field-manual/intelligence/web-enumeration/whois.md "mention"), certificates, company structure )
-2. Search public data leaks.\
-   ( [search-engine-discovery.md](../field-manual/intelligence/osint/search-engine-discovery.md "mention"), GitHub, Pastebin )
+Passive reconnaissance involves gathering information without directly interacting with the target's systems, minimising detection risk.
+
+### Domain and Host Information
+
+{% stepper %}
+{% step %}
+* #### WHOIS Lookup
+
+Retrieve registration data, including creation/expiration dates, registrar, and potentially contact information (if not privacy-protected).
+{% endstep %}
+
+{% step %}
+* #### DNS Record Examination
+
+Use tools to query A, AAAA, MX, NS, and TXT records to map the infrastructure.
+{% endstep %}
+
+{% step %}
+* #### Subdomain Enumeration
+
+Use techniques (e.g., certificate transparency logs, brute-forcing, passive lookups) to find hidden or forgotten subdomains.
+{% endstep %}
+{% endstepper %}
+
+### Public-Facing Assets and Code
+
+{% stepper %}
+{% step %}
+* #### Search Engine Dorking
+
+Use advanced search operators (Google Dorks, Bing Dorks) to find sensitive files, error messages, login pages, or exposed directories.
+{% endstep %}
+
+{% step %}
+* #### Code Repositories
+
+Search platforms like GitHub, GitLab, and Bitbucket for exposed credentials, API keys, configuration files, or internal documentation related to the target.
+{% endstep %}
+
+{% step %}
+* #### Public File Metadata
+
+Analyse document metadata (PDFs, DOCX) found online for internal usernames, server names, or geographical data.
+{% endstep %}
+{% endstepper %}
+
+### Employee & Organisation Data
+
+{% stepper %}
+{% step %}
+* #### Social Media Analysis
+
+Search for key employees on platforms like LinkedIn to understand organizational structure, technology stacks, and potential phishing targets.
+{% endstep %}
+
+{% step %}
+* #### Email Harvesting
+
+Attempt to determine a common email format for the organisation (e.g., `firstname.lastname@target.com`).
+{% endstep %}
+{% endstepper %}
+
+***
 
 ## Active Recon
 
-1. Discover all active hosts on the target network/IP range/subnet(s). Document all active hosts.
-   * Host discovery scan.\
-     ( [host-discovery.md](../toolbox/tooling/information-gathering/network-enumeration/nmap/host-discovery.md "mention"), [nmap](../toolbox/tooling/information-gathering/network-enumeration/nmap/ "mention") )
-   * ICMP sweep.\
-     ( ping or fping )
-   * TCP/UDP host discovery.\
-     ( nmap -sn, masscan )
-   * ARP scanning - if on same subnet.
-   * Add discovered hostnames to **/etc/hosts** file.
-2. For each active host, scan all TCP/UDP ports. Document each open port for the respective host.
-3. For each open port, run service version scan on discovered ports with scripts and OS detection.
-   * [nmap](../toolbox/tooling/information-gathering/network-enumeration/nmap/ "mention") service enumeration & OS detection.
-   * [netcat.md](../toolbox/tooling/post-exploitation/netcat.md "mention") [banner-grabbing.md](../field-manual/intelligence/port-and-service-enumeration/banner-grabbing.md "mention") for manual confirmation.
-   * Document services and service versions.
-4. For each detected service, conduct [service-enumeration.md](../toolbox/tooling/information-gathering/network-enumeration/nmap/service-enumeration.md "mention") to find more information and potential vulnerabilities.
-5. Check for vulnerabilities in discovered services and service versions.
-   * Search [metasploit](../toolbox/tooling/exploitation-tools/metasploit/ "mention") for exploits.
-   * Search [ExploitDB](https://www.exploit-db.com/) for exploits.
-   * Look at [nmap](../toolbox/tooling/information-gathering/network-enumeration/nmap/ "mention") script output for discovered vulnerabilities or misconfigurations.
-   * Look for OS version exploits.
-   * Document discovered vulnerabilities.
-6. Check file share services for for anonymous logon and credential files.
-   * [21-ftp.md](../field-manual/intelligence/port-and-service-enumeration/21-ftp.md "mention") enumeration.
-   * [139-445-smb.md](../field-manual/intelligence/port-and-service-enumeration/139-445-smb.md "mention") enumeration.
+Active reconnaissance involves direct interaction with the target's network, which increases the likelihood of detection but provides much richer data.
+
+### Host Discovery and Port Scanning
+
+{% stepper %}
+{% step %}
+* #### Ping Sweeps/ICMP
+
+Identify which hosts are alive on the target network.
+{% endstep %}
+
+{% step %}
+* #### TCP/UDP Port Scanning (Initial)
+
+Use a tool like Nmap to identify common open ports and the services running on them. Start with less-invasive, non-aggressive scans.
+{% endstep %}
+
+{% step %}
+* #### Firewall/IDS Evasion
+
+Test methods to bypass basic network defenses. _Potential Link: Tools & Techniques: Nmap Evasion_
+{% endstep %}
+{% endstepper %}
+
+### Service and Version Enumeration
+
+{% stepper %}
+{% step %}
+* #### Deep Service Scanning
+
+Re-scan the open ports identified in the initial step to accurately determine the software version, operating system, and specific configurations (e.g., HTTP headers, SSL/TLS certificate details).
+{% endstep %}
+
+{% step %}
+* #### Web Server Enumeration
+
+Access identified web services to check for common files like `robots.txt`, `sitemap.xml`, or hidden directories. _Potential Link: Web Application Pentest Checklist_
+{% endstep %}
+{% endstepper %}
+
+### Directory and File Enumeration (For Web Targets)
+
+{% stepper %}
+{% step %}
+* #### Content Discovery (Fuzzing/Brute-forcing)
+
+Use tools like `ffuf` or `dirbuster` against identified web services to find hidden files, folders, or pages that are not linked from the main site.
+{% endstep %}
+
+{% step %}
+* #### Virtual Host Enumeration
+
+Check for multiple websites hosted on the same IP address.
+{% endstep %}
+{% endstepper %}

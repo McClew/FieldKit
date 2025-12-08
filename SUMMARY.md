@@ -354,6 +354,7 @@
   * [Database Assessment](toolbox/tooling/database-assessment/README.md)
     * [SQLMap](toolbox/tooling/database-assessment/sqlmap/README.md)
       * [Database Enumeration](toolbox/tooling/database-assessment/sqlmap/database-enumeration.md)
+      * [Attack Tuning](toolbox/tooling/database-assessment/sqlmap/attack-tuning.md)
       * [Bypassing Web Application Protections](toolbox/tooling/database-assessment/sqlmap/bypassing-web-application-protections.md)
       * [Handling Errors](toolbox/tooling/database-assessment/sqlmap/handling-errors.md)
   * [Password Attacks](toolbox/tooling/password-attacks/README.md)

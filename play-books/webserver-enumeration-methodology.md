@@ -66,5 +66,5 @@ layout:
     * Check user input fields for [cross-site-scripting-xss.md](../field-manual/exploitation/web-attacks/cross-site-scripting-xss.md "mention") vulnerabilities.
     * Test HTTP requests for [http-verb-tampering.md](../field-manual/exploitation/web-attacks/http-verb-tampering.md "mention") vulnerabilities to bypass access controls or injection validations.
     * If XML input is accepted, test for [xml-external-entity-xxe-injection.md](../field-manual/exploitation/web-attacks/xml-external-entity-xxe-injection.md "mention").
-14. If the webserver has a web socket or API that is reachable, check if requests are injectable with [sqlmap.md](../toolbox/tooling/database-assessment/sqlmap.md "mention").
+14. If the webserver has a web socket or API that is reachable, check if requests are injectable with [sqlmap](../toolbox/tooling/database-assessment/sqlmap/ "mention").
     1. Websocket / API injection.

@@ -352,7 +352,7 @@
     * [Wafw00f](toolbox/tooling/web-application-analysis/wafw00f.md)
     * [WPScan](toolbox/tooling/web-application-analysis/wpscan.md)
   * [Database Assessment](toolbox/tooling/database-assessment/README.md)
-    * [sqlmap](toolbox/tooling/database-assessment/sqlmap.md)
+    * [SQLMap](toolbox/tooling/database-assessment/sqlmap.md)
   * [Password Attacks](toolbox/tooling/password-attacks/README.md)
     * [CeWL](toolbox/tooling/password-attacks/cewl.md)
     * [Crowbar](toolbox/tooling/password-attacks/crowbar.md)

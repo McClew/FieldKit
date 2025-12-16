@@ -28,6 +28,12 @@ Experience and a repeatable process are key so that we can sift through all of o
 
 When starting in penetration testing, it can be difficult to know what to prioritise, and we may fall down rabbit holes trying to exploit a flaw that doesn't exist or getting a broken PoC exploit to work. Time and experience help here, but we should also lean on senior team members and mentors to help. Something that you may waste half a day on could be something that they have seen many times and could tell you quickly whether it is a false positive or worth running down. Even if they can't give you a really quick black and white answer, they can at least point you in a direction that saves you several hours. Surround yourself with people you're comfortable with asking for help that won't make you feel like an idiot if you don't know all the answers.
 
+## HTB Examples
+
+{% file src="../../../.gitbook/assets/Inlanefreight_IPT_DRAFT (1).pdf" %}
+
+{% file src="../../../.gitbook/assets/Inlanefreight_IPT_DRAFT.docx" %}
+
 ## Additional Resources
 
 {% embed url="https://www.blackhillsinfosec.com/how-to-not-suck-at-reporting-or-how-to-write-great-pentesting-reports/" %}

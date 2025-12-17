@@ -143,6 +143,7 @@
     * [RDP](field-manual/exploitation/attacking-services/rdp.md)
     * [SMB](field-manual/exploitation/attacking-services/smb.md)
     * [SMTP](field-manual/exploitation/attacking-services/smtp.md)
+    * [WinRM](field-manual/exploitation/attacking-services/winrm.md)
   * [Authentication Bypass](field-manual/exploitation/authentication-bypass.md)
   * [Buffer Overflow](field-manual/exploitation/buffer-overflow.md)
   * [Brute-Force](field-manual/exploitation/brute-force/README.md)

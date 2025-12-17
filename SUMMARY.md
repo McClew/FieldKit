@@ -308,6 +308,8 @@
     * [subfinder](toolbox/tooling/information-gathering/subfinder.md)
     * [Sublist3r](toolbox/tooling/information-gathering/sublist3r.md)
     * [Windows Enumeration](toolbox/tooling/information-gathering/windows-enumeration/README.md)
+      * [Domain Enumeration](toolbox/tooling/information-gathering/windows-enumeration/domain-enumeration/README.md)
+        * [windapsearch](toolbox/tooling/information-gathering/windows-enumeration/domain-enumeration/windapsearch.md)
       * [Privilege Escalation](toolbox/tooling/information-gathering/windows-enumeration/privilege-escalation/README.md)
         * [Seatbelt](toolbox/tooling/information-gathering/windows-enumeration/privilege-escalation/seatbelt.md)
         * [winPeas](toolbox/tooling/information-gathering/windows-enumeration/privilege-escalation/winpeas.md)

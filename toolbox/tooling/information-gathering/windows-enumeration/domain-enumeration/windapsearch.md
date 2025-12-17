@@ -26,9 +26,27 @@ layout:
 {% endhint %}
 
 {% hint style="warning" %}
-#### Depreciated
+#### Superseded
 
 This tool has been superseded by go-windapsearch.
 
 [https://github.com/ropnop/go-windapsearch](https://github.com/ropnop/go-windapsearch)
 {% endhint %}
+
+***
+
+## Cheatsheet
+
+
+
+***
+
+## Basic Commands
+
+### Query Users in a Domain
+
+```bash
+./windapsearch.py -d <DOMAIN_NAME> --dc-ip <IP> -U
+```
+
+The `-U` flag is used to enumerate all users, i.e., objects with `objectCategory` set to user.

@@ -46,7 +46,13 @@ This tool has been superseded by go-windapsearch.
 ### Query Users in a Domain
 
 ```bash
-./windapsearch.py -d <DOMAIN_NAME> --dc-ip <IP> -U
+./windapsearch.py -d <DOMAIN> --dc-ip <IP> -U
 ```
 
-The `-U` flag is used to enumerate all users, i.e., objects with `objectCategory` set to user.
+The `-U` flag is used to enumerate all users, i.e., objects with `objectCategory` set to `user`.
+
+### Query all Domain Objects
+
+```bash
+./windapsearch.py -d <DOMAIN> --dc-ip <IP> --custom "objectClass=*"
+```

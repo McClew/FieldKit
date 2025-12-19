@@ -247,6 +247,7 @@
     * [Payloads](field-manual/post-exploitation/shells/payloads.md)
     * [Shell Stabilisation](field-manual/post-exploitation/shells/shell-stabilisation.md)
   * [Windows Privilege Escalation](field-manual/post-exploitation/privilege-escalation-1/README.md)
+    * [DCSync](field-manual/post-exploitation/privilege-escalation-1/dcsync.md)
     * [Internal Monologue Attack](field-manual/post-exploitation/privilege-escalation-1/internal-monologue-attack.md)
     * [Kerberoasting](field-manual/post-exploitation/privilege-escalation-1/kerberoasting/README.md)
       * [Kerberoasting with Impacket GetUserSPNs.py](field-manual/post-exploitation/privilege-escalation-1/kerberoasting/kerberoasting-with-impacket-getuserspns.py.md)

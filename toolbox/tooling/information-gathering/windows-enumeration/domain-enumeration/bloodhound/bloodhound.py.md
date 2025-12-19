@@ -26,7 +26,7 @@ layout:
 
 Install via apt:
 
-`sudo apt install bloodhound.py`
+`sudo apt install bloodhound-ce-python`
 
 
 
@@ -75,6 +75,6 @@ pip install .
 
 {% code overflow="wrap" %}
 ```bash
-bloodhound-python -u '<USER>' -p '<PASS>' -d '<DOMAIN>' -dc '<DC_IP>' -c All
+bloodhound-ce-python -u '<USER>' -p '<PASS>' -d '<DOMAIN>' -dc '<HOST_NAME>.<DOMAIN>' -ns '<DC_IP> -c All --zip
 ```
 {% endcode %}

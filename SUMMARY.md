@@ -289,7 +289,7 @@
     * [Assessment Narrative](field-manual/post-engagement/report-writing/assessment-narrative.md)
     * [Appendices](field-manual/post-engagement/report-writing/appendices.md)
     * [Proof-of-Concept](field-manual/post-engagement/report-writing/proof-of-concept.md)
-    * [Quantifying Risk](field-manual/post-engagement/report-writing/quantifying-risk.md)
+    * [Vulnerability Classification & Risk Quantification](field-manual/post-engagement/report-writing/quantifying-risk.md)
     * [QA Checklist](field-manual/post-engagement/report-writing/qa-checklist.md)
   * [Executive Report](field-manual/post-engagement/executive-report.md)
   * [Technical Report](field-manual/post-engagement/technical-report.md)

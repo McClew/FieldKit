@@ -16,7 +16,7 @@ layout:
     visible: true
 ---
 
-# Password Policy
+# Domain Password Policy
 
 ## Cheatsheet
 
@@ -82,7 +82,7 @@ If we can authenticate to the domain from a Windows host, we can use built-in Wi
 
 ### Tools
 
-<table><thead><tr><th width="213">Name</th><th>Description</th></tr></thead><tbody><tr><td>net.exe</td><td>A built-in Windows command-line utility used for managing various network resources, including user accounts, groups, network shares, services, and connections, on both local and remote systems.</td></tr><tr><td><a data-mention href="../../../toolbox/tooling/post-exploitation/powerview.md">powerview.md</a></td><td>A PowerShell tool for enumerating users, groups, computers, GPOs, and trusts, as well as identifying common misconfigurations and attack paths within Windows Active Directory domains.</td></tr></tbody></table>
+<table><thead><tr><th width="213">Name</th><th>Description</th></tr></thead><tbody><tr><td>net.exe</td><td>A built-in Windows command-line utility used for managing various network resources, including user accounts, groups, network shares, services, and connections, on both local and remote systems.</td></tr><tr><td><a data-mention href="../../../toolbox/tooling/post-exploitation/powersploit/powerview.md">powerview.md</a></td><td>A PowerShell tool for enumerating users, groups, computers, GPOs, and trusts, as well as identifying common misconfigurations and attack paths within Windows Active Directory domains.</td></tr></tbody></table>
 
 ### net.exe
 

@@ -16,7 +16,7 @@ layout:
     visible: true
 ---
 
-# Object Permissions
+# Domain Object Permissions
 
 Object Permissions Enumeration is a critical step in identifying privilege escalation opportunities within Active Directory environments.
 
@@ -41,5 +41,5 @@ Together, these techniques form a foundation for effective AD enumeration and pr
 {% hint style="info" %}
 #### Note
 
-Most of these commands are part of [powerview.md](../../../toolbox/tooling/post-exploitation/powerview.md "mention").
+Most of these commands are part of [powerview.md](../../../toolbox/tooling/post-exploitation/powersploit/powerview.md "mention").
 {% endhint %}

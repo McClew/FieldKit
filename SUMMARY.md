@@ -311,6 +311,7 @@
     * [Windows Enumeration](toolbox/tooling/information-gathering/windows-enumeration/README.md)
       * [Domain Enumeration](toolbox/tooling/information-gathering/windows-enumeration/domain-enumeration/README.md)
         * [BloodHound](toolbox/tooling/information-gathering/windows-enumeration/domain-enumeration/bloodhound/README.md)
+          * [BloodHound.py](toolbox/tooling/information-gathering/windows-enumeration/domain-enumeration/bloodhound/bloodhound.py.md)
           * [SharpHound](toolbox/tooling/information-gathering/windows-enumeration/domain-enumeration/bloodhound/sharphound.md)
         * [windapsearch](toolbox/tooling/information-gathering/windows-enumeration/domain-enumeration/windapsearch.md)
       * [Privilege Escalation](toolbox/tooling/information-gathering/windows-enumeration/privilege-escalation/README.md)

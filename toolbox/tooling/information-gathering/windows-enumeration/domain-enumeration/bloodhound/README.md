@@ -17,6 +17,12 @@ layout:
 
 # BloodHound
 
+{% hint style="warning" %}
+#### Community Edition
+
+This article and its sub-pages are referencing the Community Edition of BloodHound, NOT the Legacy version.
+{% endhint %}
+
 > BloodHound uses graph theory to reveal hidden and often unintended relationships within Active Directory, Entra ID (formerly Azure AD), and Microsoft Azure IaaS. Defenders (blue teams) and attackers (red teams) use BloodHound for a deeper understanding of privileged relationships in an environment.
 
 {% hint style="info" %}

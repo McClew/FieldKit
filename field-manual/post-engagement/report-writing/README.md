@@ -20,20 +20,23 @@ layout:
 
 ## Structure
 
-1. [executive-summary](executive-summary/ "mention")
-   1. Scope
-2. Assessment & Findings Overview
-   1. [assessment-overview.md](assessment-overview.md "mention")
-      1. [#visuals-for-executives](assessment-overview.md#visuals-for-executives "mention")
-   2. Findings Overview
-3. Walkthrough ( [assessment-narrative.md](assessment-narrative.md "mention") )
+1. Statement of Confidentiality
+2. Engagement Contacts (Customer and Assessor info)
+3. [executive-summary](executive-summary/ "mention")
+   1. Approach
+   2. Scope
+   3. Assessment & [recommendations-summary.md](recommendations-summary.md "mention")
+4. Walkthrough Summary
+   1. Summary
+   2. [visuals-for-executives.md](executive-summary/visuals-for-executives.md "mention")
+5. Technical Walkthrough ( [assessment-narrative.md](assessment-narrative.md "mention") )
    1. Phase 1: \<Phase name such as "Initial Access">
       1. \<Action/goal orientated section>
       2. \<Example: "Initial Port Scan">
    2. Phase 2: \<Phase name such as "Internal Disovery">
       1. \<Action/goal orientated section>
-4. [findings](findings/ "mention")
-5. [appendices.md](appendices.md "mention")
+6. [findings](findings/ "mention")
+7. [appendices.md](appendices.md "mention")
 
 ## Prioritisation
 

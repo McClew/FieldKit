@@ -18,6 +18,23 @@ layout:
 
 # Report Writing
 
+## Structure
+
+1. [executive-summary](executive-summary/ "mention")
+   1. Scope
+2. Assessment & Findings Overview
+   1. [assessment-overview.md](assessment-overview.md "mention")
+      1. [#visuals-for-executives](assessment-overview.md#visuals-for-executives "mention")
+   2. Findings Overview
+3. Walkthrough ( [assessment-narrative.md](assessment-narrative.md "mention") )
+   1. Phase 1: \<Phase name such as "Initial Access">
+      1. \<Action/goal orientated section>
+      2. \<Example: "Initial Port Scan">
+   2. Phase 2: \<Phase name such as "Internal Disovery">
+      1. \<Action/goal orientated section>
+4. [findings](findings/ "mention")
+5. [appendices.md](appendices.md "mention")
+
 ## Prioritisation
 
 During an assessment, especially large ones, we'll be faced with a lot of "noise" that we need to filter out to best focus our efforts and prioritize findings. As testers, we are required to disclose everything we find, but when there is a ton of information coming at us through scans and enumeration, it is easy to get lost or focus on the wrong things and waste time and potentially miss high-impact issues.&#x20;

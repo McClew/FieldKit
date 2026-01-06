@@ -26,6 +26,32 @@ For example, a particular finding on its own may be `medium-risk` but, combined 
 
 There are multiple ways to present this, and your style may differ but let's walk through an example. We will start with a summary of the attack chain and then walk through each step along with supporting command output and screenshots to show the attack chain as clearly as possible.
 
+***
+
+## Professional Requirements
+
+### The Two-Part Structure
+
+For complex attack chains, implement a tiered approach. Start with a Walkthrough Summary, providing a high-level numbered list of the attack path for a quick overview, followed by the Detailed Walkthrough where each step is explained in depth.
+
+### Third-Person Narrative
+
+To maintain professional distance and match commercial standards, always write in the third person. Refer to yourself as "the tester" or use the placeholder report.candidate.name. Avoid first-person speech like "I did," which is a common reason for report failure.
+
+### Segment by Objectives/Domains
+
+If the narrative becomes complex (e.g., rooting multiple domains), segment the walkthrough explicitly. Cover all steps for the first domain or phase entirely before starting the narrative for the next. This reflects the shifting nature of intelligence gathering as you move from external reconnaissance to post-exploitation reconnaissance.
+
+### The "Why" Behind the "How"
+
+Beyond listing steps, document the exact sequence of thoughts. Explain what specific clue led you to a tool or technique, as this helps the client understand the "logic gap" an attacker would exploit.
+
+### Reproducibility Requirement
+
+The gold standard for a technical walkthrough is that a defender should be able to replicate the entire attack based solely on your documentation. This requires capturing tool configurations (e.g., Metasploit options) before execution and showing the resulting output in a separate figure.
+
+***
+
 ## Tell a Story
 
 Each vulnerability that we investigate should have a story attached to it. We should attempt to answer the following questions for each vulnerability investigated.

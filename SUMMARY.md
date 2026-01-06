@@ -287,6 +287,7 @@
     * [Findings](field-manual/post-engagement/report-writing/findings/README.md)
       * [HTB Example Findings](field-manual/post-engagement/report-writing/findings/htb-example-findings.md)
     * [Assessment Narrative](field-manual/post-engagement/report-writing/assessment-narrative.md)
+    * [Evidence Handling](field-manual/post-engagement/report-writing/evidence-handling.md)
     * [Appendices](field-manual/post-engagement/report-writing/appendices.md)
     * [Proof-of-Concept](field-manual/post-engagement/report-writing/proof-of-concept.md)
     * [Vulnerability Classification & Risk Quantification](field-manual/post-engagement/report-writing/quantifying-risk.md)

@@ -28,9 +28,7 @@ layout:
 {% hint style="warning" %}
 #### Superseded
 
-This tool has been superseded by go-windapsearch.
-
-[https://github.com/ropnop/go-windapsearch](https://github.com/ropnop/go-windapsearch)
+This tool has been superseded by [go-windapsearch.md](go-windapsearch.md "mention").
 {% endhint %}
 
 ***

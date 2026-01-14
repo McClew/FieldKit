@@ -317,6 +317,7 @@
           * [BloodHound.py](toolbox/tooling/information-gathering/windows-enumeration/domain-enumeration/bloodhound/bloodhound.py.md)
           * [SharpHound](toolbox/tooling/information-gathering/windows-enumeration/domain-enumeration/bloodhound/sharphound.md)
         * [windapsearch](toolbox/tooling/information-gathering/windows-enumeration/domain-enumeration/windapsearch.md)
+        * [go-windapsearch](toolbox/tooling/information-gathering/windows-enumeration/domain-enumeration/go-windapsearch.md)
       * [Privilege Escalation](toolbox/tooling/information-gathering/windows-enumeration/privilege-escalation/README.md)
         * [Seatbelt](toolbox/tooling/information-gathering/windows-enumeration/privilege-escalation/seatbelt.md)
         * [winPeas](toolbox/tooling/information-gathering/windows-enumeration/privilege-escalation/winpeas.md)

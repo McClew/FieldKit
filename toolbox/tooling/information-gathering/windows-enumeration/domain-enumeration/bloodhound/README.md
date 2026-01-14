@@ -115,3 +115,14 @@ To reset Bloodhounds admin credentials run:
 
 ***
 
+## Fixes
+
+### PostgreSQL 'collation version mismatch'
+
+{% embed url="https://www.kali.org/docs/troubleshooting/postgresql-collation-mismatch-error/" %}
+
+{% code overflow="wrap" %}
+```bash
+sudo runuser -u postgres -- psql -c 'ALTER DATABASE postgres REFRESH COLLATION VERSION; ALTER DATABASE template1 REFRESH COLLATION VERSION;'
+```
+{% endcode %}

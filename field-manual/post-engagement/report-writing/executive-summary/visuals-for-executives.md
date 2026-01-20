@@ -1,5 +1,4 @@
 ---
-icon: chart-network
 layout:
   width: default
   title:

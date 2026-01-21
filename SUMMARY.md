@@ -435,6 +435,7 @@
 
 ## Play Books
 
+* [Note Taking](play-books/note-taking.md)
 * [Initial Enumeration](play-books/initial-enumeration.md)
 * [Linux Enumeration](play-books/linux-enumeration.md)
 * [Linux Privilege Escalation](play-books/linux-privilege-escalation.md)

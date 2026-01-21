@@ -1,5 +1,5 @@
 ---
-icon: windows
+icon: microsoft
 layout:
   width: default
   title:
@@ -16,7 +16,7 @@ layout:
     visible: true
 ---
 
-# Windows Privilege Escalation Methodology
+# Windows Privilege Escalation
 
 1. Run Windows privilege escalation scripts. Save the output to a file and transfer it to host for examination.
    * WinPeas

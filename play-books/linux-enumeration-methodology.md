@@ -1,5 +1,5 @@
 ---
-icon: flag-checkered
+icon: linux
 layout:
   width: default
   title:
@@ -16,51 +16,47 @@ layout:
     visible: true
 ---
 
-# Initial Enumeration Methodology
+# Linux Enumeration Methodology
 
-## Passive Reconnaissance
-
-Passive reconnaissance or [osint](../field-manual/intelligence/osint/ "mention"), involves gathering information without directly interacting with the target's systems, minimising detection risk.
-
-### Domain and Host Information
+### System & Kernel Information
 
 {% stepper %}
 {% step %}
-* #### WHOIS Lookup
+* #### System Identification
 
-[intelligence](../field-manual/intelligence/ "mention") > [web-enumeration](../field-manual/intelligence/web-enumeration/ "mention") > [whois.md](../field-manual/intelligence/web-enumeration/whois.md "mention")
+[intelligence](../field-manual/intelligence/ "mention") > [host-enumeration](../field-manual/intelligence/host-enumeration/ "mention") > [linux-system-enumeration.md](../field-manual/intelligence/host-enumeration/linux-system-enumeration.md "mention")
 
-Retrieve registration data, including creation/expiration dates, registrar, and potentially contact information (if not privacy-protected).
+Gather the basic operating system details, distribution version, and kernel release to identify known vulnerabilities (e.g., DirtyPipe, PwnKit).
+
+Commands:&#x20;
+
+* `uname -a`
+* `cat /etc/os-release`
+* `hostnamectl`
 {% endstep %}
 
 {% step %}
-* #### DNS Record Examination
+* #### Kernel Exploitation Check
 
-[intelligence](../field-manual/intelligence/ "mention") > [network-enumeration](../field-manual/intelligence/network-enumeration/ "mention") > [dns.md](../field-manual/intelligence/network-enumeration/dns.md "mention")
-
-Use tools to query A, AAAA, MX, NS, and TXT records to map the infrastructure.
+Compare the kernel version against exploit databases like [searchsploit.md](../toolbox/tooling/exploitation-tools/searchsploit.md "mention") or `Exploit-DB`. Identify if the kernel is unpatched against public local privilege escalation (LPE) exploits.
 {% endstep %}
 
 {% step %}
-* #### Subdomain Enumeration
+* #### Environment Variables
 
-[intelligence](../field-manual/intelligence/ "mention") > [web-enumeration](../field-manual/intelligence/web-enumeration/ "mention") > [automated-scanning.md](../field-manual/intelligence/web-enumeration/automated-scanning.md "mention")
+Review the `$PATH` for writable directories and check for sensitive information (API keys, secrets) stored in environment variables.
 
-[intelligence](../field-manual/intelligence/ "mention") > [web-enumeration](../field-manual/intelligence/web-enumeration/ "mention") > [crawling-spidering.md](../field-manual/intelligence/web-enumeration/crawling-spidering.md "mention")
-
-Use techniques (e.g., certificate transparency logs, brute-forcing, passive lookups) to find hidden or forgotten subdomains. Tools such as [ffuf.md](../toolbox/tooling/web-application-analysis/ffuf.md "mention") and [gobuster.md](../toolbox/tooling/information-gathering/gobuster.md "mention") can help achieve this goal.
+* Command: `env`, `printenv`.
 {% endstep %}
 {% endstepper %}
 
 ### Public-Facing Assets and Code
 
-[intelligence](../field-manual/intelligence/ "mention") > [osint](../field-manual/intelligence/osint/ "mention") > [search-engine-discovery.md](../field-manual/intelligence/osint/search-engine-discovery.md "mention")
-
 {% stepper %}
 {% step %}
 * #### Search Engine Dorking
 
-Use advanced search operators (Google Dorks, Bing Dorks) to find sensitive files, error messages, login pages, or exposed directories.
+Use [search-engine-discovery.md](../field-manual/intelligence/osint/search-engine-discovery.md "mention") techniques, advanced search operators (Google Dorks, Bing Dorks) to find sensitive files, error messages, login pages, or exposed directories.
 {% endstep %}
 
 {% step %}
@@ -77,8 +73,6 @@ Analyse document metadata (PDFs, DOCX) found online for internal usernames, serv
 {% endstepper %}
 
 ### Employee & Organisation Data
-
-[intelligence](../field-manual/intelligence/ "mention") > [osint](../field-manual/intelligence/osint/ "mention") > [identity-hunting.md](../field-manual/intelligence/osint/identity-hunting.md "mention")
 
 {% stepper %}
 {% step %}

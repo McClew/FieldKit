@@ -18,21 +18,57 @@ layout:
 
 # Linux Enumeration Methodology
 
-### System & Kernel Information
+## External Enumeration
+
+\-
+
+### Port & Service
+
+[intelligence](../field-manual/intelligence/ "mention") > [port-and-service-enumeration](../field-manual/intelligence/port-and-service-enumeration/ "mention")
+
+{% stepper %}
+{% step %}
+###
+
+
+{% endstep %}
+
+{% step %}
+###
+
+
+{% endstep %}
+{% endstepper %}
+
+***
+
+## Internal Enumeration
+
+\-
+
+### System & Kernel
+
+[intelligence](../field-manual/intelligence/ "mention") > [host-enumeration](../field-manual/intelligence/host-enumeration/ "mention") > [linux-system-enumeration.md](../field-manual/intelligence/host-enumeration/linux-system-enumeration.md "mention")
 
 {% stepper %}
 {% step %}
 * #### System Identification
 
-[intelligence](../field-manual/intelligence/ "mention") > [host-enumeration](../field-manual/intelligence/host-enumeration/ "mention") > [linux-system-enumeration.md](../field-manual/intelligence/host-enumeration/linux-system-enumeration.md "mention")
-
 Gather the basic operating system details, distribution version, and kernel release to identify known vulnerabilities (e.g., DirtyPipe, PwnKit).
 
 Commands:&#x20;
 
-* `uname -a`
-* `cat /etc/os-release`
-* `hostnamectl`
+```bash
+uname -a
+```
+
+```bash
+cat /etc/os-release
+```
+
+```bash
+hostnamectl
+```
 {% endstep %}
 
 {% step %}
@@ -46,106 +82,174 @@ Compare the kernel version against exploit databases like [searchsploit.md](../t
 
 Review the `$PATH` for writable directories and check for sensitive information (API keys, secrets) stored in environment variables.
 
-* Command: `env`, `printenv`.
+Command:
+
+```bash
+env
+```
+
+```bash
+printenv
+```
 {% endstep %}
 {% endstepper %}
 
-### Public-Facing Assets and Code
+### User & Group
+
+[intelligence](../field-manual/intelligence/ "mention") > [host-enumeration](../field-manual/intelligence/host-enumeration/ "mention") > [linux-user-and-group-enumeration.md](../field-manual/intelligence/host-enumeration/linux-user-and-group-enumeration.md "mention")
 
 {% stepper %}
 {% step %}
-* #### Search Engine Dorking
+* #### Current User Context
 
-Use [search-engine-discovery.md](../field-manual/intelligence/osint/search-engine-discovery.md "mention") techniques, advanced search operators (Google Dorks, Bing Dorks) to find sensitive files, error messages, login pages, or exposed directories.
+Determine our current privileges, group memberships, and special capabilities.
+
+Commands:
+
+```bash
+id
+```
+
+```bash
+whoami
+```
+
+```bash
+getcap -r / 2>/dev/null
+```
 {% endstep %}
 
 {% step %}
-* #### Code Repositories
+* #### User List & Login History
 
-Search platforms like GitHub, GitLab, and Bitbucket for exposed credentials, API keys, configuration files, or internal documentation related to the target.
+Identify other human users on the system and see who has logged in recently to find high-value targets.
+
+Commands:&#x20;
+
+```bash
+cat /etc/passwd | cut -d: -f1
+```
+
+```bash
+last
+```
+
+```bash
+w
+```
 {% endstep %}
 
 {% step %}
-* #### Public File Metadata
+* #### Sudo Permissions
 
-Analyse document metadata (PDFs, DOCX) found online for internal usernames, server names, or geographical data.
+Check if the current user can execute commands as root or another user, specifically looking for `NOPASSWD` entries.
+
+Commands:
+
+```bash
+sudo -l
+```
 {% endstep %}
 {% endstepper %}
 
-### Employee & Organisation Data
+### Network
+
+[intelligence](../field-manual/intelligence/ "mention") > [host-enumeration](../field-manual/intelligence/host-enumeration/ "mention") > [linux-network-enumeration.md](../field-manual/intelligence/host-enumeration/linux-network-enumeration.md "mention")
 
 {% stepper %}
 {% step %}
-* #### Social Media Analysis
+* #### Internal Network Connections
 
-Search for key employees on platforms like LinkedIn to understand organisational structure, technology stacks, and potential phishing targets.
-{% endstep %}
+Identify services running locally (127.0.0.1) that were not visible during your external Nmap scan.
 
-{% step %}
-* #### Email Harvesting
+Commands:
 
-Attempt to determine a common email format for the organisation (e.g., `firstname.lastname@target.com`).
+```bash
+netstat -ano
+```
+
+```bash
+ss -tulnp
+```
 {% endstep %}
 {% endstepper %}
 
-***
-
-## Active Reconnaissance
-
-Active reconnaissance involves direct interaction with the target's network, which increases the likelihood of detection but provides much richer data.
-
-### Host Discovery and Port Scanning
+### Program & Process
 
 {% stepper %}
 {% step %}
-* #### Ping Sweeps/ICMP
+* #### Running Processes & Services
 
-Identify which hosts are alive on the target network.
+Look for processes running as `root` or other users, especially custom binaries or non-standard services.
+
+Commands:
+
+```bash
+ps aux
+```
+
+```bash
+top
+```
 {% endstep %}
 
 {% step %}
-* #### TCP/UDP Port Scanning (Initial)
+* #### Cron Jobs & Scheduled Tasks
 
-Use a tool like [nmap](../toolbox/tooling/information-gathering/network-enumeration/nmap/ "mention") to identify common open ports and the services running on them. Start with less-invasive, non-aggressive scans.
-{% endstep %}
+Examine system-wide and user-specific crontabs for scripts that run with elevated privileges.
 
-{% step %}
-* #### Firewall/IDS Evasion
+Commands:
 
-Test methods to bypass basic network defenses.
+```bash
+cat /etc/crontab
+```
 
-_Potential Link: Tools & Techniques: Nmap Evasion_
+```bash
+ls -la /etc/cron.*
+```
 {% endstep %}
 {% endstepper %}
 
-### Service and Version Enumeration
+### File System & Sensitive Data
 
 {% stepper %}
 {% step %}
-* #### Deep Service Scanning
+* #### SUID/SGID Binaries
 
-Re-scan the open ports identified in the initial step to accurately determine the software version, operating system, and specific configurations (e.g., HTTP headers, SSL/TLS certificate details). Ports & services can be scanned using tools like [nmap](../toolbox/tooling/information-gathering/network-enumeration/nmap/ "mention").
+Locate files with the SUID bit set, which execute with the privileges of the file owner (often root).
+
+Commands:
+
+```bash
+find / -perm -u=s -type f 2>/dev/null
+```
 {% endstep %}
 
 {% step %}
-* #### Web Server Enumeration
+* #### Writable Files & Directories
 
-Access identified web services to check for common files like `robots.txt`, `sitemap.xml`, or hidden directories. See [#robots.txt](../field-manual/intelligence/web-enumeration/crawling-spidering.md#robots.txt "mention") for more information.&#x20;
-{% endstep %}
-{% endstepper %}
+Search for configuration files or system scripts that the current user has write access to.
 
-### Directory and File Enumeration (For Web Targets)
+Commands:
 
-{% stepper %}
-{% step %}
-* #### Content Discovery (Fuzzing/Brute-forcing)
-
-Use tools like [ffuf.md](../toolbox/tooling/web-application-analysis/ffuf.md "mention") or [gobuster.md](../toolbox/tooling/information-gathering/gobuster.md "mention") against identified web services to find hidden files, folders, or pages that are not linked from the main site.
+```bash
+find / -writable -type f 2>/dev/null | grep -v "/proc"
+```
 {% endstep %}
 
 {% step %}
-* #### Virtual Host Enumeration
+* #### SSH Key & Config Harvesting
 
-Check for multiple websites hosted on the same IP address.
+Check home directories for hidden SSH keys, known\_hosts, or configuration files containing credentials.
+
+Commands:
+
+```bash
+ls -la ~/.ssh/
+```
+
+```bash
+cat /etc/ssh/sshd_config
+```
 {% endstep %}
 {% endstepper %}

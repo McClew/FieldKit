@@ -16,31 +16,7 @@ layout:
     visible: true
 ---
 
-# Linux Enumeration Methodology
-
-## External Enumeration
-
-\-
-
-### Port & Service
-
-[intelligence](../field-manual/intelligence/ "mention") > [port-and-service-enumeration](../field-manual/intelligence/port-and-service-enumeration/ "mention")
-
-{% stepper %}
-{% step %}
-###
-
-
-{% endstep %}
-
-{% step %}
-###
-
-
-{% endstep %}
-{% endstepper %}
-
-***
+# Linux Enumeration
 
 ## Internal Enumeration
 

@@ -305,3 +305,25 @@ cat /etc/ssh/sshd_config
 ```
 {% endstep %}
 {% endstepper %}
+
+***
+
+## Automated Enumeration
+
+Use automated tools to map the attack surface. This saves time and identifies common misconfigurations instantly.
+
+### Initial Automated Auditing
+
+{% stepper %}
+{% step %}
+#### Automated Script
+
+Run `LinPeas` or `lse.sh` (Linux Smart Enumeration).
+{% endstep %}
+
+{% step %}
+#### Output Management
+
+Redirect tool output to a file and transfer it to your attack host for persistent analysis using `grep` or automated parsers.
+{% endstep %}
+{% endstepper %}

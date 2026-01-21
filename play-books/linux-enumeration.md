@@ -32,7 +32,7 @@ layout:
 
 Gather the basic operating system details, distribution version, and kernel release to identify known vulnerabilities (e.g., DirtyPipe, PwnKit).
 
-Commands:&#x20;
+**Commands:**
 
 ```bash
 uname -a
@@ -58,7 +58,7 @@ Compare the kernel version against exploit databases like [searchsploit.md](../t
 
 Review the `$PATH` for writable directories and check for sensitive information (API keys, secrets) stored in environment variables.
 
-Command:
+**Command:**
 
 ```bash
 env
@@ -80,7 +80,7 @@ printenv
 
 Determine our current privileges, group memberships, and special capabilities.
 
-Commands:
+**Commands:**
 
 ```bash
 id
@@ -100,7 +100,7 @@ getcap -r / 2>/dev/null
 
 Identify other human users on the system and see who has logged in recently to find high-value targets.
 
-Commands:&#x20;
+**Commands:**&#x20;
 
 ```bash
 cat /etc/passwd | cut -d: -f1
@@ -120,7 +120,7 @@ w
 
 Check if the current user can execute commands as root or another user, specifically looking for `NOPASSWD` entries.
 
-Commands:
+**Commands:**
 
 ```bash
 sudo -l
@@ -138,7 +138,7 @@ sudo -l
 
 Identify services running locally (127.0.0.1) that were not visible during your external Nmap scan.
 
-Commands:
+**Commands:**
 
 ```bash
 netstat -ano
@@ -150,7 +150,9 @@ ss -tulnp
 {% endstep %}
 {% endstepper %}
 
-### Program & Process
+### Programs & Processes
+
+[intelligence](../field-manual/intelligence/ "mention") > [host-enumeration](../field-manual/intelligence/host-enumeration/ "mention") > [linux-software-enumeration.md](../field-manual/intelligence/host-enumeration/linux-software-enumeration.md "mention")
 
 {% stepper %}
 {% step %}
@@ -158,7 +160,7 @@ ss -tulnp
 
 Look for processes running as `root` or other users, especially custom binaries or non-standard services.
 
-Commands:
+**Commands:**
 
 ```bash
 ps aux
@@ -174,7 +176,7 @@ top
 
 Examine system-wide and user-specific crontabs for scripts that run with elevated privileges.
 
-Commands:
+**Commands:**
 
 ```bash
 cat /etc/crontab
@@ -184,9 +186,55 @@ cat /etc/crontab
 ls -la /etc/cron.*
 ```
 {% endstep %}
+
+{% step %}
+* #### Installed Software & Package Versions
+
+List installed packages to check for outdated versions with known vulnerabilities.
+
+**Commands:**
+
+{% code title="Debian / Ubuntu" %}
+```bash
+dpkg -l
+```
+{% endcode %}
+
+{% code title="RHEL / CentOS" %}
+```bash
+rpm -qa
+```
+{% endcode %}
+{% endstep %}
+
+{% step %}
+* #### Targeted Program Hunting
+
+If a specific application (e.g., OsTicket, WordPress, CMS) is identified, pivot to locating its configuration and source files.
+
+**Locate Web Files:**
+
+Check common web roots like `/var/www/html/` or `/opt/`.
+
+**Hunt for Configs:**
+
+Search for keywords like `config.php`, `settings.py`, `.env`, or `web.config`.
+
+**Credential Extraction:**
+
+Audit these files for database passwords, API keys, or hardcoded administrative credentials.
+
+**Command:**
+
+```bash
+find / -name "*config*" 2>/dev/null
+```
+{% endstep %}
 {% endstepper %}
 
 ### File System & Sensitive Data
+
+[intelligence](../field-manual/intelligence/ "mention") > [host-enumeration](../field-manual/intelligence/host-enumeration/ "mention") > [linux-credential-hunting.md](../field-manual/intelligence/host-enumeration/linux-credential-hunting.md "mention")
 
 {% stepper %}
 {% step %}
@@ -194,7 +242,7 @@ ls -la /etc/cron.*
 
 Locate files with the SUID bit set, which execute with the privileges of the file owner (often root).
 
-Commands:
+**Commands:**
 
 ```bash
 find / -perm -u=s -type f 2>/dev/null
@@ -206,7 +254,7 @@ find / -perm -u=s -type f 2>/dev/null
 
 Search for configuration files or system scripts that the current user has write access to.
 
-Commands:
+**Commands:**
 
 ```bash
 find / -writable -type f 2>/dev/null | grep -v "/proc"
@@ -218,7 +266,7 @@ find / -writable -type f 2>/dev/null | grep -v "/proc"
 
 Check home directories for hidden SSH keys, known\_hosts, or configuration files containing credentials.
 
-Commands:
+**Commands:**
 
 ```bash
 ls -la ~/.ssh/

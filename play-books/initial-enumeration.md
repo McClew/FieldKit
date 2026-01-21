@@ -16,13 +16,13 @@ layout:
     visible: true
 ---
 
-# Initial Enumeration Methodology
+# Initial Enumeration
 
 ## Passive Reconnaissance
 
 Passive reconnaissance or [osint](../field-manual/intelligence/osint/ "mention"), involves gathering information without directly interacting with the target's systems, minimising detection risk.
 
-### Domain and Host Information
+### Domain & Host Information
 
 {% stepper %}
 {% step %}
@@ -52,7 +52,7 @@ Use techniques (e.g., certificate transparency logs, brute-forcing, passive look
 {% endstep %}
 {% endstepper %}
 
-### Public-Facing Assets and Code
+### Public-Facing Assets & Code
 
 [intelligence](../field-manual/intelligence/ "mention") > [osint](../field-manual/intelligence/osint/ "mention") > [search-engine-discovery.md](../field-manual/intelligence/osint/search-engine-discovery.md "mention")
 
@@ -100,7 +100,7 @@ Attempt to determine a common email format for the organisation (e.g., `firstnam
 
 Active reconnaissance involves direct interaction with the target's network, which increases the likelihood of detection but provides much richer data.
 
-### Host Discovery and Port Scanning
+### Host Discovery & Port Scanning
 
 {% stepper %}
 {% step %}
@@ -124,7 +124,7 @@ _Potential Link: Tools & Techniques: Nmap Evasion_
 {% endstep %}
 {% endstepper %}
 
-### Service and Version Enumeration
+### Service & Version Enumeration
 
 {% stepper %}
 {% step %}
@@ -140,7 +140,7 @@ Access identified web services to check for common files like `robots.txt`, `sit
 {% endstep %}
 {% endstepper %}
 
-### Directory and File Enumeration (For Web Targets)
+### Directory & File Enumeration
 
 {% stepper %}
 {% step %}

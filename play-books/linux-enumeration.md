@@ -28,7 +28,7 @@ layout:
 
 {% stepper %}
 {% step %}
-* #### System Identification
+#### System Identification
 
 Gather the basic operating system details, distribution version, and kernel release to identify known vulnerabilities (e.g., DirtyPipe, PwnKit).
 
@@ -48,13 +48,13 @@ hostnamectl
 {% endstep %}
 
 {% step %}
-* #### Kernel Exploitation Check
+#### Kernel Exploitation Check
 
 Compare the kernel version against exploit databases like [searchsploit.md](../toolbox/tooling/exploitation-tools/searchsploit.md "mention") or `Exploit-DB`. Identify if the kernel is unpatched against public local privilege escalation (LPE) exploits.
 {% endstep %}
 
 {% step %}
-* #### Environment Variables
+#### Environment Variables
 
 Review the `$PATH` for writable directories and check for sensitive information (API keys, secrets) stored in environment variables.
 
@@ -76,7 +76,7 @@ printenv
 
 {% stepper %}
 {% step %}
-* #### Current User Context
+#### Current User Context
 
 Determine our current privileges, group memberships, and special capabilities.
 
@@ -96,7 +96,7 @@ getcap -r / 2>/dev/null
 {% endstep %}
 
 {% step %}
-* #### User List & Login History
+#### User List & Login History
 
 Identify other human users on the system and see who has logged in recently to find high-value targets.
 
@@ -116,7 +116,7 @@ w
 {% endstep %}
 
 {% step %}
-* #### Sudo Permissions
+#### Sudo Permissions
 
 Check if the current user can execute commands as root or another user, specifically looking for `NOPASSWD` entries.
 
@@ -134,7 +134,7 @@ sudo -l
 
 {% stepper %}
 {% step %}
-* #### Internal Network Connections
+#### Internal Network Connections
 
 Identify services running locally (127.0.0.1) that were not visible during your external Nmap scan.
 
@@ -148,6 +148,34 @@ netstat -ano
 ss -tulnp
 ```
 {% endstep %}
+
+{% step %}
+### Routing & Arp Tables
+
+Determine if the host is multi-homed (connected to multiple networks), which could allow for pivoting.
+
+**Commands:**
+
+```bash
+ip route
+```
+
+```bash
+arp -a
+```
+{% endstep %}
+
+{% step %}
+### Active Internal Traffic
+
+Monitor internal traffic briefly to identify active communication between the host and other internal assets.
+
+**Commands:**
+
+```bash
+tcpdump -i eth0 -c 50
+```
+{% endstep %}
 {% endstepper %}
 
 ### Programs & Processes
@@ -156,7 +184,7 @@ ss -tulnp
 
 {% stepper %}
 {% step %}
-* #### Running Processes & Services
+#### Running Processes & Services
 
 Look for processes running as `root` or other users, especially custom binaries or non-standard services.
 
@@ -172,7 +200,7 @@ top
 {% endstep %}
 
 {% step %}
-* #### Cron Jobs & Scheduled Tasks
+#### Cron Jobs & Scheduled Tasks
 
 Examine system-wide and user-specific crontabs for scripts that run with elevated privileges.
 
@@ -188,7 +216,7 @@ ls -la /etc/cron.*
 {% endstep %}
 
 {% step %}
-* #### Installed Software & Package Versions
+#### Installed Software & Package Versions
 
 List installed packages to check for outdated versions with known vulnerabilities.
 
@@ -208,7 +236,7 @@ rpm -qa
 {% endstep %}
 
 {% step %}
-* #### Targeted Program Hunting
+#### Targeted Program Hunting
 
 If a specific application (e.g., OsTicket, WordPress, CMS) is identified, pivot to locating its configuration and source files.
 
@@ -224,7 +252,7 @@ Search for keywords like `config.php`, `settings.py`, `.env`, or `web.config`.
 
 Audit these files for database passwords, API keys, or hardcoded administrative credentials.
 
-**Command:**
+**Commands:**
 
 ```bash
 find / -name "*config*" 2>/dev/null
@@ -238,7 +266,7 @@ find / -name "*config*" 2>/dev/null
 
 {% stepper %}
 {% step %}
-* #### SUID/SGID Binaries
+#### SUID/SGID Binaries
 
 Locate files with the SUID bit set, which execute with the privileges of the file owner (often root).
 
@@ -250,7 +278,7 @@ find / -perm -u=s -type f 2>/dev/null
 {% endstep %}
 
 {% step %}
-* #### Writable Files & Directories
+#### Writable Files & Directories
 
 Search for configuration files or system scripts that the current user has write access to.
 
@@ -262,7 +290,7 @@ find / -writable -type f 2>/dev/null | grep -v "/proc"
 {% endstep %}
 
 {% step %}
-* #### SSH Key & Config Harvesting
+#### SSH Key & Config Harvesting
 
 Check home directories for hidden SSH keys, known\_hosts, or configuration files containing credentials.
 

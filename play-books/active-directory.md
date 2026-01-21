@@ -16,29 +16,91 @@ layout:
     visible: true
 ---
 
-# Active Directory Methodology
+# Active Directory
 
-## Initial (Uncredentialed) Enumeration
+## Uncredentialed Enumeration
+
+\-
 
 ### Host Indenticiation
 
-1. Use Wireshark and listen for Layer 2 ( ARP, NDNS ) traffic to discover IP addresses and hostnames.
-2. Use Responder in 'Analyze' mode to discover IP addresses and hostnames
-3. Perform an Fping ICMP sweep to final all hosts on your subnet that respond to an ICMP echo request.
-4. Perform an NMAP identification scan to validate findings ( it may find something previously missed ).
-5. Use all disocvered hosts to perform an NMAP scan to determin services running on each host.
-   1. Look for quick wins for initial foothold, like outdated software, service or OS.
+{% stepper %}
+{% step %}
+#### Listening with Wireshark
+
+Use Wireshark and listen for Layer 2 ( ARP, NDNS ) traffic to discover IP addresses and hostnames.
+{% endstep %}
+
+{% step %}
+#### Analysing with Responder
+
+Use Responder in 'Analyze' mode to discover IP addresses and hostnames
+{% endstep %}
+
+{% step %}
+#### ICMP Sweep
+
+Perform an Fping ICMP sweep to final all hosts on your subnet that respond to an ICMP echo request.
+{% endstep %}
+
+{% step %}
+### Nmap Network Scan
+
+Perform an NMAP identification scan to validate findings (it may find something previously missed).
+{% endstep %}
+
+{% step %}
+### Nmap Service Scan
+
+Use all disocvered hosts to perform an NMAP scan to determin services running on each host.
+
+1. Look for quick wins for initial foothold, like outdated software, service or OS.
+{% endstep %}
+{% endstepper %}
 
 ### User Identification
 
-1. Attempt to abuse an SMB NULL session against the domain controller.
-   1. rcpclient or enum4linux to grab users.
-2. Attempt to abuse an anonymous LDAP search against the domain controller.
-   1. ldapsearch or windapsearch to grab users.
-3. Check for users that do not require Kerberos pre-auth (ASREP-Roasting) to get password hash.
-4. Use Kerbrute and wordlists to brute force usernames against DC.
-5. Use Impackets lookupsid.py to discover users (works better with creds)
-6. Look for systems that can be exploited to gain SYSTEM level access.
+{% stepper %}
+{% step %}
+###
+
+Attempt to abuse an SMB NULL session against the domain controller.
+
+1. rcpclient or enum4linux to grab users.
+{% endstep %}
+
+{% step %}
+###
+
+Attempt to abuse an anonymous LDAP search against the domain controller.
+
+1. ldapsearch or windapsearch to grab users.
+{% endstep %}
+
+{% step %}
+###
+
+Check for users that do not require Kerberos pre-auth (ASREP-Roasting) to get password hash.
+{% endstep %}
+
+{% step %}
+###
+
+Use Kerbrute and wordlists to brute force usernames against DC.
+{% endstep %}
+
+{% step %}
+###
+
+Use Impackets lookupsid.py to discover users (works better with creds)
+{% endstep %}
+
+{% step %}
+###
+
+Look for systems that can be exploited to gain SYSTEM level access.
+{% endstep %}
+{% endstepper %}
 
 ### User Foothold
 
@@ -47,6 +109,8 @@ layout:
 2. attempt password spray on users identified during user identification.
    1. attempt to gather password policy for organisation.
    2. password spray using common passwords.
+
+***
 
 ## Credentialed Enumeration &  Exploitation
 

@@ -428,6 +428,7 @@
     * [Archive Wordlist Generator Command](toolbox/snippets/password-attack-scripts/archive-wordlist-generator-command.md)
   * [Shells](toolbox/snippets/shells/README.md)
     * [Bash Reverse Shell](toolbox/snippets/shells/bash-reverse-shell.md)
+    * [PowerShell Reverse Shell](toolbox/snippets/shells/bash-reverse-shell-1.md)
     * [PHP Reverse Shell](toolbox/snippets/shells/php-reverse-shell.md)
   * [Vulnerability Exploit Scripts](toolbox/snippets/vulnerability-exploit-scripts/README.md)
     * [Linux Privilege Escalation](toolbox/snippets/vulnerability-exploit-scripts/linux-privilege-escalation/README.md)

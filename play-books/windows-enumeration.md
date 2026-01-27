@@ -107,3 +107,7 @@ Use `reg.exe save` to copy the SAM, SYSTEM and SECURITY hives.
 If process creation auditng is enabled, search Event ID 4688 (New Process Created) for cleartext passwords passed as command-line arguments using wevutil or Get-WinEvent.
 {% endstep %}
 {% endstepper %}
+
+## Automated Enumeration
+
+\-

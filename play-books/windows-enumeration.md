@@ -90,7 +90,7 @@ Use accesschk to find named pipes with lax permissions (e.g., FILE\_ALL\_ACCESS 
 {% endstep %}
 {% endstepper %}
 
-## Credential Harvesting & Log Review
+### Credential Harvesting & Log Review
 
 Windows hosts often store sensitive data in the registry or logs that can be extracted with local administrative access.
 
